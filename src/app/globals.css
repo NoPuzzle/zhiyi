@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f6f0e4;
+  --paper-deep: #ece2d1;
+  --ink: #171512;
+  --ink-soft: #4e4a43;
+  --mist: #c9c0b2;
+  --wash: #ded4c4;
+  --vermilion: #b23a2e;
+  --vermilion-soft: #e7b8a9;
+}
+
+@theme inline {
+  --color-background: var(--paper);
+  --color-foreground: var(--ink);
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-mist: var(--mist);
+  --color-wash: var(--wash);
+  --color-vermilion: var(--vermilion);
+  --color-vermilion-soft: var(--vermilion-soft);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family:
+    ui-serif, "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC",
+    serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: var(--vermilion-soft);
+  color: var(--ink);
+}
+
+.paper-grain {
+  background:
+    radial-gradient(circle at 12% 16%, rgb(255 255 255 / 0.34), transparent 24%),
+    linear-gradient(135deg, rgb(23 21 18 / 0.035) 0 1px, transparent 1px 8px),
+    var(--paper);
+}
+
+.ui-copy {
+  font-family:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.hex-line-appear {
+  opacity: 0;
+  transform: translateY(8px) scaleX(0.94);
+  transform-origin: center;
+  animation: zhiyi-line-appear 680ms ease-out var(--line-delay, 0ms) forwards;
+}
+
+.hex-yang-ghost,
+.hex-yin-ghost {
+  opacity: 0.42;
+  animation: zhiyi-line-fade-out 880ms ease-out forwards;
+}
+
+.hex-connect-final {
+  opacity: 0;
+  transform: scaleX(0.62);
+  transform-origin: center;
+  animation: zhiyi-line-connect 880ms ease-out 120ms forwards;
+}
+
+.hex-open-final {
+  opacity: 0.92;
+}
+
+.hex-open-left {
+  transform: translateX(17px);
+  animation: zhiyi-line-open-left 880ms ease-out 120ms forwards;
+}
+
+.hex-open-right {
+  transform: translateX(-17px);
+  animation: zhiyi-line-open-right 880ms ease-out 120ms forwards;
+}
+
+@keyframes zhiyi-line-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleX(1);
+  }
+}
+
+@keyframes zhiyi-line-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes zhiyi-line-connect {
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes zhiyi-line-open-left {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes zhiyi-line-open-right {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hex-line-appear,
+  .hex-yang-ghost,
+  .hex-yin-ghost,
+  .hex-connect-final,
+  .hex-open-left,
+  .hex-open-right {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hex-yang-ghost,
+  .hex-yin-ghost {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">知易 / Zhiyi maskable icon</title>
+  <desc id="desc">Maskable rice-paper icon with centered ink hexagram.</desc>
+  <rect width="512" height="512" fill="#F6F0E4"/>
+  <circle cx="256" cy="256" r="220" fill="#ECE2D1" opacity=".55"/>
+  <g fill="#171512">
+    <rect x="132" y="122" width="248" height="24" rx="12"/>
+    <rect x="132" y="184" width="98" height="24" rx="12"/>
+    <rect x="282" y="184" width="98" height="24" rx="12"/>
+    <rect x="132" y="246" width="248" height="24" rx="12"/>
+    <rect x="132" y="370" width="248" height="24" rx="12"/>
+  </g>
+  <g fill="#B23A2E">
+    <rect x="132" y="308" width="98" height="24" rx="12"/>
+    <rect x="282" y="308" width="98" height="24" rx="12"/>
+  </g>
+</svg>

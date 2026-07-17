@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">知易 / Zhiyi icon</title>
+  <desc id="desc">Rice-paper square with an ink hexagram and vermilion changing line.</desc>
+  <rect width="512" height="512" rx="96" fill="#F6F0E4"/>
+  <path d="M96 96h320v320H96z" fill="none" stroke="#171512" stroke-opacity=".1" stroke-width="8"/>
+  <g fill="#171512">
+    <rect x="148" y="142" width="216" height="22" rx="11"/>
+    <rect x="148" y="198" width="86" height="22" rx="11"/>
+    <rect x="278" y="198" width="86" height="22" rx="11"/>
+    <rect x="148" y="254" width="216" height="22" rx="11"/>
+    <rect x="148" y="366" width="216" height="22" rx="11"/>
+  </g>
+  <g fill="#B23A2E">
+    <rect x="148" y="310" width="86" height="22" rx="11"/>
+    <rect x="278" y="310" width="86" height="22" rx="11"/>
+  </g>
+  <text x="256" y="462" text-anchor="middle" fill="#171512" font-size="54" font-family="Songti SC, STSong, serif" font-weight="600">知易</text>
+</svg>
