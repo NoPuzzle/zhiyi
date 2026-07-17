@@ -5,6 +5,7 @@ import { ChangingHexagramView } from "@/components/hexagram/ChangingHexagramView
 import { HexagramLines } from "@/components/hexagram/HexagramLines";
 import { InkLine } from "@/components/hexagram/InkLine";
 import type { Hexagram } from "../../../data/hexagrams";
+import { getHighStakesSafetyNote } from "../../../lib/safety";
 import {
   getChangedHexagram,
   getChangedLines,
@@ -45,6 +46,7 @@ type ReadingResult = {
   changedLines: HexagramLineTuple;
   originalHexagram: Hexagram;
   changedHexagram: Hexagram;
+  safetyNote?: string;
 };
 
 type InterpretationSection = {
@@ -200,6 +202,7 @@ function createReadingResult({
     changedLines,
     originalHexagram,
     changedHexagram,
+    safetyNote: getHighStakesSafetyNote(question),
   };
 }
 
@@ -255,7 +258,7 @@ function buildInterpretation(result: ReadingResult): InterpretationSection[] {
   const firstReflection =
     result.originalHexagram.reflectionQuestions?.[0] ?? questionType.reflection;
 
-  return [
+  const sections: InterpretationSection[] = [
     {
       title: "象 / Image",
       body:
@@ -280,10 +283,18 @@ function buildInterpretation(result: ReadingResult): InterpretationSection[] {
     },
     {
       title: "行 / Small Action",
-      body:
-        result.originalHexagram.reflectionQuestions?.[2] ?? questionType.action,
+      body: result.originalHexagram.smallAction ?? questionType.action,
     },
   ];
+
+  if (result.safetyNote) {
+    sections.push({
+      title: "安全提示 / Safety",
+      body: result.safetyNote,
+    });
+  }
+
+  return sections;
 }
 
 function MethodButton({

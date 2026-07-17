@@ -2,201 +2,154 @@
 
 ## Goals
 
-The data model should keep Yi Jing structure separate from UI rendering and interpretation copy.
+The data model keeps Yi Jing structure, product-authored content, safety rules,
+and UI rendering separate. V0.1 uses local static data only.
 
-V0.1 uses local static data only. No database, login, payment, external AI API, or real API keys.
+## Line Convention
 
-## Principles
-
-- Keep identifiers stable.
-- Store line data in a consistent direction.
-- Keep transformation logic in pure functions.
-- Do not hard-code hexagram logic inside UI components.
-- Separate classical text from original product explanations.
-- Make room for future localization and content review.
-
-## Line Direction
-
-Hexagram lines should be stored from bottom to top because line positions are traditionally counted from the bottom:
+- Lines are stored from bottom to top.
+- Index `0` is the bottom line; index `5` is the top line.
+- `1` means yang.
+- `0` means yin.
+- Old yang changes `1 -> 0`.
+- Old yin changes `0 -> 1`.
 
 ```ts
-type LineIndex = 0 | 1 | 2 | 3 | 4 | 5;
+export type TrigramLines = [number, number, number];
+export type HexagramLines = [number, number, number, number, number, number];
+export type MovingLineIndex = 0 | 1 | 2 | 3 | 4 | 5;
 ```
 
-`0` is the bottom line.  
-`5` is the top line.
+## Trigram
 
-## Core Types
+Implemented in `data/trigrams.ts`:
 
 ```ts
-export type YinYang = "yin" | "yang";
-
-export type LineKind =
-  | "old_yin"
-  | "young_yang"
-  | "young_yin"
-  | "old_yang";
-
-export interface Line {
-  index: 0 | 1 | 2 | 3 | 4 | 5;
-  yinYang: YinYang;
-  changing: boolean;
-  kind?: LineKind;
-}
-
-export interface Trigram {
+export type Trigram = {
   id: string;
-  nameZh: string;
-  nameEn: string;
-  symbol: string;
-  lines: [YinYang, YinYang, YinYang];
-  image: string;
-  attributes: string[];
-  familyRole?: string;
-  direction?: string;
-  element?: string;
-  originalText?: string;
-  explanation: string;
-}
-
-export interface Hexagram {
-  number: number;
-  nameZh: string;
-  namePinyin: string;
-  nameEn?: string;
-  unicode?: string;
-  lines: [YinYang, YinYang, YinYang, YinYang, YinYang, YinYang];
-  upperTrigramId: string;
-  lowerTrigramId: string;
-  judgmentText?: string;
-  imageText?: string;
-  lineTexts?: [string, string, string, string, string, string];
-  explanation: HexagramExplanation;
-  relations?: HexagramRelations;
-}
-
-export interface HexagramExplanation {
-  image: string;
-  principle: string;
-  plainLanguage: string;
-  reflectionPrompt: string;
-  smallActionPrompt: string;
-}
-
-export interface HexagramRelations {
-  oppositeHexagramNumber?: number;
-  reversedHexagramNumber?: number;
-  mutualHexagramNumber?: number;
-}
-```
-
-## Reading Types
-
-```ts
-export interface ReadingQuestion {
-  text: string;
-  category?: "self" | "work" | "relationship" | "decision" | "emotion" | "other";
-  createdAt?: string;
-}
-
-export interface CastLine {
-  index: 0 | 1 | 2 | 3 | 4 | 5;
-  kind: LineKind;
-  yinYang: YinYang;
-  changing: boolean;
-}
-
-export interface Reading {
-  id: string;
-  question: ReadingQuestion;
-  originalLines: [CastLine, CastLine, CastLine, CastLine, CastLine, CastLine];
-  originalHexagramNumber: number;
-  changingLineIndexes: Array<0 | 1 | 2 | 3 | 4 | 5>;
-  transformedLines: [Line, Line, Line, Line, Line, Line];
-  transformedHexagramNumber?: number;
-  interpretation: StructuredInterpretation;
-}
-
-export interface StructuredInterpretation {
-  image: string;
-  text: string;
-  principle: string;
-  application: string;
-  reflection: string;
-  smallAction: string;
-  safetyNote?: string;
-}
-```
-
-## Static Data Files
-
-Recommended initial structure:
-
-```txt
-src/
-  data/
-    trigrams.ts
-    hexagrams.ts
-    copy.ts
-  lib/
-    iching/
-      lines.ts
-      transforms.ts
-      lookup.ts
-```
-
-`trigrams.ts` should contain the Eight Trigrams.
-
-`hexagrams.ts` should contain the Sixty-Four Hexagrams when content is ready. V0.1 may start with a smaller reviewed subset while the rendering and transformation logic is built.
-
-`copy.ts` should contain UI copy and safety language.
-
-## Transformation Rules
-
-Changing lines transform as follows:
-
-| Original | Changing | Transformed |
-| --- | --- | --- |
-| old yin | yes | yang |
-| young yang | no | yang |
-| young yin | no | yin |
-| old yang | yes | yin |
-
-Pure helper functions should cover:
-
-- Convert cast line kind to Yin/Yang.
-- Detect changing line indexes.
-- Transform original lines into transformed lines.
-- Look up hexagram by six-line pattern.
-- Derive upper and lower trigram IDs.
-- Derive opposite, reversed, and mutual hexagrams when supported.
-
-## Content Boundaries
-
-Classical Yi Jing text may be included where appropriate. Modern copyrighted translations, competitor explanations, and competitor UI text must not be copied.
-
-Plain-language explanations should be original product content and should use suggestive, reflective language.
-
-## Example Hexagram Data Shape
-
-```ts
-export const hexagramOne: Hexagram = {
-  number: 1,
-  nameZh: "乾",
-  namePinyin: "Qian",
-  nameEn: "The Creative",
-  lines: ["yang", "yang", "yang", "yang", "yang", "yang"],
-  upperTrigramId: "qian",
-  lowerTrigramId: "qian",
-  judgmentText: "元亨利贞。",
-  imageText: "天行健，君子以自强不息。",
-  explanation: {
-    image: "Six unbroken lines suggest active, rising, initiating force.",
-    principle: "This image points to strength, continuity, and disciplined movement.",
-    plainLanguage: "One possible reading is that the situation asks for clarity, steadiness, and responsible initiative.",
-    reflectionPrompt: "Where is action needed, and where might force become excess?",
-    smallActionPrompt: "Choose one concrete step that can be completed today without overreaching."
-  }
+  name: string;
+  chineseName: string;
+  binaryLines: [number, number, number];
+  symbol?: string;
+  natureImage: string;
+  attributes: {
+    direction?: string;
+    element?: string;
+    familyRole?: string;
+    bodyPart?: string;
+    keywords: string[];
+  };
 };
 ```
 
+Chinese UI copy for the eight trigrams lives in `data/trigram-copy.ts`. This is
+the single source used by learning and hexagram pages.
+
+## Hexagram
+
+Implemented in `data/hexagrams.ts`:
+
+```ts
+export type Hexagram = {
+  id: number;
+  name: string;
+  chineseName: string;
+  unicodeSymbol?: string;
+  upperTrigramId: string;
+  lowerTrigramId: string;
+  lines: [number, number, number, number, number, number];
+  judgmentOriginal?: string;
+  judgmentPlain?: string;
+  imageText?: string;
+  coreMeaning?: string;
+  keywords: string[];
+  lineTexts?: {
+    position: string;
+    original?: string;
+    plain?: string;
+    reflection?: string;
+  }[];
+  reflectionQuestions?: string[];
+  smallAction?: string;
+};
+```
+
+`lines` and `unicodeSymbol` are derived when each hexagram is defined:
+
+- `lines` combines the lower trigram followed by the upper trigram.
+- Unicode symbols use the standard 64-hexagram Unicode block.
+- UI components do not construct canonical hexagram structure themselves.
+
+## Ask Mode State
+
+Ask mode distinguishes four line kinds:
+
+```ts
+type LineKindId = "yin" | "yang" | "old_yin" | "old_yang";
+```
+
+A reading result contains:
+
+- The question and selected category.
+- Manual or random casting method.
+- Six line kinds stored bottom to top.
+- Original and changed binary lines.
+- Moving line indexes.
+- Original and changed hexagram records.
+- An optional high-stakes safety note.
+
+The reading exists only in React client state. V0.1 does not save it to local
+storage or send it to a server.
+
+## Structured Interpretation
+
+The UI creates six required sections:
+
+```ts
+type InterpretationSection = {
+  title: string;
+  body: string;
+};
+```
+
+The sections are 象、辞、理、用、问、行. `行` reads the dedicated
+`hexagram.smallAction` field and falls back to a question-category action. It
+must not reuse a reflection question.
+
+When `lib/safety.ts` detects medical, legal, financial, or mental-health terms,
+the result adds a seventh safety section. Detection only controls explanatory
+copy; it does not diagnose, block, or classify the user.
+
+## Pure Domain Helpers
+
+Implemented in `lib/hexagram.ts`:
+
+- `getHexagramByLines`
+- `getChangedLines`
+- `getChangedHexagram`
+- `invertHexagram` for 错卦
+- `reverseHexagram` for 综卦
+- `getMutualHexagram` for 互卦
+- `getTrigramsFromHexagram`
+
+Search normalization is implemented in `lib/search.ts`. High-stakes keyword
+detection is implemented in `lib/safety.ts`.
+
+## Current Content Depth
+
+- All 8 trigrams have structural data.
+- All 64 hexagrams have IDs, names, upper/lower trigrams, line patterns,
+  Unicode symbols, and keywords.
+- Hexagrams 1-3 include classical draft text, line text, original plain-language
+  explanations, reflection prompts, and small actions.
+- Hexagrams 4-10 include original base explanations, reflection prompts, and
+  small actions.
+- Hexagrams 11-64 remain structural records and will be expanded in reviewed
+  batches.
+
+## Content Boundaries
+
+- Classical text may be included with source review.
+- Modern copyrighted translations and competitor copy must not be copied.
+- Product-authored explanations must be original and non-deterministic.
+- High-stakes interpretations must not replace professional advice.

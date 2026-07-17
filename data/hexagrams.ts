@@ -21,6 +21,7 @@ export type Hexagram = {
     reflection?: string;
   }[];
   reflectionQuestions?: string[];
+  smallAction?: string;
 };
 
 type HexagramLines = Hexagram["lines"];
@@ -113,6 +114,7 @@ export const hexagrams: Hexagram[] = [
       "行动之前，哪些边界需要先确认？",
       "今天可以完成的一个小推进是什么？",
     ],
+    smallAction: "选定一件今天能够完成的小事，写下完成标准并开始第一步。",
   }),
   defineHexagram({
     id: 2,
@@ -171,6 +173,7 @@ export const hexagrams: Hexagram[] = [
       "哪些关系或资源可以成为支撑？",
       "今天可以完成的一个照料动作是什么？",
     ],
+    smallAction: "为当前最需要支持的人或事项，完成一个具体而有限的照料动作。",
   }),
   defineHexagram({
     id: 3,
@@ -228,6 +231,7 @@ export const hexagrams: Hexagram[] = [
       "哪个角色、步骤或边界需要先被明确？",
       "今天可以完成的一个整理动作是什么？",
     ],
+    smallAction: "列出当前最混乱的三件事，只为其中一件写出明确的下一步。",
   }),
   defineHexagram({
     id: 4,
@@ -235,7 +239,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "蒙",
     upperTrigramId: "gen",
     lowerTrigramId: "kan",
+    judgmentPlain:
+      "蒙象呈现经验不足与方向未明。一个可能的读法是：先承认不知道，再通过清楚的问题、可靠的引导和反复练习建立基础。",
+    coreMeaning:
+      "启蒙、求教、建立边界。蒙提醒人在不熟悉的处境中保持诚实与学习秩序。",
     keywords: ["启蒙", "求学", "边界"],
+    reflectionQuestions: [
+      "你目前真正不明白的是什么？",
+      "谁或什么资料可以提供可靠引导？",
+      "今天可以验证的一个基础问题是什么？",
+    ],
+    smallAction: "写下一个具体问题，向可靠的人或资料求证，并记录得到的答案。",
   }),
   defineHexagram({
     id: 5,
@@ -243,7 +257,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "需",
     upperTrigramId: "kan",
     lowerTrigramId: "qian",
+    judgmentPlain:
+      "需象呈现力量已有、条件未齐。一个可能的读法是：等待不是停滞，而是照料资源、辨认时机，避免在条件不足时强行推进。",
+    coreMeaning:
+      "等待、准备、保持力量。需提醒人区分耐心与拖延，在等待中完成必要准备。",
     keywords: ["等待", "滋养", "时机"],
+    reflectionQuestions: [
+      "目前缺少的是时间、信息，还是资源？",
+      "等待期间有什么准备可以完成？",
+      "什么信号出现时才适合继续推进？",
+    ],
+    smallAction: "列出继续推进前必须满足的一个条件，并完成一项相关准备。",
   }),
   defineHexagram({
     id: 6,
@@ -251,7 +275,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "讼",
     upperTrigramId: "qian",
     lowerTrigramId: "kan",
+    judgmentPlain:
+      "讼象呈现立场冲突与信任不足。一个可能的读法是：先澄清事实、目标和边界，减少情绪推动下的对抗升级。",
+    coreMeaning:
+      "分歧、争执、审慎止争。讼提醒人辨认争论的代价，并寻找更清楚的处理程序。",
     keywords: ["争讼", "分歧", "审慎"],
+    reflectionQuestions: [
+      "双方真正争执的是事实、利益，还是尊严？",
+      "哪些内容需要第三方或书面记录来澄清？",
+      "怎样的边界可以阻止冲突继续扩大？",
+    ],
+    smallAction: "把争议拆成事实、感受和诉求三栏，只确认其中一项可核实事实。",
   }),
   defineHexagram({
     id: 7,
@@ -259,7 +293,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "师",
     upperTrigramId: "kun",
     lowerTrigramId: "kan",
+    judgmentPlain:
+      "师象呈现群体行动中的组织与风险。一个可能的读法是：目标越重要，越需要明确责任、纪律和照顾整体的带领方式。",
+    coreMeaning:
+      "组织、纪律、共同承担。师提醒人让行动服从清楚目标，而不是被声势或情绪带动。",
     keywords: ["组织", "纪律", "协作"],
+    reflectionQuestions: [
+      "团队是否对目标和完成标准有共同理解？",
+      "谁应当承担决定与后果？",
+      "当前最需要建立的协作规则是什么？",
+    ],
+    smallAction: "为当前协作补上一条明确规则，写清负责人、下一步和完成标准。",
   }),
   defineHexagram({
     id: 8,
@@ -267,7 +311,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "比",
     upperTrigramId: "kan",
     lowerTrigramId: "kun",
+    judgmentPlain:
+      "比象呈现靠近、连接与相互支持。一个可能的读法是：关系需要共同原则和真诚信任，也需要看清自己为何加入。",
+    coreMeaning:
+      "亲近、结盟、建立信任。比提醒人选择可靠的连接，并在关系中保持清楚的位置。",
     keywords: ["亲比", "连接", "信任"],
+    reflectionQuestions: [
+      "你希望与谁建立更可靠的连接？",
+      "这段连接建立在共同目标还是暂时需要上？",
+      "你愿意为信任承担什么责任？",
+    ],
+    smallAction: "主动联系一位重要协作者，确认一个共同目标和彼此下一步。",
   }),
   defineHexagram({
     id: 9,
@@ -275,7 +329,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "小畜",
     upperTrigramId: "xun",
     lowerTrigramId: "qian",
+    judgmentPlain:
+      "小畜象呈现力量受到轻微牵制，也在逐步积累。一个可能的读法是：暂时不求大幅突破，先把细节、习惯和资源收拢。",
+    coreMeaning:
+      "小幅积蓄、温和约束、渐进准备。小畜提醒人尊重尚未成熟的阶段。",
     keywords: ["小蓄", "涵养", "渐进"],
+    reflectionQuestions: [
+      "哪些小问题正在限制更大的推进？",
+      "现在最值得积累的资源或能力是什么？",
+      "怎样的小幅调整可以持续一周？",
+    ],
+    smallAction: "选择一个可重复的小习惯，今天完成第一次并安排下一次时间。",
   }),
   defineHexagram({
     id: 10,
@@ -283,7 +347,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "履",
     upperTrigramId: "qian",
     lowerTrigramId: "dui",
+    judgmentPlain:
+      "履象呈现在规则与风险中谨慎前行。一个可能的读法是：行动并非不能继续，但需要尊重边界、礼序与每一步的后果。",
+    coreMeaning:
+      "践履、谨慎、合宜行动。履提醒人把原则落实到具体脚步，并留意所处关系中的力量差异。",
     keywords: ["履行", "谨慎", "礼"],
+    reflectionQuestions: [
+      "这一步可能触及谁的边界或责任？",
+      "什么规则需要被认真遵守？",
+      "怎样前进既坚定又不过度冒进？",
+    ],
+    smallAction: "在行动前确认一个关键边界，并把下一步缩小到可检查、可回退的范围。",
   }),
   defineHexagram({
     id: 11,

@@ -1,4 +1,5 @@
-const CACHE_NAME = "zhiyi-static-v1";
+const CACHE_VERSION = new URL(self.location.href).searchParams.get("v") ?? "dev";
+const CACHE_NAME = `zhiyi-static-${CACHE_VERSION}`;
 const OFFLINE_URL = "/offline";
 const CORE_ASSETS = [
   "/",
@@ -64,6 +65,26 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
 
   if (url.origin === self.location.origin) {
+    const shouldRefresh =
+      url.pathname === "/manifest.webmanifest" ||
+      url.pathname.startsWith("/icons/");
+
+    if (shouldRefresh) {
+      event.respondWith(
+        fetch(request)
+          .then((response) => {
+            if (response.ok) {
+              const copy = response.clone();
+              caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+            }
+
+            return response;
+          })
+          .catch(() => caches.match(request)),
+      );
+      return;
+    }
+
     event.respondWith(
       caches.match(request).then((cached) => {
         if (cached) {

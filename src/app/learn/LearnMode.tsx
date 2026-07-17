@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { HexagramLines } from "@/components/hexagram/HexagramLines";
 import { InkLine } from "@/components/hexagram/InkLine";
+import { trigramCopy } from "../../../data/trigram-copy";
 import { trigrams, trigramsById, type Trigram } from "../../../data/trigrams";
 import {
   getChangedLines,
@@ -18,52 +19,6 @@ import {
 
 type RelationId = "invert" | "reverse" | "mutual";
 type MovingDemo = "old_yin" | "old_yang";
-
-const trigramCopy: Record<
-  string,
-  { imageZh: string; keywordsZh: string[]; hint: string }
-> = {
-  qian: {
-    imageZh: "天",
-    keywordsZh: ["主动", "刚健", "创始"],
-    hint: "三条阳线，像持续向上的力量。",
-  },
-  dui: {
-    imageZh: "泽",
-    keywordsZh: ["开放", "悦纳", "沟通"],
-    hint: "上爻打开，像水面有出口。",
-  },
-  li: {
-    imageZh: "火",
-    keywordsZh: ["明亮", "依附", "辨明"],
-    hint: "中间为阴，像火依附于物而明。",
-  },
-  zhen: {
-    imageZh: "雷",
-    keywordsZh: ["启动", "震动", "开始"],
-    hint: "初爻为阳，像力量从下方发动。",
-  },
-  xun: {
-    imageZh: "风",
-    keywordsZh: ["进入", "柔顺", "渗透"],
-    hint: "初爻为阴，像风从细处进入。",
-  },
-  kan: {
-    imageZh: "水",
-    keywordsZh: ["险", "深", "练习"],
-    hint: "中爻为阳，像水中有坚实的流向。",
-  },
-  gen: {
-    imageZh: "山",
-    keywordsZh: ["止", "边界", "稳定"],
-    hint: "上爻为阳，像山顶止住上行。",
-  },
-  kun: {
-    imageZh: "地",
-    keywordsZh: ["承载", "顺势", "包容"],
-    hint: "三条阴线，像大地承接万物。",
-  },
-};
 
 const positionNotes = [
   {

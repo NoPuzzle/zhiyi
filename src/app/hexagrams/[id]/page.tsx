@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { HexagramLines } from "@/components/hexagram/HexagramLines";
+import { trigramCopy } from "../../../../data/trigram-copy";
 import { hexagrams, hexagramsById, type Hexagram } from "../../../../data/hexagrams";
 import { trigramsById, type Trigram } from "../../../../data/trigrams";
 import {
@@ -11,7 +12,6 @@ import {
   reverseHexagram,
   type HexagramLines as HexagramLineTuple,
 } from "../../../../lib/hexagram";
-import { trigramCopy } from "../trigram-copy";
 
 type DetailParams = {
   params: Promise<{ id: string }>;
@@ -109,7 +109,7 @@ function buildSections(hexagram: Hexagram, upper?: Trigram, lower?: Trigram) {
     },
     {
       title: "行",
-      body: hexagram.reflectionQuestions?.[2] ?? fallbackText.action,
+      body: hexagram.smallAction ?? fallbackText.action,
     },
   ];
 }

@@ -12,9 +12,16 @@ export function ServiceWorkerRegistration() {
     }
 
     const register = () => {
-      navigator.serviceWorker.register("/sw.js").catch(() => {
-        // Registration failure should not block the app.
-      });
+      const version = process.env.NEXT_PUBLIC_APP_VERSION ?? "dev";
+
+      navigator.serviceWorker
+        .register(`/sw.js?v=${encodeURIComponent(version)}`, {
+          updateViaCache: "none",
+        })
+        .then((registration) => registration.update())
+        .catch(() => {
+          // Registration failure should not block the app.
+        });
     };
 
     if (document.readyState === "complete") {

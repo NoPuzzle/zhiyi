@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { HexagramLines } from "@/components/hexagram/HexagramLines";
+import { trigramCopy } from "../../../data/trigram-copy";
 import type { Hexagram } from "../../../data/hexagrams";
 import { type Trigram, trigramsById } from "../../../data/trigrams";
-import { trigramCopy } from "./trigram-copy";
+import { matchesHexagramSearch } from "../../../lib/search";
 
 type HexagramBrowserProps = {
   hexagrams: Hexagram[];
@@ -16,40 +17,19 @@ function trigramName(id: string) {
   return trigramsById.get(id)?.chineseName ?? id;
 }
 
-function normalizeSearch(value: string) {
-  return value.trim().toLowerCase();
-}
-
-function matchesSearch(hexagram: Hexagram, query: string) {
-  if (!query) {
-    return true;
-  }
-
-  const fields = [
-    hexagram.chineseName,
-    hexagram.name,
-    hexagram.id.toString(),
-    ...hexagram.keywords,
-  ];
-
-  return fields.some((field) => field.toLowerCase().includes(query));
-}
-
 export function HexagramBrowser({ hexagrams, trigrams }: HexagramBrowserProps) {
   const [search, setSearch] = useState("");
   const [upperTrigramId, setUpperTrigramId] = useState("all");
   const [lowerTrigramId, setLowerTrigramId] = useState("all");
 
   const filteredHexagrams = useMemo(() => {
-    const query = normalizeSearch(search);
-
     return hexagrams.filter((hexagram) => {
       const upperMatches =
         upperTrigramId === "all" || hexagram.upperTrigramId === upperTrigramId;
       const lowerMatches =
         lowerTrigramId === "all" || hexagram.lowerTrigramId === lowerTrigramId;
 
-      return upperMatches && lowerMatches && matchesSearch(hexagram, query);
+      return upperMatches && lowerMatches && matchesHexagramSearch(hexagram, search);
     });
   }, [hexagrams, lowerTrigramId, search, upperTrigramId]);
 
