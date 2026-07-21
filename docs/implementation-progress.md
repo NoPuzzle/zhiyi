@@ -1,6 +1,6 @@
 # 知易 / Zhiyi Implementation Progress
 
-Last updated: 2026-07-17
+Last updated: 2026-07-21
 
 ## Product Goal
 
@@ -38,7 +38,8 @@ qualified professional support.
 - Routes implemented: `/`, `/learn`, `/ask`, `/hexagrams`,
   `/hexagrams/[id]`, and `/offline`.
 - All 8 trigrams and structural data for all 64 hexagrams are present.
-- Detailed draft content currently exists for 乾、坤、屯.
+- Detailed draft content exists for 乾、坤、屯. Reviewed minimum base content
+  exists for hexagrams 4-10.
 - SVG hexagram rendering, changing-line motion, PWA manifest, and a basic
   service worker are present.
 
@@ -54,6 +55,8 @@ qualified professional support.
 | P1 | Improve PWA cache update behavior | Complete |
 | P2 | Normalize pinyin search and centralize trigram copy | Complete |
 | P2 | Add reviewed base content for hexagrams 4-10 | Complete |
+| P1 | Make clean npm installation reproducible across development Macs | Complete |
+| P1 | Add a Mac mini Codex handoff prompt | Complete |
 | P2 | Continue content in reviewed batches through hexagram 64 | Planned |
 
 ## Content Expansion Strategy
@@ -103,6 +106,15 @@ Minimum base content means:
 - Mobile browser verification confirmed compact pinyin search, high-stakes
   safety copy, concrete small-action copy, and no horizontal overflow at 390px.
 
+### 2026-07-21 Mac mini handoff
+
+- Confirmed that the GitHub SSH clone succeeds on the Mac mini.
+- Reproduced the Mac mini `npm ci` failure with the newer npm resolver.
+- Regenerated the lockfile so its optional Tailwind WASM dependencies are
+  complete and clean installs work with npm 11.18.
+- Added `docs/handoff-prompt.md` for continuing the existing repository in a
+  new Codex task on the Mac mini.
+
 ## Known Follow-ups
 
 - Hexagrams 11-64 still need reviewed base content.
@@ -110,9 +122,8 @@ Minimum base content means:
   current Next.js dependency chain. npm only proposes a breaking Next.js
   downgrade, so `npm audit fix --force` must not be used. Recheck this when a
   compatible Next.js release updates the dependency.
-- Git used the machine-inferred identity `Leo <test@Wololo--Air.local>` for the
-  initial commit. Configure the intended public Git identity before sharing
-  future commits.
+- The initial two commits retain the original machine-inferred author identity.
+  Future commits should use `NoPuzzle <liang.liang@outlook.com.au>`.
 
 ## Definition Of Done For This Stabilization Pass
 
