@@ -33,14 +33,41 @@ describe("hexagram data", () => {
     }
   });
 
-  it("provides base reflective content for the first content batch", () => {
-    for (let id = 1; id <= 10; id += 1) {
+  it("provides complete base content for published content batches", () => {
+    for (let id = 1; id <= 20; id += 1) {
       const hexagram = hexagramsById.get(id);
 
-      expect(hexagram?.coreMeaning).toBeTruthy();
-      expect(hexagram?.judgmentPlain).toBeTruthy();
-      expect(hexagram?.reflectionQuestions).toHaveLength(3);
-      expect(hexagram?.smallAction).toBeTruthy();
+      expect(hexagram, `hexagram ${id} should exist`).toBeDefined();
+      expect(
+        hexagram?.coreMeaning?.trim(),
+        `hexagram ${id} coreMeaning`,
+      ).toBeTruthy();
+      expect(
+        hexagram?.judgmentPlain?.trim(),
+        `hexagram ${id} judgmentPlain`,
+      ).toBeTruthy();
+      expect(
+        hexagram?.keywords.length,
+        `hexagram ${id} keywords`,
+      ).toBeGreaterThan(0);
+      expect(
+        hexagram?.keywords.every((keyword) => keyword.trim().length > 0),
+        `hexagram ${id} keywords should be non-empty`,
+      ).toBe(true);
+      expect(
+        hexagram?.reflectionQuestions,
+        `hexagram ${id} reflectionQuestions`,
+      ).toHaveLength(3);
+      expect(
+        hexagram?.reflectionQuestions?.every(
+          (question) => question.trim().length > 0,
+        ),
+        `hexagram ${id} reflectionQuestions should be non-empty`,
+      ).toBe(true);
+      expect(
+        hexagram?.smallAction?.trim(),
+        `hexagram ${id} smallAction`,
+      ).toBeTruthy();
     }
   });
 });
