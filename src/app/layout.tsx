@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { Viewport } from "next";
 import Link from "next/link";
 import { ServiceWorkerRegistration } from "@/components/pwa/ServiceWorkerRegistration";
+import { withBasePath } from "@/lib/base-path";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -11,22 +12,22 @@ export const metadata: Metadata = {
     template: "%s · 知易",
   },
   description: "以象入易，以问观心",
-  manifest: "/manifest.webmanifest",
+  manifest: withBasePath("/manifest.webmanifest"),
   icons: {
     icon: [
       {
-        url: "/icons/zhiyi-icon-192.png",
+        url: withBasePath("/icons/zhiyi-icon-192.png"),
         sizes: "192x192",
         type: "image/png",
       },
       {
-        url: "/icons/zhiyi-icon.svg",
+        url: withBasePath("/icons/zhiyi-icon.svg"),
         type: "image/svg+xml",
       },
     ],
     apple: [
       {
-        url: "/icons/apple-touch-icon.png",
+        url: withBasePath("/icons/apple-touch-icon.png"),
         sizes: "180x180",
         type: "image/png",
       },

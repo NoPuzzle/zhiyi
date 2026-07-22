@@ -1,6 +1,6 @@
 # 知易 / Zhiyi Roadmap
 
-Last updated: 2026-07-17
+Last updated: 2026-07-22
 
 ## Roadmap Principles
 
@@ -24,6 +24,7 @@ Last updated: 2026-07-17
 - Six-part reflective interpretation structure.
 - Hexagram browser, search, trigram filters, and 64 detail routes.
 - PWA manifest, icons, service worker, and offline fallback.
+- GitHub Pages static export and automatic deployment workflow.
 - Initial Git baseline and executable domain tests.
 
 ## Current Stabilization Pass
@@ -50,10 +51,12 @@ Status: complete for base content.
 
 ### Batch 2: Hexagrams 11-20
 
-Status: planned.
+Status: complete for base content.
 
-- Add `judgmentPlain`, `coreMeaning`, `reflectionQuestions`, and `smallAction`.
-- Review wording for non-deterministic tone and practical usefulness.
+- Added original `judgmentPlain`, `coreMeaning`, `reflectionQuestions`, and
+  `smallAction` content while retaining concise keywords.
+- Automated completeness coverage now checks all required fields for
+  hexagrams 1-20.
 
 ### Batch 3: Hexagrams 21-40
 
@@ -82,7 +85,7 @@ Status: later.
 
 ### V0.2 Content Review Tools
 
-- Add a local content completeness check.
+- Extend the local content completeness test as each batch is published.
 - Add a data validation script for required fields and duplicate content.
 - Define a lightweight editorial review status per hexagram.
 
@@ -108,6 +111,5 @@ Require explicit approval:
 
 ## Next Recommended Task
 
-Complete and review base content for hexagrams 11-20, then add a content
-validation test that reports which hexagrams still lack `coreMeaning`,
-`reflectionQuestions`, and `smallAction`.
+Complete and review base content for hexagrams 21-40, then extend the
+completeness test through hexagram 40.

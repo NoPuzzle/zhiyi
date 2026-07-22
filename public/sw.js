@@ -1,19 +1,22 @@
-const CACHE_VERSION = new URL(self.location.href).searchParams.get("v") ?? "dev";
-const CACHE_NAME = `zhiyi-static-${CACHE_VERSION}`;
-const OFFLINE_URL = "/offline";
+const SERVICE_WORKER_URL = new URL(self.location.href);
+const CACHE_VERSION = SERVICE_WORKER_URL.searchParams.get("v") ?? "dev";
+const BASE_PATH = SERVICE_WORKER_URL.pathname.replace(/\/sw\.js$/, "");
+const withBasePath = (path) => `${BASE_PATH}${path}`;
+const CACHE_NAME = `zhiyi-static-${BASE_PATH || "root"}-${CACHE_VERSION}`;
+const OFFLINE_URL = withBasePath("/offline/");
 const CORE_ASSETS = [
-  "/",
+  withBasePath("/"),
   OFFLINE_URL,
-  "/learn",
-  "/ask",
-  "/hexagrams",
-  "/manifest.webmanifest",
-  "/icons/apple-touch-icon.png",
-  "/icons/zhiyi-icon-192.png",
-  "/icons/zhiyi-icon-512.png",
-  "/icons/zhiyi-icon.svg",
-  "/icons/zhiyi-maskable-512.png",
-  "/icons/zhiyi-maskable.svg",
+  withBasePath("/learn/"),
+  withBasePath("/ask/"),
+  withBasePath("/hexagrams/"),
+  withBasePath("/manifest.webmanifest"),
+  withBasePath("/icons/apple-touch-icon.png"),
+  withBasePath("/icons/zhiyi-icon-192.png"),
+  withBasePath("/icons/zhiyi-icon-512.png"),
+  withBasePath("/icons/zhiyi-icon.svg"),
+  withBasePath("/icons/zhiyi-maskable-512.png"),
+  withBasePath("/icons/zhiyi-maskable.svg"),
 ];
 
 self.addEventListener("install", (event) => {
@@ -66,8 +69,8 @@ self.addEventListener("fetch", (event) => {
 
   if (url.origin === self.location.origin) {
     const shouldRefresh =
-      url.pathname === "/manifest.webmanifest" ||
-      url.pathname.startsWith("/icons/");
+      url.pathname === withBasePath("/manifest.webmanifest") ||
+      url.pathname.startsWith(withBasePath("/icons/"));
 
     if (shouldRefresh) {
       event.respondWith(

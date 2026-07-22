@@ -365,7 +365,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "泰",
     upperTrigramId: "kun",
     lowerTrigramId: "qian",
+    judgmentPlain:
+      "泰象呈现天地之气相交、上下能够沟通。一个可能的读法是：顺畅来自持续往来与共同维护，也要留意通达之中已经出现的细小变化。",
+    coreMeaning:
+      "通达、交流、协同维护。泰提醒人在局面顺利时继续疏通关系、分配资源，并为变化预留余地。",
     keywords: ["通泰", "交流", "平衡"],
+    reflectionQuestions: [
+      "当前哪些关系或环节正在顺畅配合？",
+      "这份顺利依靠什么条件维持？",
+      "哪个细小变化值得现在就留意？",
+    ],
+    smallAction: "与一位关键协作者做一次十分钟确认，明确当前进展、一个隐患和下一步。",
   }),
   defineHexagram({
     id: 12,
@@ -373,7 +383,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "否",
     upperTrigramId: "qian",
     lowerTrigramId: "kun",
+    judgmentPlain:
+      "否象呈现上下分离、信息与力量难以相通。一个可能的读法是：暂时不要用更大力气强推，先守住原则，辨认真正堵塞的位置。",
+    coreMeaning:
+      "闭塞、失联、守正待变。否提醒人在沟通无效时减少无谓消耗，同时保留重新连接的条件。",
     keywords: ["闭塞", "隔阂", "守正"],
+    reflectionQuestions: [
+      "阻碍来自信息不通、目标不同，还是信任不足？",
+      "哪些原则需要守住，哪些做法可以暂停？",
+      "什么迹象会说明局面开始松动？",
+    ],
+    smallAction: "选出一个堵塞环节，用一句话分别写清事实、影响和希望对方确认的事项。",
   }),
   defineHexagram({
     id: 13,
@@ -381,7 +401,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "同人",
     upperTrigramId: "qian",
     lowerTrigramId: "li",
+    judgmentPlain:
+      "同人象呈现光明在天之下，人因可见的共同方向而聚合。一个可能的读法是：合作宜建立在公开目标与真实差异上，而非只依靠熟悉或迎合。",
+    coreMeaning:
+      "求同、开放协作、容纳差异。同人提醒人把共同目标说清楚，也让不同位置的人能够参与。",
     keywords: ["同人", "共同", "开放"],
+    reflectionQuestions: [
+      "大家真正共享的目标是什么？",
+      "哪些差异需要被坦诚表达而不是掩盖？",
+      "谁尚未被纳入这次沟通或协作？",
+    ],
+    smallAction: "写下一句可检验的共同目标，请一位协作者确认或修正这句话。",
   }),
   defineHexagram({
     id: 14,
@@ -389,7 +419,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "大有",
     upperTrigramId: "li",
     lowerTrigramId: "qian",
+    judgmentPlain:
+      "大有象呈现光明照见充足的力量与资源。一个可能的读法是：拥有越多，越需要清楚取舍、合宜使用，并承担资源带来的责任。",
+    coreMeaning:
+      "丰盛、能见度、善用所有。大有提醒人把能力与资源用于重要之处，不让占有遮住责任。",
     keywords: ["丰盛", "所有", "责任"],
+    reflectionQuestions: [
+      "你现在实际拥有而尚未善用的资源是什么？",
+      "哪些成果需要与他人共享或归功？",
+      "当前最值得投入资源的重点是哪一项？",
+    ],
+    smallAction: "列出三项现有资源，今天把其中一项明确分配给当前最高优先事项。",
   }),
   defineHexagram({
     id: 15,
@@ -397,7 +437,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "谦",
     upperTrigramId: "kun",
     lowerTrigramId: "gen",
+    judgmentPlain:
+      "谦象呈现高山藏于地中，有所成而不必处处显露。一个可能的读法是：准确看待自己的长短，给他人和事实留下位置，行动会更稳妥。",
+    coreMeaning:
+      "谦逊、平衡、实事求是。谦不是否定自己，而是不过度抬高或压低自己，让贡献与责任相称。",
     keywords: ["谦逊", "节制", "低处"],
+    reflectionQuestions: [
+      "你是否高估或低估了自己的作用？",
+      "哪一项成果需要承认他人的贡献？",
+      "什么反馈能够帮助你校准判断？",
+    ],
+    smallAction: "向一位了解情况的人询问一条具体反馈，并据此调整一个细节。",
   }),
   defineHexagram({
     id: 16,
@@ -405,7 +455,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "豫",
     upperTrigramId: "zhen",
     lowerTrigramId: "kun",
+    judgmentPlain:
+      "豫象呈现雷出地上，力量被唤起并形成响应。一个可能的读法是：热情可以带动行动，但需要准备、节奏和真实条件来承接。",
+    coreMeaning:
+      "振奋、预备、形成动能。豫提醒人让期待落到安排上，也留意情绪高涨是否遮住实际限制。",
     keywords: ["豫乐", "准备", "响应"],
+    reflectionQuestions: [
+      "这份期待由真实进展还是想象推动？",
+      "要承接当前热情，还缺少什么准备？",
+      "怎样的节奏能让动力持续而不过度消耗？",
+    ],
+    smallAction: "把最想推进的事项拆成一个二十分钟任务，并为它安排今天的具体时段。",
   }),
   defineHexagram({
     id: 17,
@@ -413,7 +473,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "随",
     upperTrigramId: "dui",
     lowerTrigramId: "zhen",
+    judgmentPlain:
+      "随象呈现行动随情势而调整，也在回应关系与时机。一个可能的读法是：跟随并非失去主见，而是在守住核心原则时灵活改变方法。",
+    coreMeaning:
+      "随顺、响应、适时调整。随提醒人分辨主动适应与被动漂移，确认自己为何跟随。",
     keywords: ["随顺", "跟随", "调整"],
+    reflectionQuestions: [
+      "你正在跟随谁、什么趋势或哪种期待？",
+      "哪些原则不应因适应环境而放弃？",
+      "目前需要调整的是方向、方法，还是节奏？",
+    ],
+    smallAction: "在回应下一项外部请求前，先写下一条接受或拒绝它的判断标准。",
   }),
   defineHexagram({
     id: 18,
@@ -421,7 +491,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "蛊",
     upperTrigramId: "gen",
     lowerTrigramId: "xun",
+    judgmentPlain:
+      "蛊象呈现积久的问题需要整理与修复。一个可能的读法是：与其只处理表面症状，不如追溯形成过程，承担能够承担的修正工作。",
+    coreMeaning:
+      "整治积弊、追溯原因、重新建立秩序。蛊提醒人修复问题而非归咎个人，并防止旧模式再次发生。",
     keywords: ["修弊", "更新", "清理"],
+    reflectionQuestions: [
+      "眼前问题是由哪些长期忽略累积而成？",
+      "哪些旧做法已经不再适合现在？",
+      "修复之后需要建立什么新规则？",
+    ],
+    smallAction: "选一个反复出现的小问题，记录它的一个成因，并完成一次对应的清理或修正。",
   }),
   defineHexagram({
     id: 19,
@@ -429,7 +509,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "临",
     upperTrigramId: "kun",
     lowerTrigramId: "dui",
+    judgmentPlain:
+      "临象呈现力量逐渐靠近，新的责任与影响也随之增加。一个可能的读法是：主动接近真实情况，以关照和清楚边界带领成长。",
+    coreMeaning:
+      "临近、关照、增长中的责任。临提醒人在机会展开时亲自了解现场，也为阶段变化做好准备。",
     keywords: ["临近", "关照", "增长"],
+    reflectionQuestions: [
+      "什么人或情况需要你更直接地靠近了解？",
+      "影响力增加后，你需要承担什么责任？",
+      "当前的增长可能带来哪些新边界？",
+    ],
+    smallAction: "用十五分钟了解一位相关者的实际处境，只记录一个需求和一个可支持的下一步。",
   }),
   defineHexagram({
     id: 20,
@@ -437,7 +527,17 @@ export const hexagrams: Hexagram[] = [
     chineseName: "观",
     upperTrigramId: "xun",
     lowerTrigramId: "kun",
+    judgmentPlain:
+      "观象呈现风行地上，细致观察使整体形势逐渐显明。一个可能的读法是：行动之前先看事实、关系和自身位置，也留意自己的表现如何影响他人。",
+    coreMeaning:
+      "观察、反观、以身示范。观提醒人放慢判断，从多个位置看见模式，再决定如何回应。",
     keywords: ["观察", "观照", "示范"],
+    reflectionQuestions: [
+      "你目前看到的是事实，还是已经加入了解释？",
+      "换一个位置观察，会出现什么不同信息？",
+      "你的行为正在向他人示范什么？",
+    ],
+    smallAction: "安静观察当前流程十分钟，不急于干预，并写下三个事实与一个待验证的判断。",
   }),
   defineHexagram({
     id: 21,

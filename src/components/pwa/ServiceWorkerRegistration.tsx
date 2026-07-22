@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { withBasePath } from "@/lib/base-path";
 
 export function ServiceWorkerRegistration() {
   useEffect(() => {
@@ -15,7 +16,8 @@ export function ServiceWorkerRegistration() {
       const version = process.env.NEXT_PUBLIC_APP_VERSION ?? "dev";
 
       navigator.serviceWorker
-        .register(`/sw.js?v=${encodeURIComponent(version)}`, {
+        .register(withBasePath(`/sw.js?v=${encodeURIComponent(version)}`), {
+          scope: withBasePath("/"),
           updateViaCache: "none",
         })
         .then((registration) => registration.update())
