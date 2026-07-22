@@ -60,6 +60,7 @@ qualified professional support.
 | P1 | Add a Mac mini Codex handoff prompt | Complete |
 | P1 | Add a cross-user and cross-device Git collaboration protocol | Complete |
 | P2 | Design a distinctive ink-wash project README | Complete |
+| P1 | Configure GitHub Pages static export and deployment | Complete in code; activation pending |
 | P2 | Continue content in reviewed batches through hexagram 64 | Planned |
 
 ## Content Expansion Strategy
@@ -151,6 +152,23 @@ Minimum base content means:
   hexagram visual system without external image dependencies.
 - SVG validation, `npm run lint`, `npm test`, and `npm run build` passed; the
   build generated 73 static pages.
+
+### 2026-07-22 GitHub Pages configuration
+
+- Added a GitHub Actions workflow that builds and deploys `main` with the
+  official Pages artifact and deployment actions.
+- Added conditional static export support without changing the normal local
+  server build.
+- Made manifest, icons, service worker scope, offline caching, and public asset
+  URLs compatible with the `/zhiyi` project-site base path.
+- Added base-path unit coverage and a deployment runbook.
+- Workflow YAML validation, `npm run lint`, all 19 tests, the normal production
+  build, and the GitHub Pages static build passed.
+- Local `/zhiyi/` HTTP checks returned 200 for the main routes, CSS, manifest,
+  icon, service worker, offline page, and hexagram 64 detail page.
+- Repository Pages activation and the first public deployment remain pending
+  until the workflow is merged into `main` and Pages Source is set to GitHub
+  Actions.
 
 ## Known Follow-ups
 

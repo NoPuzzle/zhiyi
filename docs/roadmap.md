@@ -1,6 +1,6 @@
 # 知易 / Zhiyi Roadmap
 
-Last updated: 2026-07-21
+Last updated: 2026-07-22
 
 ## Roadmap Principles
 
@@ -24,6 +24,7 @@ Last updated: 2026-07-21
 - Six-part reflective interpretation structure.
 - Hexagram browser, search, trigram filters, and 64 detail routes.
 - PWA manifest, icons, service worker, and offline fallback.
+- GitHub Pages static export and automatic deployment workflow.
 - Initial Git baseline and executable domain tests.
 
 ## Current Stabilization Pass

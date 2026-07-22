@@ -49,7 +49,7 @@
 | 六十四卦结构数据 | 64 / 64 |
 | 基础反思内容 | 卦 1–20 |
 | 详细爻辞草稿 | 乾、坤、屯 |
-| 自动化测试 | 16 项 |
+| 自动化测试 | 19 项 |
 | 静态页面构建 | 73 页 |
 | 服务端用户数据 | 无 |
 
@@ -89,6 +89,18 @@ npm run build    # 生产构建
 
 > [!WARNING]
 > 不要运行 `npm audit fix --force`；当前依赖告警没有兼容的非破坏性自动修复。
+
+## 免费公网部署
+
+项目已配置 GitHub Actions，在 `main` 更新后自动生成静态站点并部署到：
+
+```text
+https://nopuzzle.github.io/zhiyi/
+```
+
+第一次使用需要在仓库 **Settings → Pages** 中把 Source 设为 **GitHub Actions**。
+GitHub Free 要求 Pages 源仓库为公开仓库。完整发布与排错步骤见
+[GitHub Pages 部署说明](docs/deployment.md)。
 
 ## 路由
 
@@ -137,6 +149,7 @@ git fetch --prune origin
 - [数据模式](docs/data-schema.md)
 - [路线图](docs/roadmap.md)
 - [实施进度](docs/implementation-progress.md)
+- [GitHub Pages 部署说明](docs/deployment.md)
 - [跨用户协作协议](CONTRIBUTING.md)
 - [Mac mini Codex 交接提示](docs/handoff-prompt.md)
 
