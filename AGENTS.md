@@ -1,5 +1,24 @@
 # AGENTS.md
 
+## Required collaboration startup
+
+Before every task, read `CONTRIBUTING.md` and follow its cross-user and
+cross-device Git protocol. Then read the product documents listed there.
+
+Before editing:
+
+1. Report the current branch, HEAD, working-tree state, Git identity, Node/npm
+   versions, remote sync state, and baseline verification result.
+2. If the working tree is not clean, identify the owner and purpose of every
+   existing change. Preserve unrelated changes and stop if ownership is
+   unclear.
+3. Work on a task branch by default. Do not implement new work directly on
+   `main`, rewrite shared history, or force-push.
+4. Do not commit, push, merge, or create a pull request unless the current task
+   explicitly authorizes that external action.
+5. At handoff, use the format in `CONTRIBUTING.md` and update
+   `docs/implementation-progress.md` when project status materially changes.
+
 ## Project
 
 This repository implements “知易 / Zhiyi”, a mobile-first Yi Jing / Zhouyi visual learning and reflection web app.

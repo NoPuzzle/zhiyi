@@ -20,13 +20,15 @@ Communication:
 Repository rules:
 1. Continue the existing Git clone. Do not run create-next-app and do not
    scaffold a replacement project.
-2. Read AGENTS.md first, then read:
+2. Read AGENTS.md and CONTRIBUTING.md first, then read:
    - docs/product-brief.md
    - docs/design-system.md
    - docs/data-schema.md
    - docs/roadmap.md
    - docs/implementation-progress.md
-3. Inspect the current Git status before editing. Preserve unrelated changes.
+3. Follow the branch, preflight, dirty-worktree, and handoff rules in
+   CONTRIBUTING.md. Inspect the current Git status before editing and preserve
+   unrelated changes.
 4. Use small, reviewable changes and update documentation when behavior or
    project status changes.
 5. Before completing a coding task, run npm run lint, npm test, and npm run
@@ -62,15 +64,21 @@ Current implementation:
 - Routes: /, /learn, /ask, /hexagrams, /hexagrams/[id], and /offline.
 - All 8 trigrams and structural records for all 64 hexagrams are present.
 - Detailed draft content exists for 乾、坤、屯; minimum reviewed content exists
-  for hexagrams 4-10.
+  for hexagrams 4-10, and base content drafts exist for hexagrams 11-20.
 - Ask mode, visual learning mode, browser/detail pages, SVG hexagram rendering,
   moving-line animation, safety notes, search normalization, manifest, and a
   basic service worker are implemented.
 - No server-side user data is stored.
 
 Start by running:
-git status --short
-git pull --ff-only
+git status --short --branch
+git branch --show-current
+git config --get user.name
+git config --get user.email
+git fetch --prune origin
+
+Only when the working tree is clean, update main and create or continue the
+assigned task branch before running:
 node -v
 npm -v
 npm ci
@@ -83,15 +91,16 @@ npm audit fix --force; the known audit warning currently has no compatible
 non-breaking automated fix.
 
 After the baseline passes, the next planned implementation task is:
-1. Add original, concise base content for hexagrams 11-20.
+1. Add original, concise base content for hexagrams 21-40.
 2. For each record, provide coreMeaning, judgmentPlain, reflectionQuestions,
    keywords, and a concrete smallAction.
 3. Keep language suggestive, practical, and non-deterministic.
-4. Add an automated completeness test for required base-content fields.
+4. Extend the automated completeness test through hexagram 40.
 5. Update docs/implementation-progress.md and run all verification commands.
 
-Before editing, report the current Git branch, working-tree state, Node/npm
-versions, and whether the clean baseline checks pass.
+Before editing, report the current Git branch, HEAD, working-tree state, Git
+identity, remote sync state, Node/npm versions, and whether the clean baseline
+checks pass.
 ```
 
 ## Mac mini Setup

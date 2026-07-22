@@ -39,7 +39,7 @@ qualified professional support.
   `/hexagrams/[id]`, and `/offline`.
 - All 8 trigrams and structural data for all 64 hexagrams are present.
 - Detailed draft content exists for 乾、坤、屯. Reviewed minimum base content
-  exists for hexagrams 4-10.
+  exists for hexagrams 4-10, with original base content drafts for 11-20.
 - SVG hexagram rendering, changing-line motion, PWA manifest, and a basic
   service worker are present.
 
@@ -55,8 +55,10 @@ qualified professional support.
 | P1 | Improve PWA cache update behavior | Complete |
 | P2 | Normalize pinyin search and centralize trigram copy | Complete |
 | P2 | Add reviewed base content for hexagrams 4-10 | Complete |
+| P2 | Add original base content and completeness coverage for hexagrams 11-20 | Complete |
 | P1 | Make clean npm installation reproducible across development Macs | Complete |
 | P1 | Add a Mac mini Codex handoff prompt | Complete |
+| P1 | Add a cross-user and cross-device Git collaboration protocol | Complete |
 | P2 | Continue content in reviewed batches through hexagram 64 | Planned |
 
 ## Content Expansion Strategy
@@ -64,8 +66,8 @@ qualified professional support.
 Content will be expanded in reviewable batches instead of generating all
 remaining interpretations at once:
 
-1. Hexagrams 4-10: base meaning, reflection prompts, and small action.
-2. Hexagrams 11-20: same minimum content fields.
+1. Hexagrams 4-10: base meaning, reflection prompts, and small action. Complete.
+2. Hexagrams 11-20: same minimum content fields. Complete.
 3. Hexagrams 21-40: same minimum content fields.
 4. Hexagrams 41-64: same minimum content fields.
 5. Add classical text and line-level drafts only after source and wording
@@ -75,6 +77,7 @@ Minimum base content means:
 
 - `coreMeaning`
 - original short `judgmentPlain`
+- non-empty `keywords`
 - `reflectionQuestions`
 - `smallAction`
 
@@ -115,9 +118,33 @@ Minimum base content means:
 - Added `docs/handoff-prompt.md` for continuing the existing repository in a
   new Codex task on the Mac mini.
 
+### 2026-07-21 content batch 2
+
+- Added original, non-deterministic base content for hexagrams 11-20.
+- Added three reflection questions and one concrete small action to each
+  record.
+- Extended the completeness test to check all required base-content fields,
+  including non-empty keywords, for hexagrams 1-20.
+- `npm run lint` passed.
+- `npm test` passed with 16 tests across 3 files.
+- `npm run build` passed and generated 73 static pages.
+
+### 2026-07-22 collaboration protocol
+
+- Added a root README with a visible collaboration and local-development entry
+  point.
+- Added `CONTRIBUTING.md` with preflight, branch ownership, dirty-worktree,
+  verification, Git identity, SSH, push, and handoff rules for humans and
+  Codex.
+- Made the collaboration startup protocol mandatory in `AGENTS.md` and linked
+  it from the Mac mini handoff prompt.
+- `npm run lint`, `npm test`, and `npm run build` passed; the build generated
+  73 static pages.
+
 ## Known Follow-ups
 
-- Hexagrams 11-64 still need reviewed base content.
+- Hexagrams 21-64 still need base content; hexagrams 11-20 need editorial
+  review alongside the existing drafts.
 - `npm audit --omit=dev` reports two moderate PostCSS advisories through the
   current Next.js dependency chain. npm only proposes a breaking Next.js
   downgrade, so `npm audit fix --force` must not be used. Recheck this when a
