@@ -1,6 +1,6 @@
 # 知易 / Zhiyi Implementation Progress
 
-Last updated: 2026-07-21
+Last updated: 2026-07-22
 
 ## Product Goal
 
@@ -59,6 +59,7 @@ qualified professional support.
 | P1 | Make clean npm installation reproducible across development Macs | Complete |
 | P1 | Add a Mac mini Codex handoff prompt | Complete |
 | P1 | Add a cross-user and cross-device Git collaboration protocol | Complete |
+| P2 | Design a distinctive ink-wash project README | Complete |
 | P2 | Continue content in reviewed batches through hexagram 64 | Planned |
 
 ## Content Expansion Strategy
@@ -140,6 +141,16 @@ Minimum base content means:
   it from the Mac mini handoff prompt.
 - `npm run lint`, `npm test`, and `npm run build` passed; the build generated
   73 static pages.
+
+### 2026-07-22 README identity
+
+- Redesigned the root README around the product's quiet-study-room positioning,
+  six-part reflection path, current feature snapshot, safety boundaries, and
+  collaboration entry points.
+- Added an original local SVG hero using the documented rice-paper, ink, and
+  hexagram visual system without external image dependencies.
+- SVG validation, `npm run lint`, `npm test`, and `npm run build` passed; the
+  build generated 73 static pages.
 
 ## Known Follow-ups
 
