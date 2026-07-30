@@ -1,17 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
   <title id="title">知易 / Zhiyi maskable icon</title>
-  <desc id="desc">Maskable rice-paper icon with centered ink hexagram.</desc>
-  <rect width="512" height="512" fill="#F6F0E4"/>
-  <circle cx="256" cy="256" r="220" fill="#ECE2D1" opacity=".55"/>
+  <desc id="desc">Maskable neutral ivory icon with centered ink hexagram.</desc>
+  <rect width="512" height="512" fill="#F3F1EA"/>
+  <circle cx="256" cy="256" r="220" fill="#E8E6DF" opacity=".55"/>
   <g fill="#171512">
-    <rect x="132" y="122" width="248" height="24" rx="12"/>
-    <rect x="132" y="184" width="98" height="24" rx="12"/>
-    <rect x="282" y="184" width="98" height="24" rx="12"/>
-    <rect x="132" y="246" width="248" height="24" rx="12"/>
-    <rect x="132" y="370" width="248" height="24" rx="12"/>
+    <rect x="132" y="96" width="248" height="22" rx="11"/>
+    <rect x="132" y="150" width="98" height="22" rx="11"/>
+    <rect x="282" y="150" width="98" height="22" rx="11"/>
+    <rect x="132" y="204" width="248" height="22" rx="11"/>
+    <rect x="132" y="312" width="248" height="22" rx="11"/>
+    <rect x="132" y="366" width="248" height="22" rx="11"/>
   </g>
   <g fill="#B23A2E">
-    <rect x="132" y="308" width="98" height="24" rx="12"/>
-    <rect x="282" y="308" width="98" height="24" rx="12"/>
+    <rect x="132" y="258" width="98" height="22" rx="11"/>
+    <rect x="282" y="258" width="98" height="22" rx="11"/>
   </g>
 </svg>

@@ -33,11 +33,15 @@ describe("hexagram data", () => {
     }
   });
 
-  it("provides complete base content for published content batches", () => {
-    for (let id = 1; id <= 20; id += 1) {
+  it("provides complete reflective content for every hexagram", () => {
+    for (let id = 1; id <= 64; id += 1) {
       const hexagram = hexagramsById.get(id);
 
       expect(hexagram, `hexagram ${id} should exist`).toBeDefined();
+      expect(
+        hexagram?.imageObservation?.trim(),
+        `hexagram ${id} imageObservation`,
+      ).toBeTruthy();
       expect(
         hexagram?.coreMeaning?.trim(),
         `hexagram ${id} coreMeaning`,
@@ -68,6 +72,23 @@ describe("hexagram data", () => {
         hexagram?.smallAction?.trim(),
         `hexagram ${id} smallAction`,
       ).toBeTruthy();
+      expect(
+        hexagram?.application?.trim(),
+        `hexagram ${id} application`,
+      ).toBeTruthy();
+      expect(
+        hexagram?.lineTexts,
+        `hexagram ${id} lineTexts`,
+      ).toHaveLength(6);
+      expect(
+        hexagram?.lineTexts?.every(
+          (lineText) =>
+            lineText.position.trim().length > 0 &&
+            Boolean(lineText.plain?.trim()) &&
+            Boolean(lineText.reflection?.trim()),
+        ),
+        `hexagram ${id} line content should be complete`,
+      ).toBe(true);
     }
   });
 });

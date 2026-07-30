@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { HexagramLines } from "@/components/hexagram/HexagramLines";
+import { InteractiveHexagramHero } from "@/components/hexagram/InteractiveHexagramHero";
 import { trigramCopy } from "../../../../data/trigram-copy";
 import { hexagrams, hexagramsById, type Hexagram } from "../../../../data/hexagrams";
 import { trigramsById, type Trigram } from "../../../../data/trigrams";
@@ -85,7 +86,7 @@ function buildSections(hexagram: Hexagram, upper?: Trigram, lower?: Trigram) {
     {
       title: "象",
       body:
-        hexagram.coreMeaning ??
+        hexagram.imageObservation ??
         `上卦为${trigramLabel(upper)}，下卦为${trigramLabel(lower)}。${fallbackText.image}`,
     },
     {
@@ -97,11 +98,15 @@ function buildSections(hexagram: Hexagram, upper?: Trigram, lower?: Trigram) {
     },
     {
       title: "理",
-      body: `可从 ${hexagram.keywords.join("、")} 入手，观察时机、位置与关系如何相互影响。这个部分只提供反思线索，不作为确定性判断。`,
+      body:
+        hexagram.coreMeaning ??
+        `可从 ${hexagram.keywords.join("、")} 入手，观察时机、位置与关系如何相互影响。这个部分只提供反思线索，不作为确定性判断。`,
     },
     {
       title: "用",
-      body: "应用时，先把卦象当作整理问题的结构：看哪里需要推进，哪里需要等待，哪里需要重新划清边界。",
+      body:
+        hexagram.application ??
+        "应用时，先把卦象当作整理问题的结构：看哪里需要推进，哪里需要等待，哪里需要重新划清边界。",
     },
     {
       title: "问",
@@ -191,126 +196,100 @@ export default async function HexagramDetailPage({ params }: DetailParams) {
   const mutual = getRelatedHexagram(hexagram.lines, "mutual");
 
   return (
-    <main className="mx-auto w-full max-w-6xl px-5 pb-16 pt-6 sm:px-8">
-      <Link
-        href="/hexagrams"
-        className="ui-copy text-sm text-ink-soft transition hover:text-ink"
-      >
-        返回观象
-      </Link>
+    <main className="mx-auto w-full max-w-6xl pb-16 pt-6">
+      <div className="px-5 sm:px-8">
+        <Link
+          href="/hexagrams"
+          className="ui-copy text-sm text-ink-soft transition hover:text-ink"
+        >
+          返回观象
+        </Link>
+      </div>
 
-      <section className="mt-8 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-        <div className="rounded-sm border border-mist/70 bg-paper-deep/55 px-6 py-10 text-center text-ink">
-          <div className="flex justify-center">
-            <HexagramLines
-              lines={hexagram.lines}
-              animated
-              size="lg"
-              label={`${hexagram.chineseName}卦大图`}
-            />
-          </div>
+      <InteractiveHexagramHero
+        hexagram={hexagram}
+        upperLabel={trigramLabel(upper)}
+        lowerLabel={trigramLabel(lower)}
+      />
 
-          <p className="ui-copy mt-8 text-sm text-vermilion">
-            第 {hexagram.id} 卦
+      <section className="mx-5 mt-12 grid gap-8 sm:mx-8 lg:grid-cols-[10rem_minmax(0,1fr)] lg:gap-14">
+        <aside>
+          <p className="ui-copy text-xs tracking-[0.2em] text-vermilion">
+            观卦六步
           </p>
-          <div className="mt-2 flex items-baseline justify-center gap-3">
-            <h1 className="text-5xl font-semibold text-ink">
-              {hexagram.chineseName}
-            </h1>
-            <span className="text-4xl text-ink-soft" aria-hidden="true">
-              {hexagram.unicodeSymbol}
-            </span>
-          </div>
-          <p className="ui-copy mt-3 text-sm uppercase tracking-[0.18em] text-ink-soft">
-            {hexagram.name}
+          <p className="mt-3 text-sm leading-7 text-ink-soft">
+            从所见之象出发，经由文字与原则，回到一个可以实践的动作。
           </p>
-
-          <div className="ui-copy mt-8 grid grid-cols-2 gap-3 text-left text-sm">
-            <div className="rounded-sm border border-mist/70 bg-paper/55 p-4">
-              <span className="block text-xs uppercase tracking-[0.16em] text-ink-soft/75">
-                上卦
-              </span>
-              <strong className="mt-2 block text-lg text-ink">
-                {trigramLabel(upper)}
-              </strong>
-              <span className="mt-2 block leading-6 text-ink-soft">
-                {upper ? trigramCopy[upper.id].explanation : "资料待补"}
-              </span>
-            </div>
-            <div className="rounded-sm border border-mist/70 bg-paper/55 p-4">
-              <span className="block text-xs uppercase tracking-[0.16em] text-ink-soft/75">
-                下卦
-              </span>
-              <strong className="mt-2 block text-lg text-ink">
-                {trigramLabel(lower)}
-              </strong>
-              <span className="mt-2 block leading-6 text-ink-soft">
-                {lower ? trigramCopy[lower.id].explanation : "资料待补"}
-              </span>
-            </div>
-          </div>
-
-          <div className="mt-5 flex flex-wrap justify-center gap-2">
+          <div className="ui-copy mt-5 flex flex-wrap gap-x-3 gap-y-2 text-xs text-ink-soft">
             {hexagram.keywords.map((keyword) => (
-              <span
-                key={keyword}
-                className="ui-copy rounded-sm border border-mist/70 bg-paper/45 px-2.5 py-1 text-xs text-ink-soft"
-              >
-                {keyword}
-              </span>
+              <span key={keyword}>{keyword}</span>
             ))}
           </div>
-        </div>
+        </aside>
 
-        <div className="space-y-4">
+        <div className="divide-y divide-mist/65 border-y border-mist/65">
           {sections.map((section) => (
             <section
               key={section.title}
-              className="rounded-sm border border-mist/70 bg-paper/75 p-5"
+              className="grid gap-3 py-7 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-7"
             >
-              <h2 className="text-2xl font-semibold text-ink">
+              <h2 className="text-3xl font-semibold text-ink">
                 {section.title}
               </h2>
-              <p className="mt-3 leading-8 text-ink-soft">{section.body}</p>
+              <p className="max-w-3xl leading-8 text-ink-soft">
+                {section.body}
+              </p>
             </section>
           ))}
         </div>
       </section>
 
-      <section className="mt-6 rounded-sm border border-mist/70 bg-paper/75 p-5">
-        <h2 className="text-2xl font-semibold text-ink">六爻</h2>
-        <div className="mt-4 grid gap-3 md:grid-cols-2">
+      <section className="mx-5 mt-14 border-t border-mist/65 pt-8 sm:mx-8">
+        <div className="max-w-2xl">
+          <p className="ui-copy text-xs tracking-[0.2em] text-vermilion">
+            Line by line
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-ink">六爻纵览</h2>
+          <p className="mt-3 leading-7 text-ink-soft">
+            六个位置自下而上展开。这里的白话为本产品原创的位置观察，不替代经典原文或专业研究。
+          </p>
+        </div>
+        <div className="mt-6 divide-y divide-mist/65 border-y border-mist/65">
           {Array.from({ length: 6 }, (_, index) => {
             const lineText = hexagram.lineTexts?.[index];
 
             return (
               <article
                 key={index}
-                className="rounded-sm border border-mist/70 bg-paper-deep/30 p-4"
+                className="grid gap-3 py-6 sm:grid-cols-[5rem_minmax(0,1fr)] sm:gap-8"
               >
-                <h3 className="text-xl font-semibold text-ink">
+                <h3 className="text-2xl font-semibold text-ink">
                   {linePosition(hexagram, index)}
                 </h3>
-                <p className="mt-2 leading-7 text-ink-soft">
-                  {lineText?.original ?? fallbackText.line}
-                </p>
-                {lineText?.plain ? (
-                  <p className="mt-2 leading-7 text-ink-soft">
-                    {lineText.plain}
+                <div>
+                  {lineText?.original ? (
+                    <p className="text-lg leading-8 text-ink">
+                      {lineText.original}
+                    </p>
+                  ) : null}
+                  <p
+                    className={`${lineText?.original ? "mt-2" : ""} leading-7 text-ink-soft`}
+                  >
+                    {lineText?.plain ?? fallbackText.line}
                   </p>
-                ) : null}
-                {lineText?.reflection ? (
-                  <p className="mt-3 text-sm leading-6 text-vermilion">
-                    {lineText.reflection}
-                  </p>
-                ) : null}
+                  {lineText?.reflection ? (
+                    <p className="mt-3 text-sm leading-6 text-vermilion">
+                      {lineText.reflection}
+                    </p>
+                  ) : null}
+                </div>
               </article>
             );
           })}
         </div>
       </section>
 
-      <section className="mt-6">
+      <section className="mx-5 mt-10 sm:mx-8">
         <div className="mb-4">
           <p className="ui-copy text-xs font-medium uppercase tracking-[0.2em] text-vermilion">
             Related

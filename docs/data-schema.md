@@ -61,7 +61,9 @@ export type Hexagram = {
   judgmentOriginal?: string;
   judgmentPlain?: string;
   imageText?: string;
+  imageObservation?: string;
   coreMeaning?: string;
+  application?: string;
   keywords: string[];
   lineTexts?: {
     position: string;
@@ -142,12 +144,13 @@ detection is implemented in `lib/safety.ts`.
   Unicode symbols, and keywords.
 - Hexagrams 1-3 include classical draft text, line text, original plain-language
   explanations, reflection prompts, and small actions.
-- Hexagrams 4-20 include original base explanations, reflection prompts, and
-  small actions.
-- Hexagrams 21-64 remain structural records and will be expanded in reviewed
-  batches.
-- An automated completeness test checks required base-content fields for
-  hexagrams 1-20.
+- All 64 hexagrams include an original image observation, core meaning,
+  application, three reflection prompts, and a concrete small action.
+- All 64 hexagrams include six bottom-to-top product-authored line-position
+  observations and reflection questions. Hexagrams 4-64 intentionally omit
+  classical line text until source review is complete.
+- Automated completeness coverage checks all required content and six line
+  observations for every hexagram.
 
 ## Content Boundaries
 

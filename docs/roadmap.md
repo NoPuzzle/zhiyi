@@ -60,18 +60,24 @@ Status: complete for base content.
 
 ### Batch 3: Hexagrams 21-40
 
-Status: planned with the same minimum content fields.
+Status: complete.
+
+- Added original base content, image observations, applications, and six
+  line-position observations for each hexagram.
 
 ### Batch 4: Hexagrams 41-64
 
-Status: planned with the same minimum content fields.
+Status: complete.
+
+- Added original base content, image observations, applications, and six
+  line-position observations for each hexagram.
 
 ### Classical And Line-Level Review
 
-Status: later.
+Status: product-authored position observations complete; classical review later.
 
 - Verify classical source text.
-- Add line-level plain-language drafts gradually.
+- Review and refine the existing line-position drafts in small batches.
 - Keep source text separate from product-authored interpretation.
 
 ## Engineering Milestones
@@ -111,5 +117,5 @@ Require explicit approval:
 
 ## Next Recommended Task
 
-Complete and review base content for hexagrams 21-40, then extend the
-completeness test through hexagram 40.
+Editorially review the six product-authored line observations per hexagram,
+then add verified classical source text in small, source-recorded batches.

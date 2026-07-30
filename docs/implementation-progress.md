@@ -1,6 +1,6 @@
 # 知易 / Zhiyi Implementation Progress
 
-Last updated: 2026-07-22
+Last updated: 2026-07-31
 
 ## Product Goal
 
@@ -38,17 +38,19 @@ qualified professional support.
 - Routes implemented: `/`, `/learn`, `/ask`, `/hexagrams`,
   `/hexagrams/[id]`, and `/offline`.
 - All 8 trigrams and structural data for all 64 hexagrams are present.
-- Detailed draft content exists for 乾、坤、屯. Reviewed minimum base content
-  exists for hexagrams 4-10, with original base content drafts for 11-20.
-- SVG hexagram rendering, changing-line motion, PWA manifest, and a basic
-  service worker are present.
+- All 64 hexagrams have original base reflection content, image observations,
+  applications, and six bottom-to-top line-position observations.
+- Classical source and line-text drafts remain limited to 乾、坤、屯 pending
+  source review.
+- Interactive line focus, trigram-driven atmospheric backgrounds, changing-line
+  motion, PWA manifest, and a basic service worker are present.
 
 ## Work Plan
 
 | Priority | Work item | Status |
 | --- | --- | --- |
 | P0 | Establish Git baseline | Complete |
-| P0 | Add independent `smallAction` content | Complete for hexagrams 1-10 |
+| P0 | Add independent `smallAction` content | Complete for all 64 hexagrams |
 | P0 | Add high-stakes safety guidance | Complete |
 | P1 | Add automated tests for hexagram transformations | Complete |
 | P1 | Synchronize roadmap and data schema | Complete |
@@ -60,28 +62,32 @@ qualified professional support.
 | P1 | Add a Mac mini Codex handoff prompt | Complete |
 | P1 | Add a cross-user and cross-device Git collaboration protocol | Complete |
 | P2 | Design a distinctive ink-wash project README | Complete |
-| P1 | Configure GitHub Pages static export and deployment | Complete in code; activation pending |
-| P2 | Continue content in reviewed batches through hexagram 64 | Planned |
+| P1 | Configure GitHub Pages static export and deployment | Complete and active |
+| P2 | Continue content in reviewed batches through hexagram 64 | Complete |
+| P1 | Add six original line-position observations to all 64 hexagrams | Complete |
+| P1 | Add interactive detail-page line focus and trigram atmospheres | Complete |
 
 ## Content Expansion Strategy
 
-Content will be expanded in reviewable batches instead of generating all
-remaining interpretations at once:
+Content was expanded in reviewable data modules so each batch remains
+independently editable:
 
 1. Hexagrams 4-10: base meaning, reflection prompts, and small action. Complete.
 2. Hexagrams 11-20: same minimum content fields. Complete.
-3. Hexagrams 21-40: same minimum content fields.
-4. Hexagrams 41-64: same minimum content fields.
-5. Add classical text and line-level drafts only after source and wording
-   review.
+3. Hexagrams 21-40: same minimum content fields. Complete.
+4. Hexagrams 41-64: same minimum content fields. Complete.
+5. Add verified classical text only after source and wording review.
 
 Minimum base content means:
 
+- `imageObservation`
 - `coreMeaning`
 - original short `judgmentPlain`
+- `application`
 - non-empty `keywords`
 - `reflectionQuestions`
 - `smallAction`
+- six bottom-to-top product-authored line observations
 
 ## Verification Log
 
@@ -166,18 +172,34 @@ Minimum base content means:
   build, and the GitHub Pages static build passed.
 - Local `/zhiyi/` HTTP checks returned 200 for the main routes, CSS, manifest,
   icon, service worker, offline page, and hexagram 64 detail page.
-- Repository Pages activation and the first public deployment remain pending
-  until the workflow is merged into `main` and Pages Source is set to GitHub
-  Actions.
+- Repository Pages activation and the first public deployment were completed;
+  the public site and primary routes returned HTTP 200.
+
+### 2026-07-31 complete content and interactive atmospheres
+
+- Added original base reflection content for hexagrams 21-64.
+- Added original image observations, applications, and six bottom-to-top
+  line-position observations for all 64 hexagrams.
+- Extended automated completeness coverage through hexagram 64.
+- Reworked hexagram detail pages around an interactive six-line focus: pointer,
+  touch, and keyboard focus reveal the selected line's content.
+- Added eight locally stored ink-wash atmosphere assets. Upper and lower
+  trigrams combine into a slowly moving background, with reduced-motion
+  support.
+- Shifted the global paper palette from yellow-brown to a cooler neutral ivory.
+- Mobile, tablet, and desktop visual QA passed, including a verified 九二 →
+  九五 interaction and a mixed-trigram atmosphere check. See `design-qa.md`.
+- `npm run lint`, all 19 tests, and the 73-page production build passed.
 
 ## Known Follow-ups
 
-- Hexagrams 21-64 still need base content; hexagrams 11-20 need editorial
-  review alongside the existing drafts.
-- `npm audit --omit=dev` reports two moderate PostCSS advisories through the
-  current Next.js dependency chain. npm only proposes a breaking Next.js
-  downgrade, so `npm audit fix --force` must not be used. Recheck this when a
-  compatible Next.js release updates the dependency.
+- Product-authored content for all 64 hexagrams needs editorial review.
+- Classical judgment, image, and line texts should be added only in
+  source-recorded, reviewed batches.
+- `npm audit --omit=dev` currently reports three high-severity dependency
+  entries through Next.js 16.2.6 (`next`, its bundled `postcss`, and `sharp`).
+  npm recommends the compatible Next.js 16.2.12 patch. Review that upgrade in
+  a separate dependency task; do not run `npm audit fix --force`.
 - The initial two commits retain the original machine-inferred author identity.
   Future commits should use `NoPuzzle <liang.liang@outlook.com.au>`.
 

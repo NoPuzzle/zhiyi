@@ -253,7 +253,7 @@ function buildInterpretation(result: ReadingResult): InterpretationSection[] {
   const { upper, lower } = getTrigramsFromHexagram(result.originalLines);
   const changedText =
     result.movingLineIndexes.length > 0
-      ? `动爻形成 ${result.changedHexagram.chineseName} 卦，可作为变化方向的参考。`
+      ? `动爻形成 ${result.changedHexagram.chineseName} 卦，可把“${result.changedHexagram.coreMeaning}”作为变化方向的另一层参考。`
       : "此卦无动爻，可先停留在本卦所呈现的结构中观察。";
   const firstReflection =
     result.originalHexagram.reflectionQuestions?.[0] ?? questionType.reflection;
@@ -262,7 +262,7 @@ function buildInterpretation(result: ReadingResult): InterpretationSection[] {
     {
       title: "象 / Image",
       body:
-        result.originalHexagram.coreMeaning ??
+        result.originalHexagram.imageObservation ??
         `${result.originalHexagram.chineseName} 卦为上${upper.chineseName}下${lower.chineseName}。从卦象看，可以先观察 ${result.originalHexagram.keywords.join("、")} 这些线索。`,
     },
     {
@@ -271,11 +271,11 @@ function buildInterpretation(result: ReadingResult): InterpretationSection[] {
     },
     {
       title: "理 / Principle",
-      body: `本卦为 ${result.originalHexagram.chineseName}，动爻为 ${movingLineSummary(result)} ${changedText} 这提示我们从位置、时机和变化幅度来理解，而不是把它当作确定结论。`,
+      body: `${result.originalHexagram.coreMeaning} 动爻为 ${movingLineSummary(result)} ${changedText} 这些内容用于观察位置、时机和变化幅度，不作为确定结论。`,
     },
     {
       title: "用 / Application",
-      body: `${questionType.application} 一个可能的读法是：先抓住 ${result.originalHexagram.keywords.slice(0, 2).join("、")}，再看哪些变化已经出现。`,
+      body: `${questionType.application} ${result.originalHexagram.application}`,
     },
     {
       title: "问 / Reflection",

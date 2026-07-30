@@ -85,7 +85,7 @@ Every reading should be structured as:
 - Mobile-first.
 - Calm and minimal.
 - Ink-wash inspired.
-- Warm rice-paper background.
+- Neutral ivory rice-paper background.
 - Ink black and gray as primary colors.
 - Vermilion accent only for changing lines.
 - The hexagram should be the visual center.
