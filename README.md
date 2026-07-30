@@ -89,8 +89,9 @@ npm run build    # 生产构建
 ```
 
 > [!WARNING]
-> 不要运行 `npm audit fix --force`。当前审计建议升级到兼容的 Next.js 补丁版本；
-> 应在独立依赖更新中审核并验证，而不是让审计命令自动改写依赖。
+> 不要运行 `npm audit fix --force`。项目已升级到 Next.js 16.2.12；当前审计仍会
+> 通过 Next.js 内置的 `postcss` 与可选 `sharp` 报告传递性问题。不要接受审计
+> 建议的破坏性降级，等待上游提供兼容更新后再单独审核。
 
 ## 免费公网部署
 

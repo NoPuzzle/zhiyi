@@ -90,8 +90,11 @@ npm test
 npm run build
 
 Use Node 20.19 or newer and the npm version declared in package.json. Do not run
-npm audit fix --force. The current audit recommends a compatible Next.js patch;
-handle that upgrade as a separate reviewed dependency task.
+npm audit fix --force. Next.js is pinned to 16.2.12; the current production
+audit still reports transitive findings through Next.js's bundled `postcss` and
+optional `sharp`. Do not accept the audit's destructive downgrade suggestion;
+wait for a compatible upstream release and review it as a separate dependency
+task.
 
 After the baseline passes, the next planned task is:
 1. Editorially review the new 64-hexagram content in small batches.

@@ -66,6 +66,7 @@ qualified professional support.
 | P2 | Continue content in reviewed batches through hexagram 64 | Complete |
 | P1 | Add six original line-position observations to all 64 hexagrams | Complete |
 | P1 | Add interactive detail-page line focus and trigram atmospheres | Complete |
+| P1 | Upgrade Next.js and its ESLint config from 16.2.6 to 16.2.12 | Complete |
 
 ## Content Expansion Strategy
 
@@ -191,15 +192,28 @@ Minimum base content means:
   九五 interaction and a mixed-trigram atmosphere check. See `design-qa.md`.
 - `npm run lint`, all 19 tests, and the 73-page production build passed.
 
+### 2026-07-31 dependency security patch
+
+- Upgraded `next` and `eslint-config-next` from 16.2.6 to the current 16.2.12
+  patch while keeping React, ESLint, and TypeScript versions unchanged.
+- Moved beyond the affected version ranges for the nine Next.js advisories in
+  the 16.2.11 security update that applied to 16.2.6.
+- `npm audit --omit=dev` still reports three aggregated high-severity entries:
+  `next`, its bundled `postcss` 8.4.31, and optional `sharp` 0.34.5. The only
+  automated suggestion is an incompatible Next.js downgrade, so it was not
+  applied.
+- Clean installation, lint, all 19 tests, the normal 73-page build, and the
+  GitHub Pages static export passed with the project-declared npm version.
+
 ## Known Follow-ups
 
 - Product-authored content for all 64 hexagrams needs editorial review.
 - Classical judgment, image, and line texts should be added only in
   source-recorded, reviewed batches.
-- `npm audit --omit=dev` currently reports three high-severity dependency
-  entries through Next.js 16.2.6 (`next`, its bundled `postcss`, and `sharp`).
-  npm recommends the compatible Next.js 16.2.12 patch. Review that upgrade in
-  a separate dependency task; do not run `npm audit fix --force`.
+- Recheck the three remaining `npm audit --omit=dev` entries when Next.js
+  publishes a compatible update for its bundled `postcss` and optional
+  `sharp`. Do not apply the current incompatible downgrade or run
+  `npm audit fix --force`.
 - The initial two commits retain the original machine-inferred author identity.
   Future commits should use `NoPuzzle <liang.liang@outlook.com.au>`.
 
