@@ -1,3 +1,4 @@
+import { hexagramContentPatches } from "./hexagram-content";
 import { trigramsById } from "./trigrams";
 
 export type Hexagram = {
@@ -12,7 +13,9 @@ export type Hexagram = {
   judgmentOriginal?: string;
   judgmentPlain?: string;
   imageText?: string;
+  imageObservation?: string;
   coreMeaning?: string;
+  application?: string;
   keywords: string[];
   lineTexts?: {
     position: string;
@@ -50,10 +53,35 @@ function makeLines(lowerTrigramId: string, upperTrigramId: string) {
 }
 
 function defineHexagram(hexagram: HexagramDraft): Hexagram {
+  const lines = makeLines(hexagram.lowerTrigramId, hexagram.upperTrigramId);
+  const contentPatch = hexagramContentPatches[hexagram.id];
+  const linePlaceLabels = ["初", "二", "三", "四", "五", "上"];
+  const patchedLineTexts = contentPatch?.lineTexts.map((lineText, index) => {
+    const lineValue = lines[index];
+    const position =
+      lineText.position ??
+      (index === 0
+        ? lineValue === 1
+          ? "初九"
+          : "初六"
+        : index === 5
+          ? lineValue === 1
+            ? "上九"
+            : "上六"
+          : `${lineValue === 1 ? "九" : "六"}${linePlaceLabels[index]}`);
+
+    return {
+      ...lineText,
+      position,
+    };
+  });
+
   return {
     ...hexagram,
+    ...contentPatch,
+    lineTexts: patchedLineTexts ?? hexagram.lineTexts,
     unicodeSymbol: hexagram.unicodeSymbol ?? hexagramSymbol(hexagram.id),
-    lines: makeLines(hexagram.lowerTrigramId, hexagram.upperTrigramId),
+    lines,
   };
 }
 
@@ -68,8 +96,12 @@ export const hexagrams: Hexagram[] = [
     judgmentPlain:
       "乾象呈现持续而主动的力量。一个可能的读法是：此时适合保持清明、稳健与负责的行动，而不是急于证明自己。",
     imageText: "天行健，君子以自强不息。",
+    imageObservation:
+      "上下皆天，六爻纯阳，像开阔天穹中的力量持续运行。它强调的不是一味加速，而是让行动有方向、有节律，也知道何时收束。",
     coreMeaning:
       "刚健、创始、持续推进。乾提醒人观察行动的方向、节奏与承受力。",
+    application:
+      "面对需要主动承担的处境，可以先确认目标与边界，再把持续推进落实为一个可完成的步骤。",
     keywords: ["主动", "刚健", "持续", "创始"],
     lineTexts: [
       {
@@ -127,8 +159,12 @@ export const hexagrams: Hexagram[] = [
     judgmentPlain:
       "坤象呈现承载与顺应。一个可能的读法是：此时不必抢先定义一切，先稳定位置、接住现实，再选择合适的跟进方式。",
     imageText: "地势坤，君子以厚德载物。",
+    imageObservation:
+      "上下皆地，六爻皆阴，像广阔地势安静承接万物。它让人看见容纳、照料和长期支持所形成的力量。",
     coreMeaning:
       "包容、承载、顺势而成。坤提醒人重视现实条件、协作关系与持续的照料。",
+    application:
+      "当局面需要稳定与支持时，可以先接住最真实的需求，再决定自己能够承担到什么范围。",
     keywords: ["承载", "顺势", "包容", "协作"],
     lineTexts: [
       {
@@ -185,8 +221,12 @@ export const hexagrams: Hexagram[] = [
     judgmentPlain:
       "屯象呈现初生时的混乱与阻力。一个可能的读法是：事情刚开始时不宜急着远行，先建立秩序、分清角色、让根基站稳。",
     imageText: "云雷，屯；君子以经纶。",
+    imageObservation:
+      "雷在水下发动，像新力量在未明的环境中寻找出口。声势已经出现，但路径仍需要整理。",
     coreMeaning:
       "初始、阻滞、整理。屯提醒人把混沌拆成线索，在困难开端中建立可执行的结构。",
+    application:
+      "面对刚开始又线索混杂的事情，可以先划清角色、顺序和最小可行动范围，而不是急着扩大。",
     keywords: ["初始", "困难", "整理", "建构"],
     lineTexts: [
       {
