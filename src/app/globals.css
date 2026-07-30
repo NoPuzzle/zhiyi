@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f6f0e4;
-  --paper-deep: #ece2d1;
+  --paper: #f3f1ea;
+  --paper-deep: #e8e6df;
   --ink: #171512;
   --ink-soft: #4e4a43;
-  --mist: #c9c0b2;
-  --wash: #ded4c4;
+  --mist: #c7c5be;
+  --wash: #dcdad4;
   --vermilion: #b23a2e;
   --vermilion-soft: #e7b8a9;
 }
@@ -45,10 +45,7 @@ select {
 }
 
 .paper-grain {
-  background:
-    radial-gradient(circle at 12% 16%, rgb(255 255 255 / 0.34), transparent 24%),
-    linear-gradient(135deg, rgb(23 21 18 / 0.035) 0 1px, transparent 1px 8px),
-    var(--paper);
+  background: var(--paper);
 }
 
 .ui-copy {
@@ -90,10 +87,126 @@ select {
   animation: zhiyi-line-open-right 880ms ease-out 120ms forwards;
 }
 
+.hexagram-atmosphere {
+  background: var(--paper);
+}
+
+.hexagram-atmosphere-lower {
+  opacity: 0.42;
+  transform: scale(1.1) translateY(-4%);
+  transform-origin: 46% 58%;
+  animation: zhiyi-atmosphere-drift 24s ease-in-out infinite alternate;
+  mix-blend-mode: multiply;
+}
+
+.hexagram-atmosphere[data-repeated="true"] .hexagram-atmosphere-lower {
+  opacity: 0.74;
+  animation-name: zhiyi-atmosphere-rise;
+}
+
+.hexagram-atmosphere-upper {
+  opacity: 0.28;
+  transform: scale(1.1);
+  transform-origin: 56% 38%;
+  animation: zhiyi-atmosphere-breathe 30s ease-in-out infinite alternate;
+  mix-blend-mode: multiply;
+}
+
+.hexagram-hero::after {
+  position: absolute;
+  inset: 0;
+  z-index: -5;
+  background: rgb(243 241 234 / 0.24);
+  content: "";
+  pointer-events: none;
+}
+
+.hexagram-touch-line {
+  opacity: 0.42;
+  transform: scaleX(0.93);
+  transform-origin: center;
+  transition:
+    opacity 360ms ease,
+    transform 520ms ease;
+}
+
+.hexagram-touch-line:hover {
+  opacity: 0.78;
+  transform: scaleX(1);
+}
+
+.hexagram-touch-line:has(.hexagram-line-input:checked) {
+  opacity: 1;
+  transform: scaleX(1.06);
+}
+
+.hexagram-touch-line:has(.hexagram-line-input:focus-visible) {
+  outline: 1px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.hexagram-line-marker {
+  opacity: 0;
+  transform: translateX(-4px);
+  transition:
+    opacity 280ms ease,
+    transform 280ms ease;
+}
+
+.hexagram-touch-line:has(.hexagram-line-input:checked)
+  .hexagram-line-marker {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hexagram-line-reading {
+  display: none;
+  animation: zhiyi-reading-reveal 420ms ease-out;
+}
+
+.hexagram-selector:has(
+    .hexagram-line-input[data-line-index="0"]:checked
+  )
+  .hexagram-line-reading[data-line-index="0"],
+.hexagram-selector:has(
+    .hexagram-line-input[data-line-index="1"]:checked
+  )
+  .hexagram-line-reading[data-line-index="1"],
+.hexagram-selector:has(
+    .hexagram-line-input[data-line-index="2"]:checked
+  )
+  .hexagram-line-reading[data-line-index="2"],
+.hexagram-selector:has(
+    .hexagram-line-input[data-line-index="3"]:checked
+  )
+  .hexagram-line-reading[data-line-index="3"],
+.hexagram-selector:has(
+    .hexagram-line-input[data-line-index="4"]:checked
+  )
+  .hexagram-line-reading[data-line-index="4"],
+.hexagram-selector:has(
+    .hexagram-line-input[data-line-index="5"]:checked
+  )
+  .hexagram-line-reading[data-line-index="5"] {
+  display: block;
+}
+
 @keyframes zhiyi-line-appear {
   to {
     opacity: 1;
     transform: translateY(0) scaleX(1);
+  }
+}
+
+@keyframes zhiyi-reading-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -122,6 +235,38 @@ select {
   }
 }
 
+@keyframes zhiyi-atmosphere-drift {
+  from {
+    transform: scale(1.1) translate3d(-1.5%, -4%, 0);
+  }
+
+  to {
+    transform: scale(1.14) translate3d(1.5%, -5%, 0);
+  }
+}
+
+@keyframes zhiyi-atmosphere-breathe {
+  from {
+    opacity: 0.2;
+    transform: scale(1.08) translate3d(1%, -1%, 0);
+  }
+
+  to {
+    opacity: 0.34;
+    transform: scale(1.13) translate3d(-1%, 1%, 0);
+  }
+}
+
+@keyframes zhiyi-atmosphere-rise {
+  from {
+    transform: scale(1.1) translate3d(-1.5%, -11%, 0);
+  }
+
+  to {
+    transform: scale(1.14) translate3d(1.5%, -14%, 0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hex-line-appear,
   .hex-yang-ghost,
@@ -137,5 +282,21 @@ select {
   .hex-yang-ghost,
   .hex-yin-ghost {
     display: none;
+  }
+
+  .hexagram-atmosphere-lower,
+  .hexagram-atmosphere-upper {
+    animation: none;
+    transform: none;
+  }
+
+  .hexagram-touch-line,
+  .hexagram-line-marker,
+  .hexagram-line-reading {
+    transition: none;
+  }
+
+  .hexagram-line-reading {
+    animation: none;
   }
 }

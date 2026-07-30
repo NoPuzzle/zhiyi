@@ -11,7 +11,7 @@ The hexagram is the visual center. Decorative elements should support focus and 
 - Mobile-first.
 - Calm and spacious.
 - Minimal controls.
-- Warm rice-paper background.
+- Neutral ivory rice-paper background.
 - Ink black and gray as primary colors.
 - Vermilion accent only for changing lines or rare emphasis.
 - Generous whitespace.
@@ -25,12 +25,12 @@ Use a restrained palette with enough warmth to avoid a cold monochrome interface
 
 | Token | Use | Value |
 | --- | --- | --- |
-| `paper` | App background | `#F6F0E4` |
-| `paper-deep` | Section contrast | `#ECE2D1` |
+| `paper` | App background | `#F3F1EA` |
+| `paper-deep` | Section contrast | `#E8E6DF` |
 | `ink` | Primary text and hexagram lines | `#171512` |
 | `ink-soft` | Secondary text | `#4E4A43` |
-| `mist` | Borders, dividers, disabled controls | `#C9C0B2` |
-| `wash` | Soft panels and inactive surfaces | `#DED4C4` |
+| `mist` | Borders, dividers, disabled controls | `#C7C5BE` |
+| `wash` | Soft panels and inactive surfaces | `#DCDAD4` |
 | `vermilion` | Changing lines only | `#B23A2E` |
 | `vermilion-soft` | Changing line background tint | `#E7B8A9` |
 
@@ -147,7 +147,13 @@ Respect reduced motion preferences.
 
 ## Imagery And Texture
 
-The background may use subtle CSS texture inspired by rice paper. Do not depend on large image assets for V0.1 unless needed.
+Detail pages use eight locally stored, original ink-wash atmosphere assets for
+天、泽、火、雷、风、水、山、地. The upper and lower trigram assets are layered
+with restrained opacity and slow movement so the background reflects the
+hexagram structure without competing with the six lines.
+
+The global page surface remains a clean neutral ivory. Atmosphere movement must
+stop when the user prefers reduced motion.
 
 Avoid:
 
@@ -174,4 +180,3 @@ Avoid:
 - "prediction"
 - "magic"
 - "this will happen"
-

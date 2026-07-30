@@ -63,11 +63,14 @@ Current implementation:
 - Next.js App Router, TypeScript, Tailwind CSS, ESLint, and Vitest.
 - Routes: /, /learn, /ask, /hexagrams, /hexagrams/[id], and /offline.
 - All 8 trigrams and structural records for all 64 hexagrams are present.
-- Detailed draft content exists for 乾、坤、屯; minimum reviewed content exists
-  for hexagrams 4-10, and base content drafts exist for hexagrams 11-20.
-- Ask mode, visual learning mode, browser/detail pages, SVG hexagram rendering,
-  moving-line animation, safety notes, search normalization, manifest, and a
-  basic service worker are implemented.
+- All 64 hexagrams have original base reflection content, image observations,
+  applications, concrete small actions, and six line-position observations.
+- Classical judgment, image, and line-text drafts currently exist for
+  乾、坤、屯; other classical text still requires source review.
+- Ask mode, visual learning mode, browser/detail pages, interactive line focus,
+  trigram-driven animated ink atmospheres, SVG hexagram rendering, moving-line
+  animation, safety notes, search normalization, manifest, and a basic service
+  worker are implemented.
 - No server-side user data is stored.
 
 Start by running:
@@ -87,15 +90,14 @@ npm test
 npm run build
 
 Use Node 20.19 or newer and the npm version declared in package.json. Do not run
-npm audit fix --force; the known audit warning currently has no compatible
-non-breaking automated fix.
+npm audit fix --force. The current audit recommends a compatible Next.js patch;
+handle that upgrade as a separate reviewed dependency task.
 
-After the baseline passes, the next planned implementation task is:
-1. Add original, concise base content for hexagrams 21-40.
-2. For each record, provide coreMeaning, judgmentPlain, reflectionQuestions,
-   keywords, and a concrete smallAction.
+After the baseline passes, the next planned task is:
+1. Editorially review the new 64-hexagram content in small batches.
+2. Verify classical sources before adding judgment, image, or line text.
 3. Keep language suggestive, practical, and non-deterministic.
-4. Extend the automated completeness test through hexagram 40.
+4. Preserve the all-64 completeness test and animated-background behavior.
 5. Update docs/implementation-progress.md and run all verification commands.
 
 Before editing, report the current Git branch, HEAD, working-tree state, Git
