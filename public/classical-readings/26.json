@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 26,
+  "name": "大畜",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F03%E5%A4%A7%E7%95%9C&oldid=2404950",
+  "jing": {
+    "judgmentOriginal": "利貞。不家食，吉。利涉大川。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "有厲利巳。"
+      },
+      {
+        "position": "九二",
+        "original": "輿說輹。"
+      },
+      {
+        "position": "九三",
+        "original": "良馬逐，利艱貞。曰：閑輿衛，利有攸往。"
+      },
+      {
+        "position": "六四",
+        "original": "童牛之牿，元吉。"
+      },
+      {
+        "position": "六五",
+        "original": "豶豕之牙，吉。"
+      },
+      {
+        "position": "上九",
+        "original": "何天之衢，亨。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "大畜，剛健篤實輝光，日新其德，剛上而尚賢。能止健，大正也。不家食吉，養賢也。利涉大川，應乎天也。"
+    ],
+    "greatImageText": "天在山中，大畜。君子以多識前言往行，以畜其德。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "有厲利已，不犯災也。"
+      },
+      {
+        "position": "九二",
+        "original": "輿說輹，中无尤也。"
+      },
+      {
+        "position": "九三",
+        "original": "利有攸往，上合志也。"
+      },
+      {
+        "position": "六四",
+        "original": "六四元吉，有喜也。"
+      },
+      {
+        "position": "六五",
+        "original": "六五之吉，有慶也。"
+      },
+      {
+        "position": "上九",
+        "original": "何天之衢，道大行也。"
+      }
+    ]
+  }
+}

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { hexagramsById } from "../../data/hexagrams";
 import { ChangingHexagramView } from "@/components/hexagram/ChangingHexagramView";
 import { HexagramCard } from "@/components/hexagram/HexagramCard";
+import { HexagramAtmosphere } from "@/components/hexagram/HexagramAtmosphere";
 import { HexagramLines } from "@/components/hexagram/HexagramLines";
 
 const qian = hexagramsById.get(1);
@@ -34,7 +35,12 @@ export default function Home() {
 
   return (
     <main className="mx-auto flex min-h-[calc(100dvh-84px)] w-full max-w-5xl flex-col px-5 pb-16 pt-8 sm:px-8">
-      <section className="flex flex-1 flex-col items-center justify-center gap-10 text-center">
+      <section className="hexagram-hero relative isolate flex flex-1 flex-col items-center justify-center gap-9 overflow-hidden border-y border-mist/55 px-4 py-14 text-center sm:py-20">
+        <HexagramAtmosphere
+          upperTrigramId={zhun.upperTrigramId}
+          lowerTrigramId={zhun.lowerTrigramId}
+        />
+
         <div className="flex w-full justify-center text-ink">
           <HexagramLines
             lines={zhun.lines}
@@ -43,6 +49,13 @@ export default function Home() {
             size="lg"
             label="知易首页卦象"
           />
+        </div>
+
+        <div>
+          <p className="text-xl font-semibold text-ink">屯 · 云雷初生</p>
+          <p className="mt-2 text-sm leading-6 text-ink-soft">
+            下震为雷，上坎为水：万事初起，先在未定中辨清第一步。
+          </p>
         </div>
 
         <div className="max-w-2xl">
@@ -72,8 +85,8 @@ export default function Home() {
 
       <section className="mt-14 border-t border-mist/70 pt-10">
         <div className="mb-6">
-          <p className="ui-copy text-xs font-medium uppercase tracking-[0.22em] text-vermilion">
-            Visual System
+          <p className="ui-copy text-xs font-medium tracking-[0.22em] text-vermilion">
+            卦象示例
           </p>
           <h2 className="mt-3 text-3xl font-semibold text-ink">观象</h2>
         </div>

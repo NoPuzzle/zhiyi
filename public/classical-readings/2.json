@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 2,
+  "name": "坤",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F01%E5%9D%A4&oldid=2404938",
+  "jing": {
+    "judgmentOriginal": "元、亨，利牝馬之貞。君子有攸往，先迷後得主。利西南得朋，東北喪朋，安貞吉。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "履霜，堅冰至。"
+      },
+      {
+        "position": "六二",
+        "original": "直方大，不習無不利。"
+      },
+      {
+        "position": "六三",
+        "original": "含章可貞，或從王事，無成有終。"
+      },
+      {
+        "position": "六四",
+        "original": "括囊，無咎無譽。"
+      },
+      {
+        "position": "六五",
+        "original": "黃裳元吉。"
+      },
+      {
+        "position": "上六",
+        "original": "龍戰於野，其血玄黃。"
+      }
+    ],
+    "specialUseText": {
+      "position": "用六",
+      "original": "利永貞。"
+    }
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "至哉坤元，萬物資生，乃順承天。坤厚載物，德合无疆；含弘光大，品物咸亨。牝馬地類，行地无疆，柔順利貞。",
+      "君子攸行，先迷失道，後順得常。",
+      "西南得朋，乃與類行，東北喪朋，乃終有慶。安貞之吉，應地无疆。"
+    ],
+    "greatImageText": "地勢坤。君子以厚德載物。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "履霜堅冰，陰始凝也。馴致其道，至堅冰也。"
+      },
+      {
+        "position": "六二",
+        "original": "六二之動，直以方也。不習无不利，地道光也。"
+      },
+      {
+        "position": "六三",
+        "original": "含章可貞，以時發也。或從王事，知光大也。"
+      },
+      {
+        "position": "六四",
+        "original": "括囊无咎，慎不害也。"
+      },
+      {
+        "position": "六五",
+        "original": "黃裳元吉，文在中也。"
+      },
+      {
+        "position": "上六",
+        "original": "龍戰于野，其道窮也。"
+      }
+    ],
+    "specialUseImageText": {
+      "position": "用六",
+      "original": "用六永貞，以大終也。"
+    }
+  }
+}

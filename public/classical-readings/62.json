@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 62,
+  "name": "小過",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F06%E5%B0%8F%E9%81%8E&oldid=2644981",
+  "jing": {
+    "judgmentOriginal": "亨，利貞。可小事，不可大事。飛鳥遺之音，不宜上，宜下，大吉。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "飛鳥以凶。"
+      },
+      {
+        "position": "六二",
+        "original": "過其祖，遇其妣，不及其君。遇其臣，無咎。"
+      },
+      {
+        "position": "九三",
+        "original": "弗過防之，從或戕之，凶。"
+      },
+      {
+        "position": "九四",
+        "original": "無咎，弗過遇之，往厲必戒，勿用永貞。"
+      },
+      {
+        "position": "六五",
+        "original": "密雲不雨，自我西郊，公弋取彼在穴。"
+      },
+      {
+        "position": "上六",
+        "original": "弗遇過之，飛鳥離之，凶，是謂災眚。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "小過，小者過而亨也。過以利貞，與時行也。柔得中，是以小事吉也。剛失位而不中，是以不可大事也。有飛鳥之象焉，有飛鳥遺之音，不宜上宜下，大吉；上逆而下順也。"
+    ],
+    "greatImageText": "山上有雷，小過。君子以行過乎恭，喪過乎哀，用過乎儉。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "飛鳥以凶，不可如何也。"
+      },
+      {
+        "position": "六二",
+        "original": "不及其君，臣不可過也。"
+      },
+      {
+        "position": "九三",
+        "original": "從或戕之，凶如何也。"
+      },
+      {
+        "position": "九四",
+        "original": "弗過遇之，位不當也。往厲必戒，終不可長也。"
+      },
+      {
+        "position": "六五",
+        "original": "密云不雨，已上也。"
+      },
+      {
+        "position": "上六",
+        "original": "弗遇過之，已亢也。"
+      }
+    ]
+  }
+}

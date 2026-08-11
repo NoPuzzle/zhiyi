@@ -1,5 +1,10 @@
 import type { Hexagram } from "../data/hexagrams";
 
+type SearchableHexagram = Pick<
+  Hexagram,
+  "id" | "name" | "chineseName" | "keywords"
+>;
+
 export function normalizeSearchTerm(value: string) {
   return value
     .trim()
@@ -9,7 +14,10 @@ export function normalizeSearchTerm(value: string) {
     .replace(/[\s·'’_-]+/g, "");
 }
 
-export function matchesHexagramSearch(hexagram: Hexagram, search: string) {
+export function matchesHexagramSearch(
+  hexagram: SearchableHexagram,
+  search: string,
+) {
   const query = normalizeSearchTerm(search);
 
   if (!query) {

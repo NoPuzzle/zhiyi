@@ -35,8 +35,11 @@ It performs the following steps:
 4. Installs dependencies with `npm ci`.
 5. Runs lint and the complete test suite.
 6. Builds a Next.js static export into `out/`.
-7. Uploads the static artifact.
-8. Deploys the artifact to the protected `github-pages` environment.
+7. Verifies routes, internal references, manifest scope, PWA assets, all 64
+   detail pages, responsive atmosphere images, and the browser-page size
+   budget.
+8. Uploads the static artifact.
+9. Deploys the artifact to the protected `github-pages` environment.
 
 Pull requests do not publish the production site. Review and merge a task
 branch into `main`; the merged commit becomes the deployed release.
@@ -63,12 +66,14 @@ also allows a future custom domain to use the correct root path.
 Run the same export mode locally before changing deployment behavior:
 
 ```bash
-GITHUB_PAGES=true \
-GITHUB_REPOSITORY=NoPuzzle/zhiyi \
-GITHUB_SHA=local-pages-check \
-NEXT_PUBLIC_BASE_PATH=/zhiyi \
-npm run build
+npm run build:pages
+npm run verify:pages
 ```
+
+`build:pages` uses `/zhiyi` locally and respects the base path supplied by
+`actions/configure-pages` in CI. `verify:pages` fails before upload if a scoped
+link or required asset is missing, the manifest points outside the project
+scope, or the hexagram browser exceeds its HTML size budget.
 
 The command must create:
 
@@ -78,6 +83,7 @@ out/manifest.webmanifest
 out/offline/index.html
 out/hexagrams/64/index.html
 out/icons/zhiyi-icon.svg
+out/atmospheres/qian-640.avif
 ```
 
 Do not commit the generated `out/` directory. GitHub Actions creates it for
@@ -85,7 +91,8 @@ each deployment.
 
 ## Release Checklist
 
-1. Run `npm run lint`, `npm test`, and `npm run build`.
+1. Run `npm run lint`, `npm test`, `npm run build`,
+   `npm run build:pages`, and `npm run verify:pages`.
 2. Review and merge the task branch into `main`.
 3. Open the repository Actions tab and watch **Deploy GitHub Pages**.
 4. Open the deployment URL shown by the `github-pages` environment.

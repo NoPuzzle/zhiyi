@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 40,
+  "name": "解",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F04%E8%A7%A3&oldid=2404966",
+  "jing": {
+    "judgmentOriginal": "利西南。無所往，其來復，吉。有攸往，夙吉。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "無咎。"
+      },
+      {
+        "position": "九二",
+        "original": "田獲三狐，得黃矢，貞吉。"
+      },
+      {
+        "position": "六三",
+        "original": "負且乘，致寇至，貞吝。"
+      },
+      {
+        "position": "九四",
+        "original": "解而拇，朋至斯孚。"
+      },
+      {
+        "position": "六五",
+        "original": "君子維有解，吉。有孚於小人。"
+      },
+      {
+        "position": "上六",
+        "original": "公用射隼於高墉之上，獲之，無不利。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "解，險以動，動而免乎險，解。解利西南，往得眾也。其來復吉，乃得中也。有攸往夙吉，往有功也。天地解，而雷雨作，雷雨作，而百果草木皆甲坼，解之時義大矣哉！"
+    ],
+    "greatImageText": "雷雨作，解。君子以赦過宥罪。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "剛柔之際，義无咎也。"
+      },
+      {
+        "position": "九二",
+        "original": "九二貞吉，得中道也。"
+      },
+      {
+        "position": "六三",
+        "original": "負且乘，亦可丑也，自我致戎，又誰咎也。"
+      },
+      {
+        "position": "九四",
+        "original": "解而拇，未當位也。"
+      },
+      {
+        "position": "六五",
+        "original": "君子有解，小人退也。"
+      },
+      {
+        "position": "上六",
+        "original": "公用射隼，以解悖也。"
+      }
+    ]
+  }
+}

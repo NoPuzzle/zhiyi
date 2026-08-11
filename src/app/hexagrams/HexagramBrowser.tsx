@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { HexagramLines } from "@/components/hexagram/HexagramLines";
+import { CompactHexagram } from "@/components/hexagram/CompactHexagram";
 import { trigramCopy } from "../../../data/trigram-copy";
-import type { Hexagram } from "../../../data/hexagrams";
 import { type Trigram, trigramsById } from "../../../data/trigrams";
+import type { HexagramSummary } from "../../../lib/hexagram-summary";
 import { matchesHexagramSearch } from "../../../lib/search";
 
 type HexagramBrowserProps = {
-  hexagrams: Hexagram[];
+  hexagrams: HexagramSummary[];
   trigrams: Trigram[];
 };
 
@@ -81,7 +81,12 @@ export function HexagramBrowser({ hexagrams, trigrams }: HexagramBrowserProps) {
         </div>
 
         <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-          <p className="ui-copy text-sm text-ink-soft">
+          <p
+            className="ui-copy text-sm text-ink-soft"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
             显示 {filteredHexagrams.length} / {hexagrams.length} 卦
           </p>
           <button
@@ -127,9 +132,8 @@ export function HexagramBrowser({ hexagrams, trigrams }: HexagramBrowserProps) {
               </div>
 
               <div className="mt-5 flex justify-center">
-                <HexagramLines
+                <CompactHexagram
                   lines={hexagram.lines}
-                  size="sm"
                   label={`${hexagram.chineseName}卦`}
                 />
               </div>

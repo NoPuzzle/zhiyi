@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 19,
+  "name": "臨",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F03%E8%87%A8&oldid=2692101",
+  "jing": {
+    "judgmentOriginal": "元亨利貞。至於八月有凶。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "咸臨，貞吉。"
+      },
+      {
+        "position": "九二",
+        "original": "咸臨，吉，無不利。"
+      },
+      {
+        "position": "六三",
+        "original": "甘臨，無攸利。既憂之，無咎。"
+      },
+      {
+        "position": "六四",
+        "original": "至臨，無咎。"
+      },
+      {
+        "position": "六五",
+        "original": "知臨，大君之宜，吉。"
+      },
+      {
+        "position": "上六",
+        "original": "敦臨，吉，無咎。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "臨，剛浸而長。說而順，剛中而應，大亨以正，天之道也。至于八月有凶，消不久也。"
+    ],
+    "greatImageText": "澤上有地，臨。君子以教思無窮，容保民無疆。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "咸臨貞吉，志行正也。"
+      },
+      {
+        "position": "九二",
+        "original": "咸臨，吉无不利；未順命也。"
+      },
+      {
+        "position": "六三",
+        "original": "甘臨，位不當也。既憂之，咎不長也。"
+      },
+      {
+        "position": "六四",
+        "original": "至臨无咎，位當也。"
+      },
+      {
+        "position": "六五",
+        "original": "大君之宜，行中之謂也。"
+      },
+      {
+        "position": "上六",
+        "original": "敦臨之吉，志在內也。"
+      }
+    ]
+  }
+}

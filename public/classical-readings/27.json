@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 27,
+  "name": "頤",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F03%E9%A0%A4&oldid=2692196",
+  "jing": {
+    "judgmentOriginal": "貞吉。觀頤，自求口實。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "舍爾靈龜，觀我朵頤，凶。"
+      },
+      {
+        "position": "六二",
+        "original": "顛頤，拂經於丘。頤，征凶。"
+      },
+      {
+        "position": "六三",
+        "original": "拂頤，貞凶。十年勿用，無攸利。"
+      },
+      {
+        "position": "六四",
+        "original": "顛頤，吉。虎視耽耽，其欲逐逐，無咎。"
+      },
+      {
+        "position": "六五",
+        "original": "拂經，居貞，吉。不可涉大川。"
+      },
+      {
+        "position": "上九",
+        "original": "由頤，厲吉，利涉大川。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "頤貞吉，養正則吉也。觀頤，觀其所養也；自求口實，觀其自養也。天地養萬物，聖人養賢，以及萬民；頤之時義大矣哉！"
+    ],
+    "greatImageText": "山下有雷，頤。君子以慎言語，節飲食。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "觀我朵頤，亦不足貴也。"
+      },
+      {
+        "position": "六二",
+        "original": "六二征凶，行失類也。"
+      },
+      {
+        "position": "六三",
+        "original": "十年勿用，道大悖也。"
+      },
+      {
+        "position": "六四",
+        "original": "顛頤之吉，上施光也。"
+      },
+      {
+        "position": "六五",
+        "original": "居貞之吉，順以從上也。"
+      },
+      {
+        "position": "上九",
+        "original": "由頤厲吉，大有慶也。"
+      }
+    ]
+  }
+}

@@ -14,6 +14,7 @@ type InkLineProps = {
 
 type LineStyle = CSSProperties & {
   "--line-delay"?: string;
+  "--line-texture-opacity"?: string;
 };
 
 const sizeClass: Record<InkLineSize, string> = {
@@ -62,6 +63,7 @@ export function InkLine({
 
   const style: LineStyle = {
     "--line-delay": `${delayMs}ms`,
+    "--line-texture-opacity": moving ? "0.24" : "0.13",
   };
 
   const finalClass =
@@ -119,7 +121,36 @@ export function InkLine({
         </g>
       ) : null}
 
-      <g className={finalClass}>
+      <g className="hex-line-edge-bloom">
+        {isYang(line) ? (
+          <path
+            d={path.yang}
+            fill="none"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeWidth="14"
+          />
+        ) : (
+          <>
+            <path
+              d={path.yinLeft}
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeWidth="14"
+            />
+            <path
+              d={path.yinRight}
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeWidth="14"
+            />
+          </>
+        )}
+      </g>
+
+      <g className={`hex-line-core ${finalClass}`.trim()}>
         {isYang(line) ? (
           <path
             d={path.yang}
@@ -150,7 +181,7 @@ export function InkLine({
         )}
       </g>
 
-      <g opacity={moving ? "0.24" : "0.13"}>
+      <g className="hex-line-texture">
         {isYang(line) ? (
           <path
             d={path.yang}

@@ -115,6 +115,12 @@ Use the fixed framework:
 
 Each section should have a compact heading and readable body. The final action should be concrete and small.
 
+Long-form detail pages should expose a compact in-page guide for 象、辞、理、
+用、问、行、六爻 and related structures. Each target needs a stable heading or
+section anchor, at least a 44px touch target, and a visible keyboard focus state.
+After the related-hexagram cards, provide previous and next links in King Wen
+order so the reader can continue without returning to the browser first.
+
 ### Controls
 
 Use quiet controls:
@@ -148,9 +154,58 @@ Respect reduced motion preferences.
 ## Imagery And Texture
 
 Detail pages use eight locally stored, original ink-wash atmosphere assets for
-天、泽、火、雷、风、水、山、地. The upper and lower trigram assets are layered
-with restrained opacity and slow movement so the background reflects the
-hexagram structure without competing with the six lines.
+天、泽、火、雷、风、水、山、地. The lower image is confined to the lower 56%
+of the scene and the upper image to the upper 56%, with a soft masked overlap
+through the middle. Use normal blending instead of `multiply`, so the paper
+does not become muddy or yellow-brown.
+
+Each trigram has restrained tuning for opacity, contrast, and focal position.
+The image files provide 640px and 1024px AVIF/WebP sources with the original
+JPEG as fallback. The lower layer is requested first; the upper layer remains
+lazy where possible.
+
+Line interaction and atmosphere must form one system:
+
+- Selecting one of the lower three lines gently strengthens and raises the
+  lower-trigram atmosphere.
+- Selecting one of the upper three lines gently strengthens and lowers the
+  upper-trigram atmosphere.
+- The inactive half remains visible, so the complete hexagram structure is
+  never lost.
+- The home page names its displayed hexagram and uses the same trigram-based
+  atmosphere rather than an unrelated decorative wash.
+
+On hexagram detail pages, present the six line controls as one vertical
+"line-position folio" rather than separating the hexagram from its reading:
+
+- Render the visible and keyboard order from the top line to the bottom line,
+  while keeping the stored data order bottom-to-top.
+- Place one shared reading folio between the upper and lower trigrams. It shows
+  the selected line's `经 · 爻辞`, `传 · 小象`, and the clearly labelled
+  `位置观察 · 产品原创` layer without duplicating the full lower-page reading.
+- Use the dedicated local blue-gray watercolor folio asset as a real image;
+  do not recreate its folds with CSS gradients or decorative boxes.
+- Keep all six 44px line targets visible while the folio changes. The active
+  state must use expansion and checked state in addition to color.
+- Build every interactive line from three SVG stroke layers: a readable core,
+  a restrained paper-texture pass, and a normally transparent ink-edge bloom.
+  On a fine pointer, hover may let that outer edge spread mostly vertically;
+  keyboard focus receives the same feedback without changing the selected
+  reading. Pressing a line releases the edge quickly, then lets it settle into
+  a faint checked-state bloom.
+- Keep the ink-edge response low-contrast and neutral. Do not use glow,
+  drop-shadow, jitter, hue shifts, or vermilion for an ordinary static line;
+  vermilion remains reserved for moving-line meaning. A yin line's central gap
+  must remain visibly open throughout the interaction.
+- Arrow-key order follows the visible vertical direction. Each reading is a
+  named region, and live feedback announces only the newly selected position,
+  not the full classical passage.
+- If `:has()` is unavailable, the declared default reading remains visible.
+
+The folio and trigram atmosphere may breathe very slowly. Both must become
+fully static under `prefers-reduced-motion`. Ink-edge feedback also loses all
+transition and transform there, while retaining a faint immediate outline for
+hover, focus, press, and checked state.
 
 The global page surface remains a clean neutral ivory. Atmosphere movement must
 stop when the user prefers reduced motion.

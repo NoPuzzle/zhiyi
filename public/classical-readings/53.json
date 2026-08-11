@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 53,
+  "name": "漸",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F05%E6%BC%B8&oldid=2665440",
+  "jing": {
+    "judgmentOriginal": "女歸吉，利貞。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "鴻漸於幹，小子厲，有言，無咎。"
+      },
+      {
+        "position": "六二",
+        "original": "鴻漸於磐，飲食衎衎，吉。"
+      },
+      {
+        "position": "九三",
+        "original": "鴻漸於陸。夫征不復，婦孕不育，凶。利禦寇。"
+      },
+      {
+        "position": "六四",
+        "original": "鴻漸於木。或得其桷，無咎。"
+      },
+      {
+        "position": "九五",
+        "original": "鴻漸於陵。婦三歲不孕，終莫之勝，吉。"
+      },
+      {
+        "position": "上九",
+        "original": "鴻漸於陸。其羽可用為儀，吉。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "漸之進也，女歸吉也。進得位，往有功也。進以正，可以正邦也。其位剛，得中也。止而巽，動不窮也。"
+    ],
+    "greatImageText": "山上有木，漸，君子以居賢德善俗。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "小子之厲，義无咎也。"
+      },
+      {
+        "position": "六二",
+        "original": "飲食衎衎，不素飽也。"
+      },
+      {
+        "position": "九三",
+        "original": "夫征不復，離群丑也。婦孕不育，失其道也。利用禦寇，順相保也。"
+      },
+      {
+        "position": "六四",
+        "original": "或得其桷，順以巽也。"
+      },
+      {
+        "position": "九五",
+        "original": "終莫之勝，吉；得所愿也。"
+      },
+      {
+        "position": "上九",
+        "original": "其羽可用為儀，吉；不可亂也。"
+      }
+    ]
+  }
+}

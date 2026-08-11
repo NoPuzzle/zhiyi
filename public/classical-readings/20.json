@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 20,
+  "name": "觀",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F03%E8%A7%80&oldid=2000708",
+  "jing": {
+    "judgmentOriginal": "盥而不薦，有孚顒若。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "童觀，小人無咎，君子吝。"
+      },
+      {
+        "position": "六二",
+        "original": "闚觀，利女貞。"
+      },
+      {
+        "position": "六三",
+        "original": "觀我生進退。"
+      },
+      {
+        "position": "六四",
+        "original": "觀國之光，利用賓於王。"
+      },
+      {
+        "position": "九五",
+        "original": "觀我生，君子無咎。"
+      },
+      {
+        "position": "上九",
+        "original": "觀其生，君子無咎。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "大觀在上，順而巽，中正以觀天下。觀，盥而不荐，有孚顒若，下觀而化也。觀天之神道，而四時不忒，聖人以神道設教，而天下服矣。"
+    ],
+    "greatImageText": "風行地上，觀。先王以省方觀民設教。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "初六童觀，小人道也。"
+      },
+      {
+        "position": "六二",
+        "original": "窺觀女貞，亦可丑也。"
+      },
+      {
+        "position": "六三",
+        "original": "觀我生，進退；未失道也。"
+      },
+      {
+        "position": "六四",
+        "original": "觀國之光，尚賓也。"
+      },
+      {
+        "position": "九五",
+        "original": "觀我生，觀民也。"
+      },
+      {
+        "position": "上九",
+        "original": "觀其生，志未平也。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 14,
+  "name": "大有",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F02%E5%A4%A7%E6%9C%89&oldid=2386341",
+  "jing": {
+    "judgmentOriginal": "元亨。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "無交害。匪咎，艱則無咎。"
+      },
+      {
+        "position": "九二",
+        "original": "大車以載，有攸往，無咎。"
+      },
+      {
+        "position": "九三",
+        "original": "公用亨於天子，小人弗克。"
+      },
+      {
+        "position": "九四",
+        "original": "匪其彭，無咎。"
+      },
+      {
+        "position": "六五",
+        "original": "厥孚交如，威如，吉。"
+      },
+      {
+        "position": "上九",
+        "original": "自天祐之，吉無不利。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "大有，柔得尊位，大中而上下應之，曰大有。其德剛健而文明，應乎天而時行，是以元亨。"
+    ],
+    "greatImageText": "火在天上，「大有」。君子以遏惡揚善，順天休命。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "大有初九，无交害也。"
+      },
+      {
+        "position": "九二",
+        "original": "大車以載，積中不敗也。"
+      },
+      {
+        "position": "九三",
+        "original": "公用亨于天子，小人害也。"
+      },
+      {
+        "position": "九四",
+        "original": "匪其彭，无咎；明辨晰也。"
+      },
+      {
+        "position": "六五",
+        "original": "厥孚交如，信以發志也。威如之吉，易而无備也。"
+      },
+      {
+        "position": "上九",
+        "original": "大有上吉，自天佑也。"
+      }
+    ]
+  }
+}

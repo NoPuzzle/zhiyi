@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 42,
+  "name": "益",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F04%E7%9B%8A&oldid=2404964",
+  "jing": {
+    "judgmentOriginal": "利有攸往，利涉大川。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "利用為大作，元吉，無咎。"
+      },
+      {
+        "position": "六二",
+        "original": "或益之十朋之龜，弗克違，永貞吉。王用享於帝，吉。"
+      },
+      {
+        "position": "六三",
+        "original": "益之，用凶事，無咎。有孚中行，告公用圭。"
+      },
+      {
+        "position": "六四",
+        "original": "中行，告公從，利用為依遷國。"
+      },
+      {
+        "position": "九五",
+        "original": "有孚惠心，勿問元吉。有孚，惠我德。"
+      },
+      {
+        "position": "上九",
+        "original": "莫益之，或擊之，立心勿恆，凶。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "益，損上益下，民說无疆，自上下下，其道大光。利有攸往，中正有慶。利涉大川，木道乃行。益動而巽，日進无疆。天施地生，其益无方。凡益之道，與時偕行。"
+    ],
+    "greatImageText": "風雷，益。君子以見善則遷，有過則改。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "元吉无咎，下不厚事也。"
+      },
+      {
+        "position": "六二",
+        "original": "或益之，自外來也。"
+      },
+      {
+        "position": "六三",
+        "original": "益用凶事，固有之也。"
+      },
+      {
+        "position": "六四",
+        "original": "告公從，以益志也。"
+      },
+      {
+        "position": "九五",
+        "original": "有孚惠心，勿問之矣。惠我德，大得志也。"
+      },
+      {
+        "position": "上九",
+        "original": "莫益之，偏辭也。或擊之，自外來也。"
+      }
+    ]
+  }
+}

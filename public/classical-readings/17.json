@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 17,
+  "name": "隨",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F03%E9%9A%A8&oldid=2000746",
+  "jing": {
+    "judgmentOriginal": "元亨，利貞，無咎。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "官有渝，貞吉。出門交有功。"
+      },
+      {
+        "position": "六二",
+        "original": "系小子，失丈夫。"
+      },
+      {
+        "position": "六三",
+        "original": "系丈夫，失小子。隨有求得，利居貞。"
+      },
+      {
+        "position": "九四",
+        "original": "隨有獲，貞兇。有孚在道以明，何咎？"
+      },
+      {
+        "position": "九五",
+        "original": "孚於嘉，吉。"
+      },
+      {
+        "position": "上六",
+        "original": "拘系之乃從。維之。王用亨於西山。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "隨，剛來而下柔，動而說，隨。大亨貞，无咎，而天下隨時，隨之時義大矣哉！"
+    ],
+    "greatImageText": "澤中有雷，隨，君子以鄉晦入宴息。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "官有渝，從正吉也。出門交有功，不失也。"
+      },
+      {
+        "position": "六二",
+        "original": "系小子，弗兼與也。"
+      },
+      {
+        "position": "六三",
+        "original": "系丈夫，志舍下也。"
+      },
+      {
+        "position": "九四",
+        "original": "隨有獲，其義凶也。有孚在道，明功也。"
+      },
+      {
+        "position": "九五",
+        "original": "孚于嘉，吉；位正中也。"
+      },
+      {
+        "position": "上六",
+        "original": "拘系之，上窮也。"
+      }
+    ]
+  }
+}

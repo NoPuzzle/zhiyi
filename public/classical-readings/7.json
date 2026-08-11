@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 7,
+  "name": "師",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F02%E5%B8%AB&oldid=2404943",
+  "jing": {
+    "judgmentOriginal": "貞，丈人吉，無咎。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "師出以律，否臧凶。"
+      },
+      {
+        "position": "九二",
+        "original": "在師中，吉，無咎，王三錫命。"
+      },
+      {
+        "position": "六三",
+        "original": "師或輿屍，凶。"
+      },
+      {
+        "position": "六四",
+        "original": "師左次，無咎。"
+      },
+      {
+        "position": "六五",
+        "original": "田有禽，利執言，無咎。長子帥師，弟子輿屍，貞凶。"
+      },
+      {
+        "position": "上六",
+        "original": "大君有命，開國承家，小人勿用。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "師，眾也。貞，正也。能以眾正，可以王矣。剛中而應，行險而順，以此毒天下，而民從之，吉又何咎矣。"
+    ],
+    "greatImageText": "地中有水，師。君子以容民畜眾。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "師出以律；失律，凶也。"
+      },
+      {
+        "position": "九二",
+        "original": "在師中吉，承天寵也。王三錫命，懷萬邦也。"
+      },
+      {
+        "position": "六三",
+        "original": "師或輿尸，大无功也。"
+      },
+      {
+        "position": "六四",
+        "original": "左次无咎，未失常也。"
+      },
+      {
+        "position": "六五",
+        "original": "長子帥師，以中行也。弟子輿尸，使不當也。"
+      },
+      {
+        "position": "上六",
+        "original": "大君有命，以正功也。小人勿用，必亂邦也。"
+      }
+    ]
+  }
+}

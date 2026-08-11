@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 29,
+  "name": "坎",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F03%E5%9D%8E&oldid=2404949",
+  "jing": {
+    "judgmentOriginal": "有孚，維心亨，行有尚。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "「習坎」，入於坎窞，凶。"
+      },
+      {
+        "position": "九二",
+        "original": "坎有險，求小得。"
+      },
+      {
+        "position": "六三",
+        "original": "來之坎坎，險且枕，「入於坎窞」，勿用。"
+      },
+      {
+        "position": "六四",
+        "original": "樽酒簋貳，用缶，納約自牖，終無咎。"
+      },
+      {
+        "position": "九五",
+        "original": "坎不盈，祗既平，無咎。"
+      },
+      {
+        "position": "上六",
+        "original": "系用徽纆，置於叢棘，三歲不得，凶。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "習坎，重險也。水流而不盈，行險而不失其信。維心亨，乃以剛中也。行有尚，往有功也。天險不可升也，地險山川丘陵也，王公設險以守其國，坎之時用大矣哉！"
+    ],
+    "greatImageText": "水洊至，「習坎」。君子以常德行，習教事。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "習坎入坎，失道凶也。"
+      },
+      {
+        "position": "九二",
+        "original": "求小得，未出中也。"
+      },
+      {
+        "position": "六三",
+        "original": "來之坎坎，終无功也。"
+      },
+      {
+        "position": "六四",
+        "original": "樽酒簋貳，剛柔济也。"
+      },
+      {
+        "position": "九五",
+        "original": "坎不盈，中未大也。"
+      },
+      {
+        "position": "上六",
+        "original": "上六失道，凶三歲也。"
+      }
+    ]
+  }
+}

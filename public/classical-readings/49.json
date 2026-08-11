@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 49,
+  "name": "革",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F05%E9%9D%A9&oldid=2407710",
+  "jing": {
+    "judgmentOriginal": "己日乃孚，元亨利貞，悔亡。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "鞏用黃牛之革。"
+      },
+      {
+        "position": "六二",
+        "original": "巳日乃革之，征吉，無咎。"
+      },
+      {
+        "position": "九三",
+        "original": "征凶，貞厲。革言三就，有孚。"
+      },
+      {
+        "position": "九四",
+        "original": "悔亡，有孚改命，吉。"
+      },
+      {
+        "position": "九五",
+        "original": "大人虎變，未佔有孚。"
+      },
+      {
+        "position": "上六",
+        "original": "君子豹變，小人革面。征凶，居貞吉。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "革，水火相息，二女同居，其志不相得，曰革。巳日乃孚；革而信也。文明以說，大亨以正，革而當，其悔乃亡。天地革而四時成，湯武革命，順乎天而應乎人，革之時義大矣哉！"
+    ],
+    "greatImageText": "澤中有火，革。君子以治曆明時。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "鞏用黃牛，不可以有為也。"
+      },
+      {
+        "position": "六二",
+        "original": "巳日革之，行有嘉也。"
+      },
+      {
+        "position": "九三",
+        "original": "革言三就，又何之矣。"
+      },
+      {
+        "position": "九四",
+        "original": "改命之吉，信志也。"
+      },
+      {
+        "position": "九五",
+        "original": "大人虎變，其文炳也。"
+      },
+      {
+        "position": "上六",
+        "original": "君子豹變，其文蔚也。小人革面，順以從君也。"
+      }
+    ]
+  }
+}

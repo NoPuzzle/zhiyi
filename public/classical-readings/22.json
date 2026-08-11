@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 22,
+  "name": "賁",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F03%E8%B3%81&oldid=2404954",
+  "jing": {
+    "judgmentOriginal": "亨。小利有攸往。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "賁其趾，舍車而徒。"
+      },
+      {
+        "position": "六二",
+        "original": "賁其須。"
+      },
+      {
+        "position": "九三",
+        "original": "賁如濡如，永貞吉。"
+      },
+      {
+        "position": "六四",
+        "original": "賁如皤如，白馬翰如。匪寇，婚媾。"
+      },
+      {
+        "position": "六五",
+        "original": "賁於丘園，束帛戔戔。吝，終吉。"
+      },
+      {
+        "position": "上九",
+        "original": "白賁，無咎。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "賁，亨；柔來而文剛，故亨。分剛上而文柔，故小利有攸往。剛柔交錯，天文也；文明以止，人文也。觀乎天文，以察時變；觀乎人文，以化成天下。"
+    ],
+    "greatImageText": "山下有火，賁。君子以明庶政，無敢折獄。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "舍車而徒，義弗乘也。"
+      },
+      {
+        "position": "六二",
+        "original": "賁其須，與上興也。"
+      },
+      {
+        "position": "九三",
+        "original": "永貞之吉，終莫之陵也。"
+      },
+      {
+        "position": "六四",
+        "original": "六四，當位疑也。匪寇婚媾，終无尤也。"
+      },
+      {
+        "position": "六五",
+        "original": "六五之吉，有喜也。"
+      },
+      {
+        "position": "上九",
+        "original": "白賁无咎，上得志也。"
+      }
+    ]
+  }
+}

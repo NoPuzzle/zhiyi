@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 43,
+  "name": "夬",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F05%E5%A4%AC&oldid=2608165",
+  "jing": {
+    "judgmentOriginal": "揚於王庭，孚號有厲。告自邑，不利即戎。利有攸往。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "壯於前趾，往不勝，為咎。"
+      },
+      {
+        "position": "九二",
+        "original": "惕號，莫夜有戎，勿恤。"
+      },
+      {
+        "position": "九三",
+        "original": "壯於頄，有凶。君子夬夬，獨行，遇雨若濡。有慍，無咎。"
+      },
+      {
+        "position": "九四",
+        "original": "臀無膚，其行次且。牽羊悔亡，聞言不信。"
+      },
+      {
+        "position": "九五",
+        "original": "莧陸夬夬，中行無咎。"
+      },
+      {
+        "position": "上六",
+        "original": "無號，終有凶。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "夬，決也，剛決柔也。健而說，決而和，揚于王庭，柔乘五剛也。孚號有厲，其危乃光也。告自邑，不利即戎，所尚乃窮也。利有攸往，剛長乃終也。"
+    ],
+    "greatImageText": "澤上於天，夬。君子以施祿及下，居德則忌。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "不勝而往，咎也。"
+      },
+      {
+        "position": "九二",
+        "original": "莫夜有戎，得中道也。"
+      },
+      {
+        "position": "九三",
+        "original": "君子夬夬，終无咎也。"
+      },
+      {
+        "position": "九四",
+        "original": "其行次且，位不當也。聞言不信，聰不明也。"
+      },
+      {
+        "position": "九五",
+        "original": "中行无咎，中未光也。"
+      },
+      {
+        "position": "上六",
+        "original": "无號之凶，終不可長也。"
+      }
+    ]
+  }
+}

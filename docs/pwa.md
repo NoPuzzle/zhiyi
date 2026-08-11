@@ -25,7 +25,18 @@ GitHub Pages builds use `GITHUB_SHA`. The browser registers:
 
 `public/sw.js` derives its scope base path from its own URL and uses both the
 path and deployment version in its cache name. A new Pages commit therefore
-creates a new cache and removes older Zhiyi caches during activation.
+creates a new cache and removes only older Zhiyi caches in that exact base-path
+namespace during activation. A root deployment, `/zhiyi`, another project, and
+unrelated applications cannot delete one another's caches.
+
+Navigation responses are written to runtime cache only when `response.ok` is
+true. Error pages and failed responses remain uncached; an offline navigation
+falls back to a previously visited page or the scoped offline page.
+
+Next.js runtime assets use network-first delivery with a cached offline
+fallback. This prevents a previously installed worker from pairing current
+HTML with an older client chunk after a new build while retaining offline
+support for assets already seen.
 
 The service worker is registered with `updateViaCache: "none"`. Manifest and
 icon requests prefer the network and fall back to cache, so metadata and icon
@@ -61,6 +72,21 @@ Open `http://localhost:3000` in Chrome or Edge, then:
 5. Enable offline mode in DevTools.
 6. Reload a visited route and verify the offline fallback for an uncached route.
 
+When returning to `npm run dev`, Zhiyi unregisters a previously installed local
+Zhiyi worker and reloads once if that worker still controls the page. This keeps
+old production caches from serving stale development chunks; it does not touch
+workers registered by other paths or applications.
+
 For a GitHub Pages check, build with `GITHUB_PAGES=true` and a `/zhiyi` base
 path as documented in `docs/deployment.md`. Confirm the worker scope, manifest,
 icons, navigation, and cached URLs all remain below `/zhiyi/`.
+
+The repeatable local check is:
+
+```bash
+npm run build:pages
+npm run verify:pages
+```
+
+`tests/service-worker.test.ts` separately covers root and project-path cache
+isolation plus successful and failed navigation caching.

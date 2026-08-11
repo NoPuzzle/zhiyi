@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 15,
+  "name": "謙",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F02%E8%AC%99&oldid=2000726",
+  "jing": {
+    "judgmentOriginal": "亨。君子有終。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "謙謙君子，用涉大川，吉。"
+      },
+      {
+        "position": "六二",
+        "original": "鳴謙，貞吉。"
+      },
+      {
+        "position": "九三",
+        "original": "勞謙，君子有終吉。"
+      },
+      {
+        "position": "六四",
+        "original": "無不利，撝謙。"
+      },
+      {
+        "position": "六五",
+        "original": "不富以其鄰，利用侵伐，無不利。"
+      },
+      {
+        "position": "上六",
+        "original": "鳴謙。利用行師征邑國。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "謙，亨，天道下濟而光明，地道卑而上行。天道虧盈而益謙，地道變盈而流謙，鬼神害盈而福謙，人道惡盈而好謙。謙尊而光，卑而不可逾，君子之終也。"
+    ],
+    "greatImageText": "地中有山，謙。君子以裒多益寡，稱物平施。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "謙謙君子，卑以自牧也。"
+      },
+      {
+        "position": "六二",
+        "original": "鳴謙貞吉，中心得也。"
+      },
+      {
+        "position": "九三",
+        "original": "勞謙君子，萬民服也。"
+      },
+      {
+        "position": "六四",
+        "original": "无不利撝謙；不違則也。"
+      },
+      {
+        "position": "六五",
+        "original": "利用侵伐，征不服也。"
+      },
+      {
+        "position": "上六",
+        "original": "鳴謙，志未得也。可用行師，征邑國也。"
+      }
+    ]
+  }
+}

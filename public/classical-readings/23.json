@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 23,
+  "name": "剝",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F03%E5%89%9D&oldid=2404947",
+  "jing": {
+    "judgmentOriginal": "不利有攸往。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "剝床以足，蔑貞凶。"
+      },
+      {
+        "position": "六二",
+        "original": "剝床以辨，蔑貞凶。"
+      },
+      {
+        "position": "六三",
+        "original": "剝之，無咎。"
+      },
+      {
+        "position": "六四",
+        "original": "剝床以膚，凶。"
+      },
+      {
+        "position": "六五",
+        "original": "貫魚，以宮人寵，無不利。"
+      },
+      {
+        "position": "上九",
+        "original": "碩果不食，君子得輿，小人剝廬。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "剝，剝也，柔變剛也。不利有攸往，小人長也。順而止之，觀象也。君子尚消息盈虛，天行也。"
+    ],
+    "greatImageText": "山附於地，剝。上以厚下安宅。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "剝牀以足，以滅下也。"
+      },
+      {
+        "position": "六二",
+        "original": "剝牀以辨，未有與也。"
+      },
+      {
+        "position": "六三",
+        "original": "剝之无咎，失上下也。"
+      },
+      {
+        "position": "六四",
+        "original": "剝牀以膚，切近災也。"
+      },
+      {
+        "position": "六五",
+        "original": "以宮人寵，終无尤也。"
+      },
+      {
+        "position": "上九",
+        "original": "君子得輿，民所載也。小人剝廬，終不可用也。"
+      }
+    ]
+  }
+}

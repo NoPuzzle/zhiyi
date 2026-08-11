@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 51,
+  "name": "震",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F05%E9%9C%87&oldid=2404977",
+  "jing": {
+    "judgmentOriginal": "亨。震來虩虩，笑言啞啞。震驚百里，不喪匕鬯。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "「震來虩虩」，後「笑言啞啞」，吉。"
+      },
+      {
+        "position": "六二",
+        "original": "震來厲，億喪貝。躋於九陵，勿逐，七日得。"
+      },
+      {
+        "position": "六三",
+        "original": "震蘇蘇，震行無眚。"
+      },
+      {
+        "position": "九四",
+        "original": "震遂泥。"
+      },
+      {
+        "position": "六五",
+        "original": "震往來厲，億無喪，有事。"
+      },
+      {
+        "position": "上六",
+        "original": "震索索，視矍矍，征凶。震不於其躬，於其鄰，無咎。婚媾有言。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "震，亨。震來虩虩，恐致福也。笑言啞啞，后有則也。震驚百里，驚遠而懼邇也。出可以守宗廟社稷，以為祭主也。"
+    ],
+    "greatImageText": "洊雷，震。君子以恐懼脩省。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "震來虩虩，恐致福也。笑言啞啞，后有則也。"
+      },
+      {
+        "position": "六二",
+        "original": "震來厲，乘剛也。"
+      },
+      {
+        "position": "六三",
+        "original": "震蘇蘇，位不當也。"
+      },
+      {
+        "position": "九四",
+        "original": "震遂泥，未光也。"
+      },
+      {
+        "position": "六五",
+        "original": "震往來厲，危行也。其事在中，大无喪也。"
+      },
+      {
+        "position": "上六",
+        "original": "震索索，中未得也。雖凶无咎，畏鄰戒也。"
+      }
+    ]
+  }
+}

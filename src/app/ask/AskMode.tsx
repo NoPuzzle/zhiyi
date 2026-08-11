@@ -1,11 +1,15 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ChangingHexagramView } from "@/components/hexagram/ChangingHexagramView";
 import { HexagramLines } from "@/components/hexagram/HexagramLines";
 import { InkLine } from "@/components/hexagram/InkLine";
+import { withBasePath } from "@/lib/base-path";
 import type { Hexagram } from "../../../data/hexagrams";
-import { getHighStakesSafetyNote } from "../../../lib/safety";
+import {
+  getHighStakesSafetyNote,
+  PROFESSIONAL_SUPPORT_NOTICE,
+} from "../../../lib/safety";
 import {
   getChangedHexagram,
   getChangedLines,
@@ -52,6 +56,42 @@ type ReadingResult = {
 type InterpretationSection = {
   title: string;
   body: string;
+  classical?: Array<{
+    label: string;
+    text: string | string[];
+  }>;
+};
+
+type ClassicalReadingAsset = {
+  schemaVersion: 1;
+  id: number;
+  name: string;
+  revisionUrl: string;
+  jing: {
+    judgmentOriginal: string;
+    lineTexts: Array<{ position: string; original: string }>;
+  };
+  zhuan: {
+    tuanParagraphs: string[];
+    greatImageText: string;
+    smallImageTexts: Array<{ position: string; original: string }>;
+  };
+};
+
+const readingSteps = [
+  { id: 1, label: "写问题" },
+  { id: 2, label: "起卦" },
+  { id: 3, label: "观变化" },
+] as const;
+
+const interpretationSectionIds: Record<string, string> = {
+  象: "image",
+  辞: "text",
+  理: "principle",
+  用: "application",
+  问: "reflection",
+  行: "action",
+  安全提示: "safety",
 };
 
 const questionTypes: Array<{
@@ -243,14 +283,18 @@ function buildTextSection(result: ReadingResult) {
 
   return (
     result.originalHexagram.judgmentPlain ??
-    result.originalHexagram.judgmentOriginal ??
-    "V0.1 暂未收录完整卦辞，可先把卦名、上下卦和关键词作为观察线索。"
+    "可先把卦名、上下卦和关键词作为观察线索。"
   );
 }
 
-function buildInterpretation(result: ReadingResult): InterpretationSection[] {
+function buildInterpretation(
+  result: ReadingResult,
+  classicalReadings: Map<number, ClassicalReadingAsset>,
+): InterpretationSection[] {
   const questionType = getQuestionType(result.questionType);
   const { upper, lower } = getTrigramsFromHexagram(result.originalLines);
+  const originalClassical = classicalReadings.get(result.originalHexagram.id);
+  const changedClassical = classicalReadings.get(result.changedHexagram.id);
   const changedText =
     result.movingLineIndexes.length > 0
       ? `动爻形成 ${result.changedHexagram.chineseName} 卦，可把“${result.changedHexagram.coreMeaning}”作为变化方向的另一层参考。`
@@ -260,39 +304,89 @@ function buildInterpretation(result: ReadingResult): InterpretationSection[] {
 
   const sections: InterpretationSection[] = [
     {
-      title: "象 / Image",
+      title: "象",
+      classical: originalClassical
+        ? [
+            {
+              label: "传 · 大象",
+              text: originalClassical.zhuan.greatImageText,
+            },
+          ]
+        : undefined,
       body:
         result.originalHexagram.imageObservation ??
         `${result.originalHexagram.chineseName} 卦为上${upper.chineseName}下${lower.chineseName}。从卦象看，可以先观察 ${result.originalHexagram.keywords.join("、")} 这些线索。`,
     },
     {
-      title: "辞 / Text",
+      title: "辞",
+      classical: originalClassical
+        ? [
+            {
+              label: "经 · 本卦卦辞",
+              text: originalClassical.jing.judgmentOriginal,
+            },
+            {
+              label: "传 · 本卦彖传",
+              text: originalClassical.zhuan.tuanParagraphs,
+            },
+            ...result.movingLineIndexes.flatMap((index) => {
+              const line = originalClassical.jing.lineTexts[index];
+              const smallImage = originalClassical.zhuan.smallImageTexts[index];
+
+              return [
+                {
+                  label: `经 · ${line.position}爻辞`,
+                  text: line.original,
+                },
+                {
+                  label: `传 · ${smallImage.position}小象`,
+                  text: smallImage.original,
+                },
+              ];
+            }),
+          ]
+        : undefined,
       body: buildTextSection(result),
     },
     {
-      title: "理 / Principle",
+      title: "理",
+      classical:
+        changedClassical &&
+        result.changedHexagram.id !== result.originalHexagram.id
+          ? [
+              {
+                label: `经 · 变卦${changedClassical.name}卦辞`,
+                text: changedClassical.jing.judgmentOriginal,
+              },
+              {
+                label: `传 · 变卦${changedClassical.name}彖传`,
+                text: changedClassical.zhuan.tuanParagraphs,
+              },
+            ]
+          : undefined,
       body: `${result.originalHexagram.coreMeaning} 动爻为 ${movingLineSummary(result)} ${changedText} 这些内容用于观察位置、时机和变化幅度，不作为确定结论。`,
     },
     {
-      title: "用 / Application",
+      title: "用",
       body: `${questionType.application} ${result.originalHexagram.application}`,
     },
     {
-      title: "问 / Reflection",
+      title: "问",
       body: firstReflection,
-    },
-    {
-      title: "行 / Small Action",
-      body: result.originalHexagram.smallAction ?? questionType.action,
     },
   ];
 
   if (result.safetyNote) {
     sections.push({
-      title: "安全提示 / Safety",
+      title: "安全提示",
       body: result.safetyNote,
     });
   }
+
+  sections.push({
+    title: "行",
+    body: result.originalHexagram.smallAction ?? questionType.action,
+  });
 
   return sections;
 }
@@ -310,7 +404,8 @@ function MethodButton({
     <button
       type="button"
       onClick={onClick}
-      className={`ui-copy min-h-11 rounded-sm border px-4 text-sm font-medium transition ${
+      aria-pressed={active}
+      className={`ui-copy min-h-11 rounded-sm border px-4 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion ${
         active
           ? "border-ink bg-ink text-paper"
           : "border-mist text-ink-soft hover:border-ink hover:text-ink"
@@ -329,14 +424,104 @@ export function AskMode() {
     useState<LineKindTuple>(initialManualLines);
   const [result, setResult] = useState<ReadingResult | null>(null);
   const [message, setMessage] = useState("");
+  const [setupOpen, setSetupOpen] = useState(true);
+  const [classicalReadings, setClassicalReadings] = useState(
+    new Map<number, ClassicalReadingAsset>(),
+  );
+  const [classicalStatus, setClassicalStatus] = useState<
+    "idle" | "loading" | "ready" | "error"
+  >("idle");
+  const questionRef = useRef<HTMLTextAreaElement>(null);
+  const shouldRestoreQuestionFocusRef = useRef(false);
+  const resultHeadingRef = useRef<HTMLHeadingElement>(null);
 
   const canCast = question.trim().length > 0;
   const manualPreviewLines = tupleFromLineKinds(manualLines);
   const manualMovingIndexes = movingIndexesFromLineKinds(manualLines);
   const interpretation = useMemo(
-    () => (result ? buildInterpretation(result) : []),
-    [result],
+    () => (result ? buildInterpretation(result, classicalReadings) : []),
+    [classicalReadings, result],
   );
+  const currentStep = result && !setupOpen ? 3 : canCast ? 2 : 1;
+
+  useEffect(() => {
+    if (!result) {
+      return;
+    }
+
+    const controller = new AbortController();
+    const ids = Array.from(
+      new Set([result.originalHexagram.id, result.changedHexagram.id]),
+    );
+
+    Promise.all(
+      ids.map(async (id) => {
+        const response = await fetch(
+          withBasePath(`/classical-readings/${id}.json`),
+          {
+            cache: "force-cache",
+            signal: controller.signal,
+          },
+        );
+
+        if (!response.ok) {
+          throw new Error(`经传静态资产读取失败：${response.status}`);
+        }
+
+        const payload = (await response.json()) as ClassicalReadingAsset;
+
+        if (
+          payload.schemaVersion !== 1 ||
+          payload.id !== id ||
+          payload.jing.lineTexts.length !== 6 ||
+          payload.zhuan.smallImageTexts.length !== 6
+        ) {
+          throw new Error(`第 ${id} 卦经传静态资产结构不完整。`);
+        }
+
+        return [id, payload] as const;
+      }),
+    )
+      .then((entries) => {
+        setClassicalReadings(new Map(entries));
+        setClassicalStatus("ready");
+      })
+      .catch((error: unknown) => {
+        if (error instanceof DOMException && error.name === "AbortError") {
+          return;
+        }
+
+        setClassicalReadings(new Map());
+        setClassicalStatus("error");
+      });
+
+    return () => controller.abort();
+  }, [result]);
+
+  useEffect(() => {
+    if (!result || setupOpen) {
+      return;
+    }
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    resultHeadingRef.current?.focus({ preventScroll: true });
+    resultHeadingRef.current?.scrollIntoView({
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+      block: "start",
+    });
+  }, [result, setupOpen]);
+
+  useEffect(() => {
+    if (!setupOpen || !shouldRestoreQuestionFocusRef.current) {
+      return;
+    }
+
+    questionRef.current?.focus();
+    shouldRestoreQuestionFocusRef.current = false;
+  }, [setupOpen]);
 
   function cycleLine(index: number) {
     setManualLines((current) =>
@@ -357,15 +542,18 @@ export function AskMode() {
       return;
     }
 
+    const nextResult = createReadingResult({
+      question: question.trim(),
+      questionType,
+      method: nextMethod,
+      lineKinds: nextLineKinds,
+    });
+
     setMessage("");
-    setResult(
-      createReadingResult({
-        question: question.trim(),
-        questionType,
-        method: nextMethod,
-        lineKinds: nextLineKinds,
-      }),
-    );
+    setClassicalReadings(new Map());
+    setClassicalStatus("loading");
+    setResult(nextResult);
+    setSetupOpen(false);
   }
 
   function randomCast() {
@@ -374,170 +562,266 @@ export function AskMode() {
     castWithLines(randomLines, "random");
   }
 
+  function reopenSetup() {
+    shouldRestoreQuestionFocusRef.current = true;
+    setSetupOpen(true);
+  }
+
   return (
-    <section className="mx-auto grid w-full max-w-6xl gap-6 px-5 pb-16 sm:px-8 lg:grid-cols-[0.92fr_1.08fr]">
-      <div className="space-y-5">
-        <div className="rounded-sm border border-mist/70 bg-paper/75 p-5">
-          <label
-            htmlFor="question"
-            className="ui-copy text-sm font-medium text-ink"
-          >
-            你的问题
-          </label>
-          <textarea
-            id="question"
-            value={question}
-            onChange={(event) => setQuestion(event.target.value)}
-            className="ui-copy mt-3 min-h-32 w-full resize-none rounded-sm border border-mist bg-paper-deep/55 p-4 text-base leading-7 text-ink outline-none transition placeholder:text-ink-soft/60 focus:border-vermilion"
-            placeholder="例如：我现在该如何理解这个选择？"
-          />
+    <section className="mx-auto w-full max-w-6xl px-5 pb-16 sm:px-8">
+      <ol
+        className="grid grid-cols-3 gap-2 rounded-sm border border-mist/70 bg-paper/70 p-2 sm:gap-4 sm:p-3"
+        aria-label="问卦进度"
+      >
+        {readingSteps.map((step) => {
+          const active = step.id === currentStep;
+          const complete = step.id < currentStep;
 
-          <div className="mt-5">
-            <p className="ui-copy text-sm font-medium text-ink">问题类型</p>
-            <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
-              {questionTypes.map((type) => (
-                <button
-                  key={type.id}
-                  type="button"
-                  onClick={() => setQuestionType(type.id)}
-                  className={`ui-copy min-h-10 rounded-sm border px-3 text-sm transition ${
-                    questionType === type.id
+          return (
+            <li
+              key={step.id}
+              aria-current={active ? "step" : undefined}
+              className={`ui-copy flex min-h-12 items-center gap-2 rounded-sm px-2 text-sm transition sm:px-4 ${
+                active
+                  ? "bg-ink text-paper"
+                  : complete
+                    ? "bg-paper-deep/70 text-ink"
+                    : "text-ink-soft"
+              }`}
+            >
+              <span
+                className={`grid size-6 shrink-0 place-items-center rounded-full border text-xs ${
+                  active
+                    ? "border-paper/45"
+                    : complete
                       ? "border-vermilion text-vermilion"
-                      : "border-mist text-ink-soft hover:border-ink hover:text-ink"
-                  }`}
-                >
-                  {type.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-5">
-            <p className="ui-copy text-sm font-medium text-ink">起卦方式</p>
-            <div className="mt-3 grid grid-cols-2 gap-2">
-              <MethodButton
-                active={method === "manual"}
-                onClick={() => setMethod("manual")}
+                      : "border-mist"
+                }`}
+                aria-hidden="true"
               >
-                Manual build
-              </MethodButton>
-              <MethodButton
-                active={method === "random"}
-                onClick={() => setMethod("random")}
-              >
-                Random cast
-              </MethodButton>
-            </div>
-          </div>
+                {complete ? "✓" : step.id}
+              </span>
+              <span>{step.label}</span>
+            </li>
+          );
+        })}
+      </ol>
 
-          <p className="mt-4 text-sm leading-6 text-ink-soft">
-            本页仅使用本地静态规则，不调用外部 AI API，也不会把问题保存到服务器。
-          </p>
-        </div>
+      <aside
+        aria-label="专业支持说明"
+        className="mt-4 border-l-2 border-vermilion/45 bg-paper-deep/35 px-4 py-3 text-sm leading-6 text-ink-soft"
+      >
+        {PROFESSIONAL_SUPPORT_NOTICE}
+      </aside>
 
-        <div className="rounded-sm border border-mist/70 bg-paper/75 p-5">
-          {method === "manual" ? (
+      <div className="mt-6 grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
+        <div className="space-y-5">
+          {setupOpen || !result ? (
             <>
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h2 className="text-2xl font-semibold text-ink">手动成卦</h2>
-                  <p className="mt-2 text-sm leading-6 text-ink-soft">
-                    点击每一爻循环：阴、阳、老阴、老阳。数据顺序为自下而上。
-                  </p>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setManualLines(initialManualLines)}
-                  className="ui-copy rounded-sm border border-mist px-3 py-2 text-xs text-ink-soft transition hover:border-ink hover:text-ink"
-                >
-                  重置
-                </button>
-              </div>
-
-              <div className="mt-6 flex justify-center">
-                <div className="flex w-full max-w-sm flex-col-reverse gap-2">
-                  {manualLines.map((kind, index) => {
-                    const meta = lineKindMeta[kind];
-
-                    return (
-                      <button
-                        key={index}
-                        type="button"
-                        onClick={() => cycleLine(index)}
-                        className="grid grid-cols-[4.5rem_minmax(0,1fr)_4.5rem] items-center gap-3 rounded-sm border border-mist/70 bg-paper-deep/35 px-3 py-2 text-left transition hover:border-ink focus:border-vermilion focus:outline-none"
-                      >
-                        <span className="ui-copy text-xs text-ink-soft">
-                          {linePositionLabels[index]}
-                        </span>
-                        <InkLine
-                          line={meta.value}
-                          moving={meta.moving}
-                          size="sm"
-                          seed={index}
-                        />
-                        <span
-                          className={`ui-copy text-right text-xs ${
-                            meta.moving ? "text-vermilion" : "text-ink-soft"
-                          }`}
-                        >
-                          {meta.label}
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-
-              <button
-                type="button"
-                onClick={() => castWithLines(manualLines, "manual")}
-                disabled={!canCast}
-                className="ui-copy mt-6 min-h-12 w-full rounded-sm bg-vermilion px-5 text-base font-medium text-paper transition hover:bg-[#962f26] disabled:cursor-not-allowed disabled:bg-wash disabled:text-ink-soft"
+              <div
+                id="ask-setup"
+                className="rounded-sm border border-mist/70 bg-paper/75 p-5"
               >
-                生成卦象
-              </button>
+                <label
+                  htmlFor="question"
+                  className="ui-copy text-sm font-medium text-ink"
+                >
+                  你的问题
+                </label>
+                <textarea
+                  id="question"
+                  ref={questionRef}
+                  value={question}
+                  onChange={(event) => setQuestion(event.target.value)}
+                  className="ui-copy mt-3 min-h-32 w-full resize-none rounded-sm border border-mist bg-paper-deep/55 p-4 text-base leading-7 text-ink outline-none transition placeholder:text-ink-soft/60 focus:border-vermilion focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion"
+                  placeholder="例如：我现在该如何理解这个选择？"
+                />
+
+                <div className="mt-5">
+                  <p className="ui-copy text-sm font-medium text-ink">问题类型</p>
+                  <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
+                    {questionTypes.map((type) => (
+                      <button
+                        key={type.id}
+                        type="button"
+                        onClick={() => setQuestionType(type.id)}
+                        aria-pressed={questionType === type.id}
+                        className={`ui-copy min-h-10 rounded-sm border px-3 text-sm transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion ${
+                          questionType === type.id
+                            ? "border-vermilion text-vermilion"
+                            : "border-mist text-ink-soft hover:border-ink hover:text-ink"
+                        }`}
+                      >
+                        {type.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-5">
+                  <p className="ui-copy text-sm font-medium text-ink">起卦方式</p>
+                  <div className="mt-3 grid grid-cols-2 gap-2">
+                    <MethodButton
+                      active={method === "manual"}
+                      onClick={() => setMethod("manual")}
+                    >
+                      手动成卦
+                    </MethodButton>
+                    <MethodButton
+                      active={method === "random"}
+                      onClick={() => setMethod("random")}
+                    >
+                      随机起卦
+                    </MethodButton>
+                  </div>
+                </div>
+
+                <p className="mt-4 text-sm leading-6 text-ink-soft">
+                  本页仅使用本地静态规则，不调用外部 AI API，也不会把问题保存到服务器。
+                </p>
+              </div>
+
+              <div className="rounded-sm border border-mist/70 bg-paper/75 p-5">
+                {method === "manual" ? (
+                  <>
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <h2 className="text-2xl font-semibold text-ink">
+                          手动成卦
+                        </h2>
+                        <p className="mt-2 text-sm leading-6 text-ink-soft">
+                          点击每一爻循环：阴、阳、老阴、老阳。数据顺序为自下而上。
+                        </p>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setManualLines(initialManualLines)}
+                        className="ui-copy rounded-sm border border-mist px-3 py-2 text-xs text-ink-soft transition hover:border-ink hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion"
+                      >
+                        重置
+                      </button>
+                    </div>
+
+                    <div className="mt-6 flex justify-center">
+                      <div className="flex w-full max-w-sm flex-col-reverse gap-2">
+                        {manualLines.map((kind, index) => {
+                          const meta = lineKindMeta[kind];
+
+                          return (
+                            <button
+                              key={index}
+                              type="button"
+                              onClick={() => cycleLine(index)}
+                              className="grid grid-cols-[4.5rem_minmax(0,1fr)_4.5rem] items-center gap-3 rounded-sm border border-mist/70 bg-paper-deep/35 px-3 py-2 text-left transition hover:border-ink focus:border-vermilion focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion"
+                            >
+                              <span className="ui-copy text-xs text-ink-soft">
+                                {linePositionLabels[index]}
+                              </span>
+                              <InkLine
+                                line={meta.value}
+                                moving={meta.moving}
+                                size="sm"
+                                seed={index}
+                              />
+                              <span
+                                className={`ui-copy text-right text-xs ${
+                                  meta.moving
+                                    ? "text-vermilion"
+                                    : "text-ink-soft"
+                                }`}
+                              >
+                                {meta.label}
+                              </span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={() => castWithLines(manualLines, "manual")}
+                      disabled={!canCast}
+                      className="ui-copy mt-6 min-h-12 w-full rounded-sm bg-vermilion px-5 text-base font-medium text-paper transition hover:bg-[#962f26] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion disabled:cursor-not-allowed disabled:bg-wash disabled:text-ink-soft"
+                    >
+                      生成卦象
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <h2 className="text-2xl font-semibold text-ink">随机起卦</h2>
+                    <p className="mt-2 text-sm leading-6 text-ink-soft">
+                      随机生成六爻，顺序仍为自下而上。老阴、老阳会作为动爻显示。
+                    </p>
+                    <div className="mt-6 flex justify-center rounded-sm border border-mist/70 bg-paper-deep/35 py-8">
+                      <HexagramLines
+                        lines={manualPreviewLines}
+                        movingLineIndexes={manualMovingIndexes}
+                        size="md"
+                        label="随机起卦预览"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      onClick={randomCast}
+                      disabled={!canCast}
+                      className="ui-copy mt-6 min-h-12 w-full rounded-sm bg-vermilion px-5 text-base font-medium text-paper transition hover:bg-[#962f26] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion disabled:cursor-not-allowed disabled:bg-wash disabled:text-ink-soft"
+                    >
+                      随机生成六爻
+                    </button>
+                  </>
+                )}
+
+                {message ? (
+                  <p className="mt-4 text-sm leading-6 text-vermilion">
+                    {message}
+                  </p>
+                ) : null}
+              </div>
             </>
           ) : (
-            <>
-              <h2 className="text-2xl font-semibold text-ink">随机起卦</h2>
-              <p className="mt-2 text-sm leading-6 text-ink-soft">
-                随机生成六爻，顺序仍为自下而上。老阴、老阳会作为动爻显示。
+            <aside className="rounded-sm border border-mist/70 bg-paper/75 p-5 lg:sticky lg:top-24">
+              <p className="ui-copy text-xs tracking-[0.16em] text-vermilion">
+                本次所问
               </p>
-              <div className="mt-6 flex justify-center rounded-sm border border-mist/70 bg-paper-deep/35 py-8">
-                <HexagramLines
-                  lines={manualPreviewLines}
-                  movingLineIndexes={manualMovingIndexes}
-                  size="md"
-                  label="随机起卦预览"
-                />
-              </div>
+              <p className="mt-3 leading-7 text-ink">{result.question}</p>
+              <p className="ui-copy mt-4 text-sm text-ink-soft">
+                {getQuestionType(result.questionType).label} ·{" "}
+                {result.method === "manual" ? "手动成卦" : "随机起卦"}
+              </p>
               <button
                 type="button"
-                onClick={randomCast}
-                disabled={!canCast}
-                className="ui-copy mt-6 min-h-12 w-full rounded-sm bg-vermilion px-5 text-base font-medium text-paper transition hover:bg-[#962f26] disabled:cursor-not-allowed disabled:bg-wash disabled:text-ink-soft"
+                onClick={reopenSetup}
+                aria-controls="ask-setup"
+                aria-expanded={setupOpen}
+                className="ui-copy mt-6 min-h-11 w-full rounded-sm border border-ink px-4 text-sm font-medium text-ink transition hover:bg-ink hover:text-paper focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion"
               >
-                随机生成六爻
+                修改问题与重新起卦
               </button>
-            </>
+              <a
+                href="#reading-action"
+                className="ui-copy mt-3 flex min-h-11 items-center justify-center rounded-sm text-sm text-vermilion underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion"
+              >
+                直达这一卦的「行」
+              </a>
+            </aside>
           )}
-
-          {message ? (
-            <p className="mt-4 text-sm leading-6 text-vermilion">{message}</p>
-          ) : null}
         </div>
-      </div>
 
-      <div className="space-y-5">
+        <div className="space-y-5">
         {result ? (
           <>
             <div className="rounded-sm border border-mist/70 bg-paper/75 p-5">
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
-                  <p className="ui-copy text-xs font-medium uppercase tracking-[0.18em] text-vermilion">
-                    Reading
+                  <p className="ui-copy text-xs font-medium tracking-[0.18em] text-vermilion">
+                    观卦结果
                   </p>
-                  <h2 className="mt-2 text-2xl font-semibold text-ink">
+                  <h2
+                    ref={resultHeadingRef}
+                    tabIndex={-1}
+                    className="mt-2 scroll-mt-24 text-2xl font-semibold text-ink outline-none focus-visible:ring-2 focus-visible:ring-vermilion/55"
+                  >
                     {result.originalHexagram.chineseName} →{" "}
                     {result.changedHexagram.chineseName}
                   </h2>
@@ -594,21 +878,109 @@ export function AskMode() {
               <p className="mt-2 text-sm leading-6 text-ink-soft">
                 以下为 V0.1 静态规则生成的反思结构，只提供一种观察角度。
               </p>
+              <p
+                className="ui-copy mt-3 text-xs leading-5 text-ink-soft"
+                role="status"
+                aria-live="polite"
+              >
+                {classicalStatus === "loading"
+                  ? "正在从本地静态资料载入本卦与变卦经传……"
+                  : classicalStatus === "ready"
+                    ? "已载入卦辞、彖传、大象及对应动爻的小象。"
+                    : classicalStatus === "error"
+                      ? "经传资料暂未载入；产品原创反思仍可正常使用。"
+                      : ""}
+              </p>
 
-              <div className="mt-5 space-y-3">
+              <nav
+                className="ui-copy mt-5 flex flex-wrap gap-x-4 gap-y-2 border-y border-mist/70 py-3 text-sm"
+                aria-label="解释章节"
+              >
                 {interpretation.map((section) => (
-                  <div
+                  <a
                     key={section.title}
-                    className="rounded-sm border border-mist/70 bg-paper-deep/30 p-4"
+                    href={`#reading-${interpretationSectionIds[section.title]}`}
+                    className={
+                      section.title === "行"
+                        ? "text-vermilion underline-offset-4 hover:underline"
+                        : "text-ink-soft underline-offset-4 hover:text-ink hover:underline"
+                    }
                   >
-                    <h3 className="text-xl font-semibold text-ink">
-                      {section.title}
-                    </h3>
-                    <p className="mt-2 leading-7 text-ink-soft">
-                      {section.body}
-                    </p>
-                  </div>
+                    {section.title}
+                  </a>
                 ))}
+              </nav>
+
+              <div className="mt-2">
+                {interpretation.map((section) => {
+                  const isAction = section.title === "行";
+                  const isSafety = section.title === "安全提示";
+
+                  return (
+                    <section
+                      key={section.title}
+                      id={`reading-${interpretationSectionIds[section.title]}`}
+                      className={`scroll-mt-24 border-b p-4 sm:p-5 ${
+                        isAction
+                          ? "mt-4 rounded-sm border-transparent bg-ink text-paper"
+                          : isSafety
+                            ? "mt-4 rounded-sm border border-vermilion/35 bg-vermilion/[0.04]"
+                            : "border-mist/70"
+                      }`}
+                    >
+                      <h3
+                        className={`text-xl font-semibold ${
+                          isAction ? "text-paper" : "text-ink"
+                        }`}
+                      >
+                        {section.title}
+                        {isAction ? (
+                          <span className="ui-copy ml-3 text-xs font-normal tracking-[0.12em] text-paper/60">
+                            一步即可
+                          </span>
+                        ) : null}
+                      </h3>
+                      {section.classical?.length ? (
+                        <div className="mt-4 space-y-4 border-y border-mist/60 py-4">
+                          {section.classical.map((passage) => (
+                            <div key={passage.label}>
+                              <p className="ui-copy text-xs tracking-[0.14em] text-ink-soft/75">
+                                {passage.label}
+                              </p>
+                              <blockquote className="mt-2 text-lg leading-8 text-ink">
+                                {Array.isArray(passage.text) ? (
+                                  <div className="space-y-2">
+                                    {passage.text.map((paragraph, index) => (
+                                      <p
+                                        key={`${index}-${paragraph.slice(0, 16)}`}
+                                      >
+                                        {paragraph}
+                                      </p>
+                                    ))}
+                                  </div>
+                                ) : (
+                                  passage.text
+                                )}
+                              </blockquote>
+                            </div>
+                          ))}
+                        </div>
+                      ) : null}
+                      {section.classical?.length ? (
+                        <p className="ui-copy mt-4 text-xs tracking-[0.14em] text-ink-soft/75">
+                          知易解读 · 产品原创
+                        </p>
+                      ) : null}
+                      <p
+                        className={`mt-2 leading-7 ${
+                          isAction ? "text-paper/80" : "text-ink-soft"
+                        }`}
+                      >
+                        {section.body}
+                      </p>
+                    </section>
+                  );
+                })}
               </div>
             </section>
           </>
@@ -622,10 +994,11 @@ export function AskMode() {
             />
             <h2 className="mt-8 text-2xl font-semibold text-ink">等待成卦</h2>
             <p className="mt-3 max-w-sm text-sm leading-7 text-ink-soft">
-              写下问题，选择类型和起卦方式。生成后会显示本卦、动爻、变卦与六段式反思。
+              写下问题，选择类型和起卦方式。生成后会显示本卦、动爻、变卦与「象、辞、理、用、问、行」六段反思。
             </p>
           </div>
         )}
+        </div>
       </div>
     </section>
   );

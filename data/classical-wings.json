@@ -1,0 +1,3420 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "source": {
+    "id": "zhouyi-yizhuan-wikisource",
+    "work": "《周易》經傳",
+    "edition": "逐卦傳文依中文維基文庫《周易》獨立卦頁；五部通論依《易傳》獨立轉寫頁",
+    "transcriptionProvider": "中文維基文庫",
+    "catalogUrl": "https://zh.wikisource.org/wiki/周易",
+    "treatiseCatalogUrl": "https://zh.wikisource.org/wiki/易傳",
+    "bibliographicScanUrl": "https://ctext.org/library.pl?if=gb&res=77712",
+    "publicDomainStatement": "古籍原文屬公有領域；中文維基文庫轉寫頁面依 CC BY-SA 4.0 提供。",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "accessDate": "2026-08-10",
+    "textPolicy": "逐卦從《周易》獨立卦頁收錄彖、小象與乾坤文言；通論從《易傳》獨立頁收錄繫辭上下、說卦、序卦與雜卦；不混入歷代注疏，保留各固定版本字形與標點。",
+    "verificationPolicy": "逐頁鎖定中文維基文庫 oldid 並回讀；來源已記錄不等於完成校勘學定本，也不解決傳文作者歸屬問題。",
+    "structuralCrossCheck": {
+      "provider": "Kanripo",
+      "repository": "https://github.com/kanripo/KR1a0001",
+      "commit": "8284adbf9e3435d713180e24f05bf75f8b7d1d96",
+      "purpose": "僅核對十翼篇目與傳文結構完整性，不作唯一底本。"
+    },
+    "extractionCorrections": []
+  },
+  "hexagrams": [
+    {
+      "id": 1,
+      "name": "乾",
+      "pageTitle": "周易/乾",
+      "revisionId": 2404991,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E4%B9%BE&oldid=2404991",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "大哉乾元，萬物資始，乃統天。雲行雨施，品物流形，大明終始，六位時成。",
+        "時乘六龍以御天，乾道變化，各正性命，保合大和，乃利貞。",
+        "首出庶物，萬國咸寧。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "潛龍勿用，陽在下也。"
+        },
+        {
+          "position": "九二",
+          "original": "見龍在田，德施普也。"
+        },
+        {
+          "position": "九三",
+          "original": "終日乾乾，反復道也。"
+        },
+        {
+          "position": "九四",
+          "original": "或躍在淵，進无咎也。"
+        },
+        {
+          "position": "九五",
+          "original": "飛龍在天，大人造也。"
+        },
+        {
+          "position": "上九",
+          "original": "亢龍有悔，盈不可久也。"
+        }
+      ],
+      "specialUseImageText": {
+        "position": "用九",
+        "original": "用九，天德不可為首也。"
+      },
+      "wenyanParagraphs": [
+        "元者，善之長也。亨者，嘉之會也。利者，義之和也。貞者，事之幹也。君子體仁足以長人，嘉會足以合禮，利物足以和義，貞固足以幹事。君子行此四德者，故曰：「乾，元、亨、利、貞。」",
+        "初九曰：「潛龍，勿用。」何謂也？子曰：「龍德而隱者也。不易乎世，不成乎名，遯世无悶，不見是而无悶，樂則行之，憂則違之，確乎其不可拔，潛龍也。」",
+        "九二曰：「見龍在田，利見大人。」何謂也？子曰：「龍德而正中者也。庸言之信，庸行之謹；閑邪存其誠，善世而不伐，德博而化。易曰：『見龍在田，利見大人。』君德也。」",
+        "九三曰：「君子終日乾乾，夕惕若，厲，无咎。」何謂也？子曰：「君子進德脩業。忠信，所以進德也；脩辭立其誠，所以居業也。知至至之，可與言幾也。知終終之，可與存義也。是故居上位而不驕，在下位而不憂，故乾乾因其時而惕，雖危无咎矣。」",
+        "九四曰：「或躍在淵，无咎。」何謂也？子曰：「上下无常，非為邪也。進退无恒，非離羣也。君子進德脩業，欲及時也。故无咎。」",
+        "九五曰：「飛龍在天，利見大人。」何謂也？子曰：「同聲相應，同氣相求；水流濕，火就燥，雲從龍，風從虎；聖人作而萬物覩；本乎天者親上，本乎地者親下，則各從其類也。」",
+        "上九曰：「亢龍，有悔。」何謂也？子曰：「貴而无位，高而无民，賢人在下位而无輔，是以動而有悔也。」",
+        "「潛龍勿用」，下也。",
+        "「見龍在田」，時舍也。",
+        "「終日乾乾」，行事也。",
+        "「或躍在淵」，自試也。",
+        "「飛龍在天」，上治也。",
+        "「亢龍有悔」，窮之災也。",
+        "「乾元用九」，天下治也。",
+        "「潛龍勿用」，陽氣潛藏。",
+        "「見龍在田」，天下文明。",
+        "「終日乾乾」，與時偕行。",
+        "「或躍在淵」，乾道乃革。",
+        "「飛龍在天」，乃位乎天德。",
+        "「亢龍有悔」，與時偕極。",
+        "「乾元用九」，乃見天則。",
+        "乾元者，始而亨者也。利貞者，性情也。乾始能以美利利天下，不言所利，大矣哉！大哉乾元，剛健中正，純粹精也。六爻發揮，旁通情也。時乘六龍，以御天也。雲行雨施，天下平也。",
+        "君子以成德為行，日可見之行也。潛之為言也，隱而未見，行而未成，是以君子弗用也。",
+        "君子學以聚之，問以辯之，寬以居之，仁以行之，易曰：「見龍在田，利見大人。」君德也。",
+        "九三，重剛而不中，上不在天，下不在田；故乾乾因其時而惕，雖危，无咎矣。",
+        "九四，重剛而不中，上不在天，下不在田，中不在人，故或之。或之者，疑之也，故无咎。",
+        "夫大人者，與天地合其德，與日月合其明，與四時合其序，與鬼神合其吉凶；先天而天弗違，後天而奉天時，天且弗違，而況於人乎？況於鬼神乎？",
+        "亢之為言也，知進而不知退，知存而不知亡，知得而不知喪；其唯聖人乎？知進退存亡而不失其正者，其唯聖人乎！"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "坤",
+      "pageTitle": "周易/坤",
+      "revisionId": 2404999,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%9D%A4&oldid=2404999",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "至哉坤元，萬物資生，乃順承天。坤厚載物，德合无疆；含弘光大，品物咸亨。牝馬地類，行地无疆，柔順利貞。",
+        "君子攸行，先迷失道，後順得常。",
+        "西南得朋，乃與類行，東北喪朋，乃終有慶。安貞之吉，應地无疆。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "履霜堅冰，陰始凝也。馴致其道，至堅冰也。"
+        },
+        {
+          "position": "六二",
+          "original": "六二之動，直以方也。不習无不利，地道光也。"
+        },
+        {
+          "position": "六三",
+          "original": "含章可貞，以時發也。或從王事，知光大也。"
+        },
+        {
+          "position": "六四",
+          "original": "括囊无咎，慎不害也。"
+        },
+        {
+          "position": "六五",
+          "original": "黃裳元吉，文在中也。"
+        },
+        {
+          "position": "上六",
+          "original": "龍戰于野，其道窮也。"
+        }
+      ],
+      "specialUseImageText": {
+        "position": "用六",
+        "original": "用六永貞，以大終也。"
+      },
+      "wenyanParagraphs": [
+        "坤至柔而動也剛，至靜而德方。後得主而有常，含萬物而化光。坤道其順乎！承天而時行。",
+        "積善之家，必有餘慶；積不善之家，必有餘殃。臣弒其君，子弒其父，非一朝一夕之故，其所由來者漸矣。由辨之不早辨也。易曰：「履霜，堅冰至。」蓋言順也。",
+        "直其正也，方其義也。君子敬以直內，義以方外，敬義立而德不孤。「直方大，不習无不利。」則不疑其所行也。",
+        "陰雖有美，含之。以從王事，弗敢成也。地道也，妻道也，臣道也。地道无成，而代有終也。",
+        "天地變化，草木蕃；天地閉，賢人隱。易曰：「括囊，无咎，无譽。」蓋言謹也。",
+        "君子黃中通理，正位居體，美在其中，而暢於四支，發於事業，美之至也。",
+        "陰疑於陽必戰，為其嫌於无陽也，故稱龍焉。猶未離其類也，故稱血焉。夫玄黃者，天地之雜也。天玄而地黃。"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "屯",
+      "pageTitle": "周易/屯",
+      "revisionId": 2527353,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%B1%AF&oldid=2527353",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "屯，剛柔始交而難生，動乎險中，大亨貞。雷雨之動滿盈，天造草昧，宜建侯而不寧。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "雖磐桓，志行正也。以貴下賤，大得民也。"
+        },
+        {
+          "position": "六二",
+          "original": "六二之難，乘剛也。十年乃字，反常也。"
+        },
+        {
+          "position": "六三",
+          "original": "即鹿无虞，以從禽也。君子舍之，往吝窮也。"
+        },
+        {
+          "position": "六四",
+          "original": "求而往，明也。"
+        },
+        {
+          "position": "九五",
+          "original": "屯其膏，施未光也。"
+        },
+        {
+          "position": "上六",
+          "original": "泣血漣如，何可長也。"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "蒙",
+      "pageTitle": "周易/蒙",
+      "revisionId": 2601829,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E8%92%99&oldid=2601829",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "蒙，山下有險，險而止，蒙。蒙亨，以亨行，時中也。匪我求童蒙，童蒙求我，志應也。初筮告，以剛中也。再三瀆，瀆則不告，瀆蒙也。蒙以養正，聖功也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "利用刑人，以正法也。"
+        },
+        {
+          "position": "九二",
+          "original": "子克家，剛柔接也。"
+        },
+        {
+          "position": "六三",
+          "original": "勿用取女，行不順也。"
+        },
+        {
+          "position": "六四",
+          "original": "困蒙之吝，獨遠實也。"
+        },
+        {
+          "position": "六五",
+          "original": "童蒙之吉，順以巽也。"
+        },
+        {
+          "position": "上九",
+          "original": "利禦寇，上下順也。"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "需",
+      "pageTitle": "周易/需",
+      "revisionId": 2405039,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E9%9C%80&oldid=2405039",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "需，須也，險在前也；剛健而不陷，其義不困窮矣。需，有孚，光亨，貞吉，位乎天位，以正中也。利涉大川，往有功也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "需于郊，不犯難行也。利用恆，无咎，未失常也。"
+        },
+        {
+          "position": "九二",
+          "original": "需于沙，衍在中也。雖小有言，以終吉也。"
+        },
+        {
+          "position": "九三",
+          "original": "需于泥，災在外也。自我致寇，敬慎不敗也。"
+        },
+        {
+          "position": "六四",
+          "original": "需于血，順以聽也。"
+        },
+        {
+          "position": "九五",
+          "original": "酒食，貞吉，以中正也。"
+        },
+        {
+          "position": "上六",
+          "original": "不速之客來，敬之終吉。雖不當位，未大失也。"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "訟",
+      "pageTitle": "周易/訟",
+      "revisionId": 2405032,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E8%A8%9F&oldid=2405032",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "訟，上剛下險，險而健，訟。訟，有孚，窒，惕，中吉，剛來而得中也。終凶，訟不可成也。利見大人，尚中正也。不利涉大川，入于淵也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "不永所事，訟不可長也。雖小有言，其辯明也。"
+        },
+        {
+          "position": "九二",
+          "original": "不克訟，歸逋竄也。自下訟上，患至掇也。"
+        },
+        {
+          "position": "六三",
+          "original": "食舊德，從上吉也。"
+        },
+        {
+          "position": "九四",
+          "original": "復即命渝，安貞，不失也。"
+        },
+        {
+          "position": "九五",
+          "original": "訟，元吉，以中正也。"
+        },
+        {
+          "position": "上九",
+          "original": "以訟受服，亦不足敬也。"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "師",
+      "pageTitle": "周易/師",
+      "revisionId": 2405011,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%B8%AB&oldid=2405011",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "師，眾也。貞，正也。能以眾正，可以王矣。剛中而應，行險而順，以此毒天下，而民從之，吉又何咎矣。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "師出以律；失律，凶也。"
+        },
+        {
+          "position": "九二",
+          "original": "在師中吉，承天寵也。王三錫命，懷萬邦也。"
+        },
+        {
+          "position": "六三",
+          "original": "師或輿尸，大无功也。"
+        },
+        {
+          "position": "六四",
+          "original": "左次无咎，未失常也。"
+        },
+        {
+          "position": "六五",
+          "original": "長子帥師，以中行也。弟子輿尸，使不當也。"
+        },
+        {
+          "position": "上六",
+          "original": "大君有命，以正功也。小人勿用，必亂邦也。"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "比",
+      "pageTitle": "周易/比",
+      "revisionId": 2405022,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E6%AF%94&oldid=2405022",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "比，吉也。比，輔也，下順從也。原筮，元永貞，无咎，以剛中也。不寧方來，上下應也。後夫凶，其道窮也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "比之初六，有它吉也。"
+        },
+        {
+          "position": "六二",
+          "original": "比之自內，不自失也。"
+        },
+        {
+          "position": "六三",
+          "original": "比之匪人，不亦傷乎！"
+        },
+        {
+          "position": "六四",
+          "original": "外比於賢，以從上也。"
+        },
+        {
+          "position": "九五",
+          "original": "顯比之吉，位正中也。舍逆取順，失前禽也。邑人不誡，上使中也。"
+        },
+        {
+          "position": "上六",
+          "original": "比之无首，无所終也。"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "小畜",
+      "pageTitle": "周易/小畜",
+      "revisionId": 2405006,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%B0%8F%E7%95%9C&oldid=2405006",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "小畜，柔得位而上下應之，曰小畜。健而巽，剛中而志行，乃亨。密雲不雨，尚往也。自我西郊，施未行也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "復自道，其義吉也。"
+        },
+        {
+          "position": "九二",
+          "original": "牽復在中，亦不自失也。"
+        },
+        {
+          "position": "九三",
+          "original": "夫妻反目，不能正室也。"
+        },
+        {
+          "position": "六四",
+          "original": "有孚。惕出。上合志也。"
+        },
+        {
+          "position": "九五",
+          "original": "有孚攣如，不獨富也。"
+        },
+        {
+          "position": "上九",
+          "original": "既雨既處，德積載也。君子征凶，有所疑也。"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "履",
+      "pageTitle": "周易/履",
+      "revisionId": 2494097,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%B1%A5&oldid=2494097",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "履，柔履剛也。說而應乎乾，是以履虎尾，不咥人，亨。剛中正，履帝位而不疚，光明也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "素履之往，獨行願也。"
+        },
+        {
+          "position": "九二",
+          "original": "幽人貞吉，中不自亂也。"
+        },
+        {
+          "position": "六三",
+          "original": "眇能視，不足以有明也。跛能履，不足以與行也。咥人之凶，位不當也。武人為于大君，志剛也。"
+        },
+        {
+          "position": "九四",
+          "original": "愬愬終吉，志行也。"
+        },
+        {
+          "position": "九五",
+          "original": "夬履貞厲，位正當也。"
+        },
+        {
+          "position": "上九",
+          "original": "元吉在上，大有慶也。"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "泰",
+      "pageTitle": "周易/泰",
+      "revisionId": 2106138,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E6%B3%B0&oldid=2106138",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "泰，小往大來，吉亨。則是天地交而萬物通也，上下交而其志同也。內陽而外陰，內健而外順，內君子而外小人，君子道長，小人道消也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "拔茅征吉，志在外也。"
+        },
+        {
+          "position": "九二",
+          "original": "包荒，得尚于中行，以光大也。"
+        },
+        {
+          "position": "九三",
+          "original": "无往不復，天地際也。"
+        },
+        {
+          "position": "六四",
+          "original": "翩翩不富，皆失實也。不戒以孚，中心願也。"
+        },
+        {
+          "position": "六五",
+          "original": "以祉，元吉。中以行願也。"
+        },
+        {
+          "position": "上六",
+          "original": "城復于隍，其命亂也。"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "否",
+      "pageTitle": "周易/否",
+      "revisionId": 2106139,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%90%A6&oldid=2106139",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "否之匪人，不利君子貞，大往小來。則是天地不交而萬物不通也，上下不交而天下无邦也。內陰而外陽，內柔而外剛，內小人而外君子，小人道長，君子道消也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "拔茅貞吉，志在君也。"
+        },
+        {
+          "position": "六二",
+          "original": "大人否，亨。不亂羣也。"
+        },
+        {
+          "position": "六三",
+          "original": "包羞，位不當也。"
+        },
+        {
+          "position": "九四",
+          "original": "有命无咎，志行也。"
+        },
+        {
+          "position": "九五",
+          "original": "大人之吉，位正當也。"
+        },
+        {
+          "position": "上九",
+          "original": "否終則傾，何可長也。"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "同人",
+      "pageTitle": "周易/同人",
+      "revisionId": 2106140,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%90%8C%E4%BA%BA&oldid=2106140",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "同人，柔得位得中，而應乎乾，曰同人。同人曰，同人于野，亨。利涉大川，乾行也。文明以健，中正而應，君子正也。唯君子為能通天下之志。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "出門同人，又誰咎也。"
+        },
+        {
+          "position": "六二",
+          "original": "同人于宗，吝道也。"
+        },
+        {
+          "position": "九三",
+          "original": "伏戎于莽，敵剛也。三歲不興，安行也。"
+        },
+        {
+          "position": "九四",
+          "original": "乘其墉，義弗克也，其吉，則困而反則也。"
+        },
+        {
+          "position": "九五",
+          "original": "同人之先，以中直也。大師相遇，言相克也。"
+        },
+        {
+          "position": "上九",
+          "original": "同人于郊，志未得也。"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "大有",
+      "pageTitle": "周易/大有",
+      "revisionId": 2494004,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%A4%A7%E6%9C%89&oldid=2494004",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "大有，柔得尊位，大中而上下應之，曰大有。其德剛健而文明，應乎天而時行，是以元亨。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "大有初九，无交害也。"
+        },
+        {
+          "position": "九二",
+          "original": "大車以載，積中不敗也。"
+        },
+        {
+          "position": "九三",
+          "original": "公用亨于天子，小人害也。"
+        },
+        {
+          "position": "九四",
+          "original": "匪其彭，无咎；明辨晰也。"
+        },
+        {
+          "position": "六五",
+          "original": "厥孚交如，信以發志也。威如之吉，易而无備也。"
+        },
+        {
+          "position": "上九",
+          "original": "大有上吉，自天佑也。"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "謙",
+      "pageTitle": "周易/謙",
+      "revisionId": 2106142,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E8%AC%99&oldid=2106142",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "謙，亨，天道下濟而光明，地道卑而上行。天道虧盈而益謙，地道變盈而流謙，鬼神害盈而福謙，人道惡盈而好謙。謙尊而光，卑而不可逾，君子之終也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "謙謙君子，卑以自牧也。"
+        },
+        {
+          "position": "六二",
+          "original": "鳴謙貞吉，中心得也。"
+        },
+        {
+          "position": "九三",
+          "original": "勞謙君子，萬民服也。"
+        },
+        {
+          "position": "六四",
+          "original": "无不利撝謙；不違則也。"
+        },
+        {
+          "position": "六五",
+          "original": "利用侵伐，征不服也。"
+        },
+        {
+          "position": "上六",
+          "original": "鳴謙，志未得也。可用行師，征邑國也。"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "豫",
+      "pageTitle": "周易/豫",
+      "revisionId": 2106143,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E8%B1%AB&oldid=2106143",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "豫，剛應而志行，順以動，豫。豫，順以動，故天地如之，而況建侯行師乎？天地以順動，故日月不過，而四時不忒；聖人以順動，則刑罰清而民服。豫之時義大矣哉！"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "初六鳴豫，志窮凶也。"
+        },
+        {
+          "position": "六二",
+          "original": "不終日，貞吉；以中正也。"
+        },
+        {
+          "position": "六三",
+          "original": "盱豫有悔，位不當也。"
+        },
+        {
+          "position": "九四",
+          "original": "由豫，大有得；志大行也。"
+        },
+        {
+          "position": "六五",
+          "original": "六五貞疾，乘剛也。恆不死，中未亡也。"
+        },
+        {
+          "position": "上六",
+          "original": "冥豫在上，何可長也。"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "隨",
+      "pageTitle": "周易/隨",
+      "revisionId": 2497157,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E9%9A%A8&oldid=2497157",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "隨，剛來而下柔，動而說，隨。大亨貞，无咎，而天下隨時，隨之時義大矣哉！"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "官有渝，從正吉也。出門交有功，不失也。"
+        },
+        {
+          "position": "六二",
+          "original": "系小子，弗兼與也。"
+        },
+        {
+          "position": "六三",
+          "original": "系丈夫，志舍下也。"
+        },
+        {
+          "position": "九四",
+          "original": "隨有獲，其義凶也。有孚在道，明功也。"
+        },
+        {
+          "position": "九五",
+          "original": "孚于嘉，吉；位正中也。"
+        },
+        {
+          "position": "上六",
+          "original": "拘系之，上窮也。"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "蠱",
+      "pageTitle": "周易/蠱",
+      "revisionId": 2106145,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E8%A0%B1&oldid=2106145",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "蠱，剛上而柔下，巽而止，蠱。蠱，元亨，而天下治也。利涉大川，往有事也。先甲三日，後甲三日，終則有始，天行也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "幹父之蠱，意承考也。"
+        },
+        {
+          "position": "九二",
+          "original": "幹母之蠱，得中道也。"
+        },
+        {
+          "position": "九三",
+          "original": "幹父之蠱，終无咎也。"
+        },
+        {
+          "position": "六四",
+          "original": "裕父之蠱，往未得也。"
+        },
+        {
+          "position": "六五",
+          "original": "幹父用譽，承以德也。"
+        },
+        {
+          "position": "上九",
+          "original": "不事王侯，志可則也。"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "臨",
+      "pageTitle": "周易/臨",
+      "revisionId": 2106146,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E8%87%A8&oldid=2106146",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "臨，剛浸而長。說而順，剛中而應，大亨以正，天之道也。至于八月有凶，消不久也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "咸臨貞吉，志行正也。"
+        },
+        {
+          "position": "九二",
+          "original": "咸臨，吉无不利；未順命也。"
+        },
+        {
+          "position": "六三",
+          "original": "甘臨，位不當也。既憂之，咎不長也。"
+        },
+        {
+          "position": "六四",
+          "original": "至臨无咎，位當也。"
+        },
+        {
+          "position": "六五",
+          "original": "大君之宜，行中之謂也。"
+        },
+        {
+          "position": "上六",
+          "original": "敦臨之吉，志在內也。"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "觀",
+      "pageTitle": "周易/觀",
+      "revisionId": 2106147,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E8%A7%80&oldid=2106147",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "大觀在上，順而巽，中正以觀天下。觀，盥而不荐，有孚顒若，下觀而化也。觀天之神道，而四時不忒，聖人以神道設教，而天下服矣。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "初六童觀，小人道也。"
+        },
+        {
+          "position": "六二",
+          "original": "窺觀女貞，亦可丑也。"
+        },
+        {
+          "position": "六三",
+          "original": "觀我生，進退；未失道也。"
+        },
+        {
+          "position": "六四",
+          "original": "觀國之光，尚賓也。"
+        },
+        {
+          "position": "九五",
+          "original": "觀我生，觀民也。"
+        },
+        {
+          "position": "上九",
+          "original": "觀其生，志未平也。"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "噬嗑",
+      "pageTitle": "周易/噬嗑",
+      "revisionId": 2404997,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%99%AC%E5%97%91&oldid=2404997",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "頤中有物，曰噬嗑，噬嗑而亨。剛柔分，動而明，雷電合而章。柔得中而上行，雖不當位，利用獄也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "屨校滅趾，不行也。"
+        },
+        {
+          "position": "六二",
+          "original": "噬膚滅鼻，乘剛也。"
+        },
+        {
+          "position": "六三",
+          "original": "遇毒，位不當也。"
+        },
+        {
+          "position": "九四",
+          "original": "利艱貞吉，未光也。"
+        },
+        {
+          "position": "六五",
+          "original": "貞厲无咎，得當也。"
+        },
+        {
+          "position": "上九",
+          "original": "何校滅耳，聰不明也。"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "賁",
+      "pageTitle": "周易/賁",
+      "revisionId": 2405035,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E8%B3%81&oldid=2405035",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "賁，亨；柔來而文剛，故亨。分剛上而文柔，故小利有攸往。剛柔交錯，天文也；文明以止，人文也。觀乎天文，以察時變；觀乎人文，以化成天下。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "舍車而徒，義弗乘也。"
+        },
+        {
+          "position": "六二",
+          "original": "賁其須，與上興也。"
+        },
+        {
+          "position": "九三",
+          "original": "永貞之吉，終莫之陵也。"
+        },
+        {
+          "position": "六四",
+          "original": "六四，當位疑也。匪寇婚媾，終无尤也。"
+        },
+        {
+          "position": "六五",
+          "original": "六五之吉，有喜也。"
+        },
+        {
+          "position": "上九",
+          "original": "白賁无咎，上得志也。"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "剝",
+      "pageTitle": "周易/剝",
+      "revisionId": 2404994,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%89%9D&oldid=2404994",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "剝，剝也，柔變剛也。不利有攸往，小人長也。順而止之，觀象也。君子尚消息盈虛，天行也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "剝牀以足，以滅下也。"
+        },
+        {
+          "position": "六二",
+          "original": "剝牀以辨，未有與也。"
+        },
+        {
+          "position": "六三",
+          "original": "剝之无咎，失上下也。"
+        },
+        {
+          "position": "六四",
+          "original": "剝牀以膚，切近災也。"
+        },
+        {
+          "position": "六五",
+          "original": "以宮人寵，終无尤也。"
+        },
+        {
+          "position": "上九",
+          "original": "君子得輿，民所載也。小人剝廬，終不可用也。"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "復",
+      "pageTitle": "周易/復",
+      "revisionId": 2497162,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%BE%A9&oldid=2497162",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "復亨；剛反，動而以順行，是以出入无疾，朋來无咎。反復其道，七日來復，天行也。利有攸往，剛長也。復其見天地之心乎？"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "不遠之復，以修身也。"
+        },
+        {
+          "position": "六二",
+          "original": "休復之吉，以下仁也。"
+        },
+        {
+          "position": "六三",
+          "original": "頻復之厲，義无咎也。"
+        },
+        {
+          "position": "六四",
+          "original": "中行獨復，以從道也。"
+        },
+        {
+          "position": "六五",
+          "original": "敦復无悔，中以自考也。"
+        },
+        {
+          "position": "上六",
+          "original": "迷復之凶，反君道也。"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "無妄",
+      "pageTitle": "周易/无妄",
+      "revisionId": 2527352,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E6%97%A0%E5%A6%84&oldid=2527352",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "无妄，剛自外來，而為主於內。動而健，剛中而應，大亨以正，天之命也。其匪正有眚，不利有攸往。无妄之往，何之矣？ 天命不佑，行矣哉？"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "无妄之往，得志也。"
+        },
+        {
+          "position": "六二",
+          "original": "不耕穫，未富也。"
+        },
+        {
+          "position": "六三",
+          "original": "行人得牛，邑人災也。"
+        },
+        {
+          "position": "九四",
+          "original": "可貞无咎，固有之也。"
+        },
+        {
+          "position": "九五",
+          "original": "无妄之藥，不可試也。"
+        },
+        {
+          "position": "上九",
+          "original": "无妄之行，窮之災也。"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "大畜",
+      "pageTitle": "周易/大畜",
+      "revisionId": 2405001,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%A4%A7%E7%95%9C&oldid=2405001",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "大畜，剛健篤實輝光，日新其德，剛上而尚賢。能止健，大正也。不家食吉，養賢也。利涉大川，應乎天也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "有厲利已，不犯災也。"
+        },
+        {
+          "position": "九二",
+          "original": "輿說輹，中无尤也。"
+        },
+        {
+          "position": "九三",
+          "original": "利有攸往，上合志也。"
+        },
+        {
+          "position": "六四",
+          "original": "六四元吉，有喜也。"
+        },
+        {
+          "position": "六五",
+          "original": "六五之吉，有慶也。"
+        },
+        {
+          "position": "上九",
+          "original": "何天之衢，道大行也。"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "頤",
+      "pageTitle": "周易/頤",
+      "revisionId": 2405042,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E9%A0%A4&oldid=2405042",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "頤貞吉，養正則吉也。觀頤，觀其所養也；自求口實，觀其自養也。天地養萬物，聖人養賢，以及萬民；頤之時義大矣哉！"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "觀我朵頤，亦不足貴也。"
+        },
+        {
+          "position": "六二",
+          "original": "六二征凶，行失類也。"
+        },
+        {
+          "position": "六三",
+          "original": "十年勿用，道大悖也。"
+        },
+        {
+          "position": "六四",
+          "original": "顛頤之吉，上施光也。"
+        },
+        {
+          "position": "六五",
+          "original": "居貞之吉，順以從上也。"
+        },
+        {
+          "position": "上九",
+          "original": "由頤厲吉，大有慶也。"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "大過",
+      "pageTitle": "周易/大過",
+      "revisionId": 2405002,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%A4%A7%E9%81%8E&oldid=2405002",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "大過，大者過也。棟橈，本末弱也。剛過而中，巽而說行，利有攸往，乃亨。大過之時義大矣哉！"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "藉用白茅，柔在下也。"
+        },
+        {
+          "position": "九二",
+          "original": "老夫女妻，過以相與也。"
+        },
+        {
+          "position": "九三",
+          "original": "棟橈之凶，不可以有輔也。"
+        },
+        {
+          "position": "九四",
+          "original": "棟隆之吉，不橈乎下也。"
+        },
+        {
+          "position": "九五",
+          "original": "枯楊生華，何可久也。老婦士夫，亦可丑也。"
+        },
+        {
+          "position": "上六",
+          "original": "過涉之凶，不可咎也。"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "坎",
+      "pageTitle": "周易/坎",
+      "revisionId": 2502716,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%9D%8E&oldid=2502716",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "習坎，重險也。水流而不盈，行險而不失其信。維心亨，乃以剛中也。行有尚，往有功也。天險不可升也，地險山川丘陵也，王公設險以守其國，坎之時用大矣哉！"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "習坎入坎，失道凶也。"
+        },
+        {
+          "position": "九二",
+          "original": "求小得，未出中也。"
+        },
+        {
+          "position": "六三",
+          "original": "來之坎坎，終无功也。"
+        },
+        {
+          "position": "六四",
+          "original": "樽酒簋貳，剛柔济也。"
+        },
+        {
+          "position": "九五",
+          "original": "坎不盈，中未大也。"
+        },
+        {
+          "position": "上六",
+          "original": "上六失道，凶三歲也。"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "離",
+      "pageTitle": "周易/離",
+      "revisionId": 2528049,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E9%9B%A2&oldid=2528049",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "離，麗也；日月麗乎天，百谷草木麗乎土，重明以麗乎正，乃化成天下。柔麗乎中正，故亨；是以畜牝牛吉也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "履錯之敬，以辟咎也。"
+        },
+        {
+          "position": "六二",
+          "original": "黃離元吉，得中道也。"
+        },
+        {
+          "position": "九三",
+          "original": "日昃之離，何可久也。"
+        },
+        {
+          "position": "九四",
+          "original": "突如其來如，无所容也。"
+        },
+        {
+          "position": "六五",
+          "original": "六五之吉，離王公也。"
+        },
+        {
+          "position": "上九",
+          "original": "王用出征，以正邦也。"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "咸",
+      "pageTitle": "周易/咸",
+      "revisionId": 2404996,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%92%B8&oldid=2404996",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "咸，感也。柔上而剛下，二氣感應以相與，止而說，男下女，是以亨利貞，取女吉也。天地感而萬物化生，聖人感人心而天下和平；觀其所感，而天地萬物之情可見矣！"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "咸其拇，志在外也。"
+        },
+        {
+          "position": "六二",
+          "original": "雖凶，居吉，順不害也。"
+        },
+        {
+          "position": "九三",
+          "original": "咸其股，亦不處也。志在隨人，所執下也。"
+        },
+        {
+          "position": "九四",
+          "original": "貞吉悔亡，未感害也。憧憧往來，未光大也。"
+        },
+        {
+          "position": "九五",
+          "original": "咸其脢，志末也。"
+        },
+        {
+          "position": "上六",
+          "original": "咸其輔，頰，舌，滕口說也。"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "恒",
+      "pageTitle": "周易/恒",
+      "revisionId": 2530043,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E6%81%92&oldid=2530043",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "恆，久也。剛上而柔下，雷風相與，巽而動，剛柔皆應，恆。恆亨无咎，利貞；久于其道也，天地之道，恆久而不已也。利有攸往，終則有始也。日月得天，而能久照，四時變化，而能久成，聖人久于其道，而天下化成；觀其所恆，而天地萬物之情可見矣！"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "浚恆之凶，始求深也。"
+        },
+        {
+          "position": "九二",
+          "original": "九二悔亡，能久中也。"
+        },
+        {
+          "position": "九三",
+          "original": "不恆其德，无所容也。"
+        },
+        {
+          "position": "九四",
+          "original": "久非其位，安得禽也。"
+        },
+        {
+          "position": "六五",
+          "original": "婦人貞吉，從一而終也。夫子制義，從婦凶也。"
+        },
+        {
+          "position": "上六",
+          "original": "振恆在上，大无功也。"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "遯",
+      "pageTitle": "周易/遯",
+      "revisionId": 2405037,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E9%81%AF&oldid=2405037",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "遯亨，遯而亨也。剛當位而應，與時行也。小利貞，浸而長也。遯之時義大矣哉！"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "遯尾之厲，不往何災也。"
+        },
+        {
+          "position": "六二",
+          "original": "執用黃牛，固志也。"
+        },
+        {
+          "position": "九三",
+          "original": "系遯之厲，有疾憊也。畜臣妾吉，不可大事也。"
+        },
+        {
+          "position": "九四",
+          "original": "君子好遯，小人否也。"
+        },
+        {
+          "position": "九五",
+          "original": "嘉遯貞吉，以正志也。"
+        },
+        {
+          "position": "上九",
+          "original": "肥遯，无不利；无所疑也。"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "大壯",
+      "pageTitle": "周易/大壯",
+      "revisionId": 2531745,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%A4%A7%E5%A3%AF&oldid=2531745",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "大壯，大者壯也。剛以動，故壯。大壯利貞；大者正也。正大而天地之情可見矣！"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "壯于趾，其孚窮也。"
+        },
+        {
+          "position": "九二",
+          "original": "九二貞吉，以中也。"
+        },
+        {
+          "position": "九三",
+          "original": "小人用壯，君子罔也。"
+        },
+        {
+          "position": "九四",
+          "original": "藩決不羸，尚往也。"
+        },
+        {
+          "position": "六五",
+          "original": "喪羊于易，位不當也。"
+        },
+        {
+          "position": "上六",
+          "original": "不能退，不能遂，不詳也。艱則吉，咎不長也。"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "晉",
+      "pageTitle": "周易/晉",
+      "revisionId": 2584802,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E6%99%89&oldid=2584802",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "晉，進也。明出地上，順而麗乎大明，柔進而上行。是以康侯用錫馬蕃庶，晝日三接也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "晉如，摧如；獨行正也。裕无咎；未受命也。"
+        },
+        {
+          "position": "六二",
+          "original": "受茲介福，以中正也。"
+        },
+        {
+          "position": "六三",
+          "original": "眾允之志，上行也。"
+        },
+        {
+          "position": "九四",
+          "original": "鼫鼠貞厲，位不當也。"
+        },
+        {
+          "position": "六五",
+          "original": "失得勿恤，往有慶也。"
+        },
+        {
+          "position": "上九",
+          "original": "維用伐邑，道未光也。"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "明夷",
+      "pageTitle": "周易/明夷",
+      "revisionId": 2531747,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E6%98%8E%E5%A4%B7&oldid=2531747",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "明入地中，明夷。內文明而外柔順，以蒙大難，文王以之。利艱貞，晦其明也，內難而能正其志，箕子以之。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "君子于行，義不食也。"
+        },
+        {
+          "position": "六二",
+          "original": "六二之吉，順以則也。"
+        },
+        {
+          "position": "九三",
+          "original": "南狩之志，乃大得也。"
+        },
+        {
+          "position": "六四",
+          "original": "入于左腹，獲心意也。"
+        },
+        {
+          "position": "六五",
+          "original": "箕子之貞，明不可息也。"
+        },
+        {
+          "position": "上六",
+          "original": "初登于天，照四國也。后入于地，失則也。"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "家人",
+      "pageTitle": "周易/家人",
+      "revisionId": 2405005,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%AE%B6%E4%BA%BA&oldid=2405005",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "家人，女正位乎內，男正位乎外，男女正，天地之大義也。家人有嚴君焉，父母之謂也。父父，子子，兄兄，弟弟，夫夫，婦婦，而家道正；正家而天下定矣。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "閑有家，志未變也。"
+        },
+        {
+          "position": "六二",
+          "original": "六二之吉，順以巽也。"
+        },
+        {
+          "position": "九三",
+          "original": "家人嗃嗃，未失也；婦子嘻嘻，失家節也。"
+        },
+        {
+          "position": "六四",
+          "original": "富家大吉，順在位也。"
+        },
+        {
+          "position": "九五",
+          "original": "王假有家，交相愛也。"
+        },
+        {
+          "position": "上九",
+          "original": "威如之吉，反身之謂也。"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "睽",
+      "pageTitle": "周易/睽",
+      "revisionId": 2531978,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E7%9D%BD&oldid=2531978",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "睽，火動而上，澤動而下；二女同居，其志不同行；說而麗乎明，柔進而上行，得中而應乎剛；是以小事吉。天地睽，而其事同也；男女睽，而其志通也；萬物睽，而其事類也；睽之時用大矣哉！"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "見惡人，以辟咎也。"
+        },
+        {
+          "position": "九二",
+          "original": "遇主于巷，未失道也。"
+        },
+        {
+          "position": "六三",
+          "original": "見輿曳，位不當也。无初有終，遇剛也。"
+        },
+        {
+          "position": "九四",
+          "original": "交孚无咎，志行也。"
+        },
+        {
+          "position": "六五",
+          "original": "厥宗噬膚，往有慶也。"
+        },
+        {
+          "position": "上九",
+          "original": "遇雨之吉，群疑亡也。"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "蹇",
+      "pageTitle": "周易/蹇",
+      "revisionId": 2405036,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E8%B9%87&oldid=2405036",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "蹇，難也，險在前也。見險而能止，知矣哉！蹇利西南，往得中也；不利東北，其道窮也。利見大人，往有功也。當位貞吉，以正邦也。蹇之時用大矣哉！"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "往蹇來譽，宜待也。"
+        },
+        {
+          "position": "六二",
+          "original": "王臣蹇蹇，終无尤也。"
+        },
+        {
+          "position": "九三",
+          "original": "往蹇來反，內喜之也。"
+        },
+        {
+          "position": "六四",
+          "original": "往蹇來連，當位實也。"
+        },
+        {
+          "position": "九五",
+          "original": "大蹇朋來，以中節也。"
+        },
+        {
+          "position": "上六",
+          "original": "往蹇來碩，志在內也。利見大人，以從貴也。"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "解",
+      "pageTitle": "周易/解",
+      "revisionId": 2405031,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E8%A7%A3&oldid=2405031",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "解，險以動，動而免乎險，解。解利西南，往得眾也。其來復吉，乃得中也。有攸往夙吉，往有功也。天地解，而雷雨作，雷雨作，而百果草木皆甲坼，解之時義大矣哉！"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "剛柔之際，義无咎也。"
+        },
+        {
+          "position": "九二",
+          "original": "九二貞吉，得中道也。"
+        },
+        {
+          "position": "六三",
+          "original": "負且乘，亦可丑也，自我致戎，又誰咎也。"
+        },
+        {
+          "position": "九四",
+          "original": "解而拇，未當位也。"
+        },
+        {
+          "position": "六五",
+          "original": "君子有解，小人退也。"
+        },
+        {
+          "position": "上六",
+          "original": "公用射隼，以解悖也。"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "損",
+      "pageTitle": "周易/損",
+      "revisionId": 2405014,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E6%90%8D&oldid=2405014",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "損，損下益上，其道上行。損而有孚，元吉，无咎，可貞，利有攸往。曷之用？二簋可用享；二簋應有時。損剛益柔有時，損益盈虛，與時偕行。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "已事遄往，尚合志也。"
+        },
+        {
+          "position": "九二",
+          "original": "九二利貞，中以為志也。"
+        },
+        {
+          "position": "六三",
+          "original": "一人行，三則疑也。"
+        },
+        {
+          "position": "六四",
+          "original": "損其疾，亦可喜也。"
+        },
+        {
+          "position": "六五",
+          "original": "六五元吉，自上佑也。"
+        },
+        {
+          "position": "上九",
+          "original": "弗損益之，大得志也。"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "益",
+      "pageTitle": "周易/益",
+      "revisionId": 2405025,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E7%9B%8A&oldid=2405025",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "益，損上益下，民說无疆，自上下下，其道大光。利有攸往，中正有慶。利涉大川，木道乃行。益動而巽，日進无疆。天施地生，其益无方。凡益之道，與時偕行。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "元吉无咎，下不厚事也。"
+        },
+        {
+          "position": "六二",
+          "original": "或益之，自外來也。"
+        },
+        {
+          "position": "六三",
+          "original": "益用凶事，固有之也。"
+        },
+        {
+          "position": "六四",
+          "original": "告公從，以益志也。"
+        },
+        {
+          "position": "九五",
+          "original": "有孚惠心，勿問之矣。惠我德，大得志也。"
+        },
+        {
+          "position": "上九",
+          "original": "莫益之，偏辭也。或擊之，自外來也。"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "夬",
+      "pageTitle": "周易/夬",
+      "revisionId": 2405003,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%A4%AC&oldid=2405003",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "夬，決也，剛決柔也。健而說，決而和，揚于王庭，柔乘五剛也。孚號有厲，其危乃光也。告自邑，不利即戎，所尚乃窮也。利有攸往，剛長乃終也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "不勝而往，咎也。"
+        },
+        {
+          "position": "九二",
+          "original": "莫夜有戎，得中道也。"
+        },
+        {
+          "position": "九三",
+          "original": "君子夬夬，終无咎也。"
+        },
+        {
+          "position": "九四",
+          "original": "其行次且，位不當也。聞言不信，聰不明也。"
+        },
+        {
+          "position": "九五",
+          "original": "中行无咎，中未光也。"
+        },
+        {
+          "position": "上六",
+          "original": "无號之凶，終不可長也。"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "姤",
+      "pageTitle": "周易/姤",
+      "revisionId": 2437487,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%A7%A4&oldid=2437487",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "姤，遇也，柔遇剛也。勿用取女，不可與長也。天地相遇，品物咸章也。剛遇中正，天下大行也。姤之時義大矣哉！"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "系于金柅，柔道牽也。"
+        },
+        {
+          "position": "九二",
+          "original": "包有魚，義不及賓也。"
+        },
+        {
+          "position": "九三",
+          "original": "其行次且，行未牽也。"
+        },
+        {
+          "position": "九四",
+          "original": "无魚之凶，遠民也。"
+        },
+        {
+          "position": "九五",
+          "original": "九五含章，中正也。有隕自天，志不舍命也。"
+        },
+        {
+          "position": "上九",
+          "original": "姤其角，上窮吝也。"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "萃",
+      "pageTitle": "周易/萃",
+      "revisionId": 2535017,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E8%90%83&oldid=2535017",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "萃，聚也；順以說，剛中而應，故聚也。王假有廟，致孝享也。利見大人亨，聚以正也。用大牲吉，利有攸往，順天命也。觀其所聚，而天地萬物之情可見矣。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "乃亂乃萃，其志亂也。"
+        },
+        {
+          "position": "六二",
+          "original": "引吉无咎，中未變也。"
+        },
+        {
+          "position": "六三",
+          "original": "往无咎，上巽也。"
+        },
+        {
+          "position": "九四",
+          "original": "大吉无咎，位不當也。"
+        },
+        {
+          "position": "九五",
+          "original": "萃有位，志未光也。"
+        },
+        {
+          "position": "上六",
+          "original": "齎咨涕洟，未安上也。"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "升",
+      "pageTitle": "周易/升",
+      "revisionId": 2404995,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%8D%87&oldid=2404995",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "柔以時升，巽而順，剛中而應，是以大亨。用見大人，勿恤；有慶也。南征吉，志行也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "允升大吉，上合志也。"
+        },
+        {
+          "position": "九二",
+          "original": "九二之孚，有喜也。"
+        },
+        {
+          "position": "九三",
+          "original": "升虛邑，无所疑也。"
+        },
+        {
+          "position": "六四",
+          "original": "王用亨于岐山，順事也。"
+        },
+        {
+          "position": "六五",
+          "original": "貞吉升階，大得志也。"
+        },
+        {
+          "position": "上六",
+          "original": "冥升在上，消不富也。"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "name": "困",
+      "pageTitle": "周易/困",
+      "revisionId": 2502714,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%9B%B0&oldid=2502714",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "困，剛掩也。險以說，困而不失其所，亨；其唯君子乎？ 貞大人吉，以剛中也。有言不信，尚口乃窮也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "入于幽谷，幽不明也。"
+        },
+        {
+          "position": "九二",
+          "original": "困于酒食，中有慶也。"
+        },
+        {
+          "position": "六三",
+          "original": "據于蒺藜，乘剛也。入于其宮，不見其妻，不祥也。"
+        },
+        {
+          "position": "九四",
+          "original": "來徐徐，志在下也。雖不當位，有與也。"
+        },
+        {
+          "position": "九五",
+          "original": "劓刖，志未得也。乃徐有說，以中直也。利用祭祀，受福也。"
+        },
+        {
+          "position": "上六",
+          "original": "困于葛藟，未當也。動悔，有悔，吉行也。"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "name": "井",
+      "pageTitle": "周易/井",
+      "revisionId": 2404992,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E4%BA%95&oldid=2404992",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "巽乎水而上水，井；井養而不窮也。改邑不改井，乃以剛中也。汔至亦未繘井，未有功也。羸其瓶，是以凶也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "井泥不食，下也。舊井无禽，時舍也。"
+        },
+        {
+          "position": "九二",
+          "original": "井谷射鮒，无與也。"
+        },
+        {
+          "position": "九三",
+          "original": "井渫不食，行惻也。求王明，受福也。"
+        },
+        {
+          "position": "六四",
+          "original": "井甃无咎，修井也。"
+        },
+        {
+          "position": "九五",
+          "original": "寒泉之食，中正也。"
+        },
+        {
+          "position": "上六",
+          "original": "元吉在上，大成也。"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "革",
+      "pageTitle": "周易/革",
+      "revisionId": 2674393,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E9%9D%A9&oldid=2674393",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "革，水火相息，二女同居，其志不相得，曰革。巳日乃孚；革而信也。文明以說，大亨以正，革而當，其悔乃亡。天地革而四時成，湯武革命，順乎天而應乎人，革之時義大矣哉！"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "鞏用黃牛，不可以有為也。"
+        },
+        {
+          "position": "六二",
+          "original": "巳日革之，行有嘉也。"
+        },
+        {
+          "position": "九三",
+          "original": "革言三就，又何之矣。"
+        },
+        {
+          "position": "九四",
+          "original": "改命之吉，信志也。"
+        },
+        {
+          "position": "九五",
+          "original": "大人虎變，其文炳也。"
+        },
+        {
+          "position": "上六",
+          "original": "君子豹變，其文蔚也。小人革面，順以從君也。"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "鼎",
+      "pageTitle": "周易/鼎",
+      "revisionId": 2106200,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E9%BC%8E&oldid=2106200",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "鼎，象也。以木巽火，亨飪也。聖人亨以享上帝，而大亨以養聖賢。巽而耳目聰明，柔進而上行，得中而應乎剛，是以元亨。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "鼎顛趾，未悖也。利出否，以從貴也。"
+        },
+        {
+          "position": "九二",
+          "original": "鼎有實，慎所之也。我仇有疾，終无尤也。"
+        },
+        {
+          "position": "九三",
+          "original": "鼎耳革，失其義也。"
+        },
+        {
+          "position": "九四",
+          "original": "覆公餗，信如何也。"
+        },
+        {
+          "position": "六五",
+          "original": "鼎黃耳，中以為實也。"
+        },
+        {
+          "position": "上九",
+          "original": "玉鉉在上，剛柔節也。"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "震",
+      "pageTitle": "周易/震",
+      "revisionId": 2560429,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E9%9C%87&oldid=2560429",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "震，亨。震來虩虩，恐致福也。笑言啞啞，后有則也。震驚百里，驚遠而懼邇也。出可以守宗廟社稷，以為祭主也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "震來虩虩，恐致福也。笑言啞啞，后有則也。"
+        },
+        {
+          "position": "六二",
+          "original": "震來厲，乘剛也。"
+        },
+        {
+          "position": "六三",
+          "original": "震蘇蘇，位不當也。"
+        },
+        {
+          "position": "九四",
+          "original": "震遂泥，未光也。"
+        },
+        {
+          "position": "六五",
+          "original": "震往來厲，危行也。其事在中，大无喪也。"
+        },
+        {
+          "position": "上六",
+          "original": "震索索，中未得也。雖凶无咎，畏鄰戒也。"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "艮",
+      "pageTitle": "周易/艮",
+      "revisionId": 2405028,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E8%89%AE&oldid=2405028",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "艮，止也。時止則止，時行則行，動靜不失其時，其道光明。艮其止，止其所也。上下敵應，不相與也。是以不獲其身，行其庭不見其人，无咎也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "艮其趾，未失正也。"
+        },
+        {
+          "position": "六二",
+          "original": "不拯其隨，未退聽也。"
+        },
+        {
+          "position": "九三",
+          "original": "艮其限，危薰心也。"
+        },
+        {
+          "position": "六四",
+          "original": "艮其身，止諸躬也。"
+        },
+        {
+          "position": "六五",
+          "original": "艮其輔，以中正也。"
+        },
+        {
+          "position": "上九",
+          "original": "敦艮之吉，以厚終也。"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "name": "漸",
+      "pageTitle": "周易/漸",
+      "revisionId": 2560535,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E6%BC%B8&oldid=2560535",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "漸之進也，女歸吉也。進得位，往有功也。進以正，可以正邦也。其位剛，得中也。止而巽，動不窮也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "小子之厲，義无咎也。"
+        },
+        {
+          "position": "六二",
+          "original": "飲食衎衎，不素飽也。"
+        },
+        {
+          "position": "九三",
+          "original": "夫征不復，離群丑也。婦孕不育，失其道也。利用禦寇，順相保也。"
+        },
+        {
+          "position": "六四",
+          "original": "或得其桷，順以巽也。"
+        },
+        {
+          "position": "九五",
+          "original": "終莫之勝，吉；得所愿也。"
+        },
+        {
+          "position": "上九",
+          "original": "其羽可用為儀，吉；不可亂也。"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "歸妹",
+      "pageTitle": "周易/歸妹",
+      "revisionId": 2511521,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E6%AD%B8%E5%A6%B9&oldid=2511521",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "歸妹，天地之大義也。天地不交，而萬物不興，歸妹人之終始也。說以動，所歸妹也。征凶，位不當也。无攸利，柔乘剛也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "歸妹以娣，以恆也。跛能履吉，相承也。"
+        },
+        {
+          "position": "九二",
+          "original": "利幽人之貞，未變常也。"
+        },
+        {
+          "position": "六三",
+          "original": "歸妹以須，未當也。"
+        },
+        {
+          "position": "九四",
+          "original": "愆期之志，有待而行也。"
+        },
+        {
+          "position": "六五",
+          "original": "帝乙歸妹，不如其娣之袂良也。其位在中，以貴行也。"
+        },
+        {
+          "position": "上六",
+          "original": "上六无實，承虛筐也。"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "豐",
+      "pageTitle": "周易/豐",
+      "revisionId": 2560608,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E8%B1%90&oldid=2560608",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "豐，大也。明以動，故豐。王假之，尚大也。勿憂宜日中，宜照天下也。日中則昃，月盈則食，天地盈虛，與時消息，而況于人乎？況于鬼神乎？"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "雖旬无咎，過旬災也。"
+        },
+        {
+          "position": "六二",
+          "original": "有孚發若，信以發志也。"
+        },
+        {
+          "position": "九三",
+          "original": "豐其沛，不可大事也。折其右肱，終不可用也。"
+        },
+        {
+          "position": "九四",
+          "original": "豐其蔀，位不當也。日中見斗，幽不明也。遇其夷主，吉；行也。"
+        },
+        {
+          "position": "六五",
+          "original": "六五之吉，有慶也。"
+        },
+        {
+          "position": "上六",
+          "original": "豐其屋，天際翔也。窺其戶，闃其无人，自藏也。"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "name": "旅",
+      "pageTitle": "周易/旅",
+      "revisionId": 2560781,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E6%97%85&oldid=2560781",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "旅，小亨，柔得中乎外，而順乎剛，止而麗乎明，是以小亨，旅貞吉也。旅之時義大矣哉！"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "旅瑣瑣，志窮災也。"
+        },
+        {
+          "position": "六二",
+          "original": "得童僕貞，終无尤也。"
+        },
+        {
+          "position": "九三",
+          "original": "旅焚其次，亦以傷矣。以旅與下，其義喪也。"
+        },
+        {
+          "position": "九四",
+          "original": "旅于處，未得位也。得其資斧，心未快也。"
+        },
+        {
+          "position": "六五",
+          "original": "終以譽命，上逮也。"
+        },
+        {
+          "position": "上九",
+          "original": "以旅在上，其義焚也。喪牛于易，終莫之聞也。"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "name": "巽",
+      "pageTitle": "周易/巽",
+      "revisionId": 2441563,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%B7%BD&oldid=2441563",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "重巽以申命，剛巽乎中正而志行。柔皆順乎剛，是以小亨，利有攸往，利見大人。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "進退，志疑也。利武人之貞，志治也。"
+        },
+        {
+          "position": "九二",
+          "original": "紛若之吉，得中也。"
+        },
+        {
+          "position": "九三",
+          "original": "頻巽之吝，志窮也。"
+        },
+        {
+          "position": "六四",
+          "original": "田獲三品，有功也。"
+        },
+        {
+          "position": "九五",
+          "original": "九五之吉，位正中也。"
+        },
+        {
+          "position": "上九",
+          "original": "巽在牀下，上窮也。喪其資斧，正乎凶也。"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "name": "兌",
+      "pageTitle": "周易/兌",
+      "revisionId": 2404993,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%85%8C&oldid=2404993",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "兌，說也。剛中而柔外，說以利貞，是以順乎天，而應乎人。說以先民，民忘其勞；說以犯難，民忘其死；說之大，民勸矣哉！"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "和兌之吉，行未疑也。"
+        },
+        {
+          "position": "九二",
+          "original": "孚兌之吉，信志也。"
+        },
+        {
+          "position": "六三",
+          "original": "來兌之凶，位不當也。"
+        },
+        {
+          "position": "九四",
+          "original": "九四之喜，有慶也。"
+        },
+        {
+          "position": "九五",
+          "original": "孚于剝，位正當也。"
+        },
+        {
+          "position": "上六",
+          "original": "上六引兌，未光也。"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "name": "渙",
+      "pageTitle": "周易/渙",
+      "revisionId": 2405023,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E6%B8%99&oldid=2405023",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "渙，亨。剛來而不窮，柔得位乎外而上同。王假有廟，王乃在中也。利涉大川，乘木有功也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "初六之吉，順也。"
+        },
+        {
+          "position": "九二",
+          "original": "渙奔其机，得愿也。"
+        },
+        {
+          "position": "六三",
+          "original": "渙其躬，志在外也。"
+        },
+        {
+          "position": "六四",
+          "original": "渙其群，元吉；光大也。"
+        },
+        {
+          "position": "九五",
+          "original": "王居无咎，正位也。"
+        },
+        {
+          "position": "上九",
+          "original": "渙其血，遠害也。"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "name": "節",
+      "pageTitle": "周易/節",
+      "revisionId": 2405027,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E7%AF%80&oldid=2405027",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "節，亨，剛柔分，而剛得中。苦節不可貞，其道窮也。說以行險，當位以節，中正以通。天地節而四時成，節以制度，不傷財，不害民。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "不出戶庭，知通塞也。"
+        },
+        {
+          "position": "九二",
+          "original": "不出門庭，失時極也。"
+        },
+        {
+          "position": "六三",
+          "original": "不節之嗟，又誰咎也。"
+        },
+        {
+          "position": "六四",
+          "original": "安節之亨，承上道也。"
+        },
+        {
+          "position": "九五",
+          "original": "甘節之吉，居位中也。"
+        },
+        {
+          "position": "上六",
+          "original": "苦節貞凶，其道窮也。"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "name": "中孚",
+      "pageTitle": "周易/中孚",
+      "revisionId": 2404990,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E4%B8%AD%E5%AD%9A&oldid=2404990",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "中孚，柔在內而剛得中。說而巽，孚，乃化邦也。豚魚吉，信及豚魚也。利涉大川，乘木舟虛也。中孚以利貞，乃應乎天也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "初九虞吉，志未變也。"
+        },
+        {
+          "position": "九二",
+          "original": "其子和之，中心愿也。"
+        },
+        {
+          "position": "六三",
+          "original": "可鼓或罷，位不當也。"
+        },
+        {
+          "position": "六四",
+          "original": "馬匹亡，絕類上也。"
+        },
+        {
+          "position": "九五",
+          "original": "有孚攣如，位正當也。"
+        },
+        {
+          "position": "上九",
+          "original": "翰音登于天，何可長也。"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "name": "小過",
+      "pageTitle": "周易/小過",
+      "revisionId": 2405007,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E5%B0%8F%E9%81%8E&oldid=2405007",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "小過，小者過而亨也。過以利貞，與時行也。柔得中，是以小事吉也。剛失位而不中，是以不可大事也。有飛鳥之象焉，有飛鳥遺之音，不宜上宜下，大吉；上逆而下順也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "飛鳥以凶，不可如何也。"
+        },
+        {
+          "position": "六二",
+          "original": "不及其君，臣不可過也。"
+        },
+        {
+          "position": "九三",
+          "original": "從或戕之，凶如何也。"
+        },
+        {
+          "position": "九四",
+          "original": "弗過遇之，位不當也。往厲必戒，終不可長也。"
+        },
+        {
+          "position": "六五",
+          "original": "密云不雨，已上也。"
+        },
+        {
+          "position": "上六",
+          "original": "弗遇過之，已亢也。"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "name": "既濟",
+      "pageTitle": "周易/既濟",
+      "revisionId": 2572417,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E6%97%A2%E6%BF%9F&oldid=2572417",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "既濟，亨，小者亨也。利貞，剛柔正而位當也。初吉，柔得中也。終止則亂，其道窮也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初九",
+          "original": "曳其輪，義无咎也。"
+        },
+        {
+          "position": "六二",
+          "original": "七日得，以中道也。"
+        },
+        {
+          "position": "九三",
+          "original": "三年克之，憊也。"
+        },
+        {
+          "position": "六四",
+          "original": "終日戒，有所疑也。"
+        },
+        {
+          "position": "九五",
+          "original": "東鄰殺牛，不如西鄰之時也；實受其福，吉大來也。"
+        },
+        {
+          "position": "上六",
+          "original": "濡其首厲，何可久也。"
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "name": "未濟",
+      "pageTitle": "周易/未濟",
+      "revisionId": 2405020,
+      "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%2F%E6%9C%AA%E6%BF%9F&oldid=2405020",
+      "review": {
+        "status": "source-recorded",
+        "recordedOn": "2026-08-10",
+        "method": "fixed-revision-readback"
+      },
+      "tuanParagraphs": [
+        "未濟，亨；柔得中也。小狐汔濟，未出中也。濡其尾，无攸利；不續終也。雖不當位，剛柔應也。"
+      ],
+      "smallImageTexts": [
+        {
+          "position": "初六",
+          "original": "濡其尾，亦不知極也。"
+        },
+        {
+          "position": "九二",
+          "original": "九二貞吉，中以行正也。"
+        },
+        {
+          "position": "六三",
+          "original": "未濟征凶，位不當也。"
+        },
+        {
+          "position": "九四",
+          "original": "貞吉悔亡，志行也。"
+        },
+        {
+          "position": "六五",
+          "original": "君子之光，其暉吉也。"
+        },
+        {
+          "position": "上九",
+          "original": "飲酒濡首，亦不知節也。"
+        }
+      ]
+    }
+  ],
+  "treatises": [
+    {
+      "slug": "xici-shang",
+      "title": "繫辭上傳",
+      "shortTitle": "系辞上",
+      "description": "从天地、象数、言意与变化等层面展开《易》的整体结构。",
+      "pages": [
+        {
+          "id": "xici-shang-1",
+          "label": "第一章",
+          "pageTitle": "易傳/繫辭上",
+          "revisionId": 2611140,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8A&oldid=2611140",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "天尊地卑，乾坤定矣。卑高以陳，貴賤位矣。動靜有常，剛柔斷矣。方以類聚，物以羣分，吉凶生矣。在天成象，在地成形，變化見矣。是故剛柔相摩，八卦相荡，鼓之以雷霆，潤之以風雨，日月運行，一寒一暑。乾道成男，坤道成女；乾知大始，坤作成物；乾以易知，坤以簡能；易則易知，簡則易從；易知則有親，易從則有功；有親則可久，有功則可大；可久則賢人之德，可大則賢人之業。易簡，而天下之理得矣。天下之理得，而成位乎其中矣。"
+          ]
+        },
+        {
+          "id": "xici-shang-2",
+          "label": "第二章",
+          "pageTitle": "易傳/繫辭上",
+          "revisionId": 2611140,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8A&oldid=2611140",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "聖人設卦觀象，繫辭焉而明吉凶；剛柔相推而生變化。是故吉凶者，失得之象也。悔吝者，憂虞之象也。變化者，進退之象也。剛柔者，晝夜之象也。六爻之動，三極之道也。是故君子所居而安者，易之序也。所樂而玩者，爻之辭也。是故君子居則觀其象而玩其辭，動則觀其變而玩其占；是以自天祐之，吉无不利。"
+          ]
+        },
+        {
+          "id": "xici-shang-3",
+          "label": "第三章",
+          "pageTitle": "易傳/繫辭上",
+          "revisionId": 2611140,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8A&oldid=2611140",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "彖者，言乎象者也。爻者，言乎變者也。吉凶者，言乎其失得也。悔吝者，言乎其小疵也。无咎者，善補過也。是故列貴賤者存乎位，齊小大者存乎卦，辯吉凶者存乎辭，憂悔吝者存乎介，震无咎者存乎悔。是故卦有小大，辭有險易，辭也者，各指其所之。"
+          ]
+        },
+        {
+          "id": "xici-shang-4",
+          "label": "第四章",
+          "pageTitle": "易傳/繫辭上",
+          "revisionId": 2611140,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8A&oldid=2611140",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "易與天地準，故能彌綸天地之道。仰以觀於天文，俯以察於地理，是故知幽明之故。原始反終，故知死生之說。精氣為物，遊魂為變，是故知鬼神之情狀。與天地相似，故不違；知周乎萬物，而道濟天下，故不過；旁行而不流，樂天知命，故不憂；安土敦乎仁，故能愛；範圍天地之化而不過，曲成萬物而不遺，通乎晝夜之道而知，故神无方而易无體。"
+          ]
+        },
+        {
+          "id": "xici-shang-5",
+          "label": "第五章",
+          "pageTitle": "易傳/繫辭上",
+          "revisionId": 2611140,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8A&oldid=2611140",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "一陰一陽之謂道：繼之者善也，成之者性也；仁者見之謂之仁，知者見之謂之知；百姓日用而不知，故君子之道鮮矣。顯諸仁，藏諸用，鼓萬物而不與聖人同憂，盛德大業至矣哉！富有之謂大業，日新之謂盛德，生生之謂易，成象之謂乾，效法之謂坤，極數知來之謂占，通變之謂事，陰陽不測之謂神。"
+          ]
+        },
+        {
+          "id": "xici-shang-6",
+          "label": "第六章",
+          "pageTitle": "易傳/繫辭上",
+          "revisionId": 2611140,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8A&oldid=2611140",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "夫易，廣矣！大矣！以言乎遠則不禦，以言乎邇則靜而正，以言乎天地之間則備矣！夫乾，其靜也專，其動也直，是以大生焉。夫坤，其靜也翕，其動也闢，是以廣生焉。廣大配天地，變通配四時，陰陽之義配日月，易簡之善配至德。"
+          ]
+        },
+        {
+          "id": "xici-shang-7",
+          "label": "第七章",
+          "pageTitle": "易傳/繫辭上",
+          "revisionId": 2611140,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8A&oldid=2611140",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "子曰：「易其至矣乎！夫易，聖人所以崇德而廣業也，知崇禮卑，崇效天，卑法地。天地設位，而易行乎其中矣。成性存存，道義之門。」"
+          ]
+        },
+        {
+          "id": "xici-shang-8",
+          "label": "第八章",
+          "pageTitle": "易傳/繫辭上",
+          "revisionId": 2611140,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8A&oldid=2611140",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "聖人有以見天下之賾，而擬諸其形容，象其物宜，是故謂之象。聖人有以見天下之動，而觀其會通，以行其典禮，繫辭焉以斷其吉凶，是故謂之爻。言天下之至賾而不可惡也，言天下之至動而不可亂也。擬之而後言，議之而後動，擬議以成其變化。",
+            "「鳴鶴在陰，其子和之。我有好爵，吾與爾靡之。」子曰：「君子居其室，出其言善，則千里之外應之，況其邇者乎！居其室，出其言不善，則千里之外違之，況其邇者乎！言出乎身加乎民；行發乎邇見乎遠。言行，君子之樞機；樞機之發，榮辱之主也。言行，君子之所以動天地也，可不慎乎！」「同人，先號咷而後笑。」子曰：「君子之道，或出或處，或默或語。二人同心，其利斷金。同心之言，其臭如蘭。」",
+            "「初六，藉用白茅，无咎。」子曰：「苟錯諸地而可矣。藉之用茅，何咎之有！慎之至也。夫茅之為物薄而用可重也，慎斯術也以往，其无所失矣。」",
+            "「勞謙，君子有終，吉。」子曰：「勞而不伐，有功而不德，厚之至也；語以其功下人者也。德言盛，禮言恭；謙也者，致恭以存其位者也。」",
+            "「亢龍有悔。」子曰：「貴而无位，高而无民，賢人在下位而无輔，是以動而有悔也。」",
+            "「不出戶庭，无咎。」子曰：「亂之所生也，則言語以為階。君不密則失臣，臣不密則失身，幾事不密則害成；是以君子慎密而不出也。」",
+            "子曰：「作易者，其知盜乎！易曰：『負且乘，致寇至。』負也者，小人之事也。乘也者，君子之器也。小人而乘君子之器，盜思奪之矣。上慢下暴，盜思伐之矣。慢藏誨盜，冶容誨淫。易曰：『負且乘，致寇至。』盜之招也。」"
+          ]
+        },
+        {
+          "id": "xici-shang-9",
+          "label": "第九章",
+          "pageTitle": "易傳/繫辭上",
+          "revisionId": 2611140,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8A&oldid=2611140",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "天一地二，天三地四，天五地六，天七地八，天九地十。天數五，地數五，五位相得而各有合。天數二十有五，地數三十，凡天地之數，五十有五，此所以成變化，而行鬼神也。大衍之數五十，其用四十有九，分而為二以象兩，掛一以象三，揲之以四以象四時，歸奇於扐以象閏，五歲再閏，故再扐而後掛。",
+            "乾之策，二百一十有六，坤之策，百四十有四，凡三百有六十，當期之日。二篇之策，萬有一千五百二十，當萬物之數也。是故四營而成易，十有八變而成卦，八卦而小成；引而伸之，觸類而長之，天下之能事畢矣。顯道神德行，是故可與酬酢，可與祐神矣。子曰：「知變化之道者，其知神之所為乎！」"
+          ]
+        },
+        {
+          "id": "xici-shang-10",
+          "label": "第十章",
+          "pageTitle": "易傳/繫辭上",
+          "revisionId": 2611140,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8A&oldid=2611140",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "易有聖人之道四焉：以言者尚其辭，以動者尚其變，以制器者尚其象，以卜筮者尚其占。是以君子將有為也，將有行也，問焉而以言，其受命也如響，无有遠近幽深，遂知來物。非天下之至精，其孰能與於此！",
+            "參伍以變，錯綜其數，通其變，遂成天下之文，極其數，遂定天下之象；非天下之至變，其孰能與於此！",
+            "易，无思也，无為也，寂然不動，感而遂通天下之故。非天下之至神，其孰能與於此！",
+            "夫易，聖人之所以極深而研幾也！唯深也，故能通天下之志；唯幾也，故能成天下之務；唯神也，故不疾而速，不行而至。",
+            "子曰「易有聖人之道四焉」者，此之謂也。"
+          ]
+        },
+        {
+          "id": "xici-shang-11",
+          "label": "第十一章",
+          "pageTitle": "易傳/繫辭上",
+          "revisionId": 2611140,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8A&oldid=2611140",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "子曰：「夫易，何為者也？夫易，開物成務，冒天下之道，如斯而已者也。」是故聖人以通天下之志，以定天下之業，以斷天下之疑。是故蓍之德圓而神，卦之德方以知，六爻之義易以貢；聖人以此洗心，退藏於密，吉凶與民同患，神以知來，知以藏往，其孰能與此哉？古之聦明叡知神武而不殺者夫！是以明於天之道，而察於民之故，是興神物以前民用；聖人以此齊戒以神明其德夫！是故闔戶謂之坤，闢戶謂之乾，一闔一闢謂之變；往來不窮謂之通，見乃謂之象，形乃謂之器，制而用之謂之法，利用出入，民咸用之謂之神。是故易有太極，是生兩儀，兩儀生四象，四象生八卦，八卦定吉凶，吉凶生大業。是故法象莫大乎天地；變通莫大乎四時；縣象著明莫大乎日月；崇高莫大乎富貴；備物致用，立成器以為天下利，莫大乎聖人；探賾索隱，鉤深致遠，以定天下之吉凶，成天下之亹亹者，莫大乎蓍龜。是故天生神物，聖人則之。天地變化，聖人效之。天垂象，見吉凶，聖人象之。河出圖，洛出書，聖人則之。易有四象，所以示也。繫辭焉，所以告也。定之以吉凶，所以斷也。"
+          ]
+        },
+        {
+          "id": "xici-shang-12",
+          "label": "第十二章",
+          "pageTitle": "易傳/繫辭上",
+          "revisionId": 2611140,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8A&oldid=2611140",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "易曰：「自天祐之，吉无不利」。子曰：「祐者，助也。天之所助者，順也。人之所助者，信也。履信思乎順，又以尚賢也，是以『自天祐之，吉无不利。』也。」",
+            "子曰：「書不盡言，言不盡意。」然則聖人之意，其不可見乎？子曰：「聖人立象以盡意，設卦以盡情偽，繫辭以盡其言，變而通之以盡利，鼓之舞之以盡神。」",
+            "乾坤，其易之縕邪！乾坤成列，而易立乎其中矣。乾坤毀，則无以見易，易不可見，則乾坤或幾乎息矣。是故形而上者謂之道，形而下者謂之器，化而裁之謂之變，推而行之謂之通，舉而錯之天下之民謂之事業。是故夫象，聖人有以見天下之賾，而擬諸其形容，象其物宜，是故謂之象。聖人有以見天下之動，而觀其會通，以行其典禮，繫辭焉以斷其吉凶，是故謂之爻。極天下之賾者存乎卦；鼓天下之動者存乎辭；化而裁之存乎變；推而行之存乎通；神而明之，存乎其人；默而成之，不言而信，存乎德行。"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "xici-xia",
+      "title": "繫辭下傳",
+      "shortTitle": "系辞下",
+      "description": "继续讨论制器、爻位、变通与读《易》时的观察方法。",
+      "pages": [
+        {
+          "id": "xici-xia-1",
+          "label": "第一章",
+          "pageTitle": "易傳/繫辭下",
+          "revisionId": 2611136,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8B&oldid=2611136",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "八卦成列，象在其中矣；因而重之，爻在其中矣；剛柔相推，變在其中矣；繫辭焉而命之，動在其中矣。吉凶悔吝者，生乎動者也。剛柔者，立本者也；變通者，趣時者也；吉凶者，貞勝者也。天地之道，貞觀者也；日月之道，貞明者也；天下之動，貞夫一者也。夫乾，確然示人易矣；夫坤，隤然示人簡矣。爻也者，效此者也；象也者，像此者也。爻象動乎內，吉凶見乎外，功業見乎變，聖人之情見乎辭。天地之大德曰生，聖人之大寶曰位，何以守位曰仁，何以聚人曰財，理財正辭，禁民為非曰義。"
+          ]
+        },
+        {
+          "id": "xici-xia-2",
+          "label": "第二章",
+          "pageTitle": "易傳/繫辭下",
+          "revisionId": 2611136,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8B&oldid=2611136",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "古者包犧氏之王天下也，仰則觀象於天，俯則觀法於地，觀鳥獸之文，與地之宜，近取諸身，遠取諸物；於是始作八卦，以通神明之德，以類萬物之情。作結繩而為罔罟，以佃以漁，蓋取諸離。",
+            "包犧氏沒，神農氏作，斲木為耜，揉木為耒，耒耨之利，以教天下，蓋取諸益。日中為市，致天下之民，聚天下之貨，交易而退，各得其所，蓋取諸噬嗑。",
+            "神農氏沒，黃帝、堯、舜氏作，通其變，使民不倦；神而化之，使民宜之；易窮則變，變則通，通則久；是以自天祐之，吉无不利。黃帝、堯、舜垂衣裳而天下治，蓋取諸乾坤。",
+            "刳木為舟，剡木為楫，舟楫之利以濟不通，致遠以利天下，蓋取諸渙。",
+            "服牛乘馬，引重致遠以利天下，蓋取諸隨。重門擊柝以待暴客，蓋取諸豫。",
+            "斷木為杵，掘地為臼，臼杵之利，萬民以濟，蓋取諸小過。",
+            "弦木為弧，剡木為矢，弧矢之利，以威天下，蓋取諸睽。",
+            "上古穴居而野處，後世聖人易之以宮室，上棟下宇，以待風雨，蓋取諸大壯。",
+            "古之葬者，厚衣之以薪，葬之中野，不封不樹，喪期无數，後世聖人易之以棺槨，蓋取諸大過。",
+            "上古結繩而治，後世聖人易之以書契，百官以治，萬民以察，蓋取諸周易/夬。"
+          ]
+        },
+        {
+          "id": "xici-xia-3",
+          "label": "第三章",
+          "pageTitle": "易傳/繫辭下",
+          "revisionId": 2611136,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8B&oldid=2611136",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "是故易者，象也。象也者，像也。彖者，材也。爻也者，效天下之動者也。是故吉凶生而悔吝著也。",
+            "陽卦多陰，陰卦多陽，其故何也？陽卦奇，陰卦偶。其德行何也？陽一君而二民，君子之道也；陰二君而一民，小人之道也。"
+          ]
+        },
+        {
+          "id": "xici-xia-4",
+          "label": "第四章",
+          "pageTitle": "易傳/繫辭下",
+          "revisionId": 2611136,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8B&oldid=2611136",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "易曰：「憧憧往來，朋從爾思。」子曰：「天下何思何慮！天下同歸而殊途，一致而百慮，天下何思何慮！日往則月來，月往則日來，日月相推而明生焉。寒往則暑來，暑往則寒來，寒暑相推而歲成焉。往者，屈也；來者，信也。屈信相感而利生焉。尺蠖之屈，以求信也。龍蛇之蟄，以存身也。精義入神，以致用也。利用安身，以崇德也。過此以往，未之或知也。窮神知化，德之盛也。」",
+            "易曰：「困于石，據于蒺蔾，入于其宮，不見其妻，凶。」子曰：「非所困而困焉，名必辱；非所據而據焉，身必危；既辱且危，死期將至，妻其可得見耶！」",
+            "易曰：「公用射隼于高墉之上，獲之，无不利。」子曰：「隼者，禽也；弓矢者，器也。射之者，人也。君子藏器於身，待時而動，何不利之有。動而不括，是以出而有獲，語成器而動者也。」",
+            "子曰：「小人不恥不仁，不畏不義，不見利不勸，不威不懲，小懲而大誡，此小人之福也。易曰：『履校滅趾，无咎。』此之謂也。善不積不足以成名，惡不積不足以滅身，小人以小善為无益而弗為也，以小惡為无傷而弗去也；故惡積而不可揜，罪大而不可解。易曰：『何校滅耳，凶。』」",
+            "子曰：「危者，安其位者也。亡者，保其存者也。亂者，有其治者也。是故君子安而不忘危，存而不忘亡，治而不忘亂，是以身安而國家可保也。易曰：『其亡其亡，繫于苞桑。』」",
+            "子曰：「德薄而位尊，知小而謀大，力小而任重，鮮不及矣。易曰：『鼎折足，覆公餗，其形渥，凶。』言不勝其任也。」",
+            "子曰：「知幾其神乎！君子上交不諂，下交不瀆，其知幾乎！幾者，動之微，吉之先見者也。君子見幾而作，不俟終日。易曰：『介于石，不終日，貞吉。』介如石焉，寧用終日，斷可識矣。君子知微知彰，知柔知剛，萬夫之望。」",
+            "子曰：「顏氏之子，其殆庶幾乎！有不善，未嘗不知；知之，未嘗復行也。易曰：『不遠復，无祇悔，元吉。』天地絪縕，萬物化醇；男女構精，萬物化生。易曰：『三人行，則損一人；一人行，則得其友。』言致一也。」",
+            "子曰：「君子安其身而後動，易其心而後語，定其交而後求。君子脩此三者，故全也。危以動，則民不與也。懼以語，則民不應也。无交而求，則民不與也。莫之與，則傷之者至矣。易曰：『莫益之，或擊之。立心勿恒，凶。』」"
+          ]
+        },
+        {
+          "id": "xici-xia-5",
+          "label": "第五章",
+          "pageTitle": "易傳/繫辭下",
+          "revisionId": 2611136,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8B&oldid=2611136",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "子曰：「乾坤，其易之門邪！乾，陽物也；坤，陰物也。陰陽合德，而剛柔有體，以體天地之撰，以通神明之德。」其稱名也，雜而不越，於稽其類，其衰世之意邪！夫易，彰往而察來，而微顯闡幽，開而當名辨物，正言斷辭，則備矣。其稱名也小，其取類也大，其旨遠，其辭文，其言曲而中，其事肆而隱，因貳以濟民行，以明失得之報。"
+          ]
+        },
+        {
+          "id": "xici-xia-6",
+          "label": "第六章",
+          "pageTitle": "易傳/繫辭下",
+          "revisionId": 2611136,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8B&oldid=2611136",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "易之興也，其於中古乎！作易者，其有憂患乎！是故：",
+            "履，德之基也。謙，德之柄也。復，德之本也。恒，德之固也。損，德之脩也。益，德之裕也。困，德之辨也。井，德之地也。巽，德之制也。",
+            "履，和而至。謙，尊而光。復，小而辨於物。恒，雜而不厭。損，先難而後易。益，長裕而不没。困，窮而通。井，居其所而遷。巽，稱而隱。",
+            "履，以和行。謙，以制禮。復，以自知。恒，以一德。損，以遠害。益，以興利。困，以寡怨。井，以辯義。巽，以行權。"
+          ]
+        },
+        {
+          "id": "xici-xia-7",
+          "label": "第七章",
+          "pageTitle": "易傳/繫辭下",
+          "revisionId": 2611136,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8B&oldid=2611136",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "易之為書也不可遠，為道也屢遷；變動不居，周流六虛，上下无常，剛柔相易，不可為典要，唯變所適。其出入以度，外內使知懼。又明於憂患與故，无有師保，如臨父母。初率其辭而揆其方，既有典常，苟非其人，道不虛行。",
+            "易之為書也，原始要終以為質也。六爻相雜，唯其時物也。其初難知，其上易知，本末也。初辭擬之，卒成之終。若夫雜物撰德，辨是與非，則非其中爻不備。噫，亦要存亡吉凶，則居可知矣。知者觀其彖辭，則思過半矣。"
+          ]
+        },
+        {
+          "id": "xici-xia-8",
+          "label": "第八章",
+          "pageTitle": "易傳/繫辭下",
+          "revisionId": 2611136,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8B&oldid=2611136",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "二與四同功而異位，其善不同：二多譽，四多懼，近也。柔之為道，不利近者，其要無咎，其用柔中也。三與五同功而異位，其遇不同：三多凶，五多功，貴賤之等也。其柔危，其剛勝邪？",
+            "《易》之為書也，廣大悉備：有天道焉，有人道焉，有地道焉，兼三材而兩之，故六。六者，非它也，三材之道也。道有變動，故曰爻；爻有等，故曰物；物相雜，故曰文；文不當，故吉凶生焉。",
+            "《易》之興也，其當殷之末世，周之盛德邪！當文王與紂之事邪！是故其辭危，危者使平，易者使傾，其道甚大，百物不廢，懼以終始，其要无咎；此之謂易之道也。"
+          ]
+        },
+        {
+          "id": "xici-xia-9",
+          "label": "第九章",
+          "pageTitle": "易傳/繫辭下",
+          "revisionId": 2611136,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E7%B9%AB%E8%BE%AD%E4%B8%8B&oldid=2611136",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "夫乾，天下之至健也；德行恒易以知險。夫坤，天下之至順也；德行恒簡以知阻。能說諸心，能研諸侯之慮，定天下之吉凶，成天下之亹亹者。是故變化云為，吉事有祥，象事知器，占事知來。",
+            "天地設位，聖人成能；人謀鬼謀，百姓與能。八卦以象告，爻彖以情言，剛柔雜居，而吉凶可見矣。變動以利言，吉凶以情遷。是故愛惡相攻而吉凶生，遠近相取而悔吝生，情偽相感而利害生。凡易之情，近而不相得，則凶或害之，悔且吝。",
+            "將叛者其辭慚，中心疑者其辭枝；吉人之辭寡，躁人之辭多；誣善之人其辭游，失其守者其辭屈。"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "shuogua",
+      "title": "說卦傳",
+      "shortTitle": "说卦",
+      "description": "说明八卦的德、象、方位、亲属与万物取象。",
+      "pages": [
+        {
+          "id": "shuogua-1",
+          "label": "第一章",
+          "pageTitle": "易傳/說卦",
+          "revisionId": 2614055,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E8%AA%AA%E5%8D%A6&oldid=2614055",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "昔者，聖人之作《易》也，幽贊於神明而生蓍。參天兩地而倚數，觀變於陰陽而立卦；發揮於剛柔而生爻；和順於道德而理於義；窮理盡性以至於命。"
+          ]
+        },
+        {
+          "id": "shuogua-2",
+          "label": "第二章",
+          "pageTitle": "易傳/說卦",
+          "revisionId": 2614055,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E8%AA%AA%E5%8D%A6&oldid=2614055",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "昔者，聖人之作《易》也，將以順性命之理。是以立天之道，曰陰與陽；立地之道，曰柔與剛；立人之道，曰仁與義。兼三才而兩之，故易六畫而成卦。分陰分陽，迭用柔剛，故易六位而成章。"
+          ]
+        },
+        {
+          "id": "shuogua-3",
+          "label": "第三章",
+          "pageTitle": "易傳/說卦",
+          "revisionId": 2614055,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E8%AA%AA%E5%8D%A6&oldid=2614055",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "天地定位，山澤通氣，雷風相薄，水火不相射。八卦相錯，數往者順，知來者逆。是故易逆數也。"
+          ]
+        },
+        {
+          "id": "shuogua-4",
+          "label": "第四章",
+          "pageTitle": "易傳/說卦",
+          "revisionId": 2614055,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E8%AA%AA%E5%8D%A6&oldid=2614055",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "雷以動之，風以散之，雨以潤之，日以烜之，艮以止之，兌以說之，乾以君之，坤以藏之。"
+          ]
+        },
+        {
+          "id": "shuogua-5",
+          "label": "第五章",
+          "pageTitle": "易傳/說卦",
+          "revisionId": 2614055,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E8%AA%AA%E5%8D%A6&oldid=2614055",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "帝出乎震，齊乎巽，相見乎離，致役乎坤，說言乎兌，戰乎乾，勞乎坎，成言乎艮。",
+            "萬物出乎震，震，東方也。",
+            "齊乎巽，巽，東南也，齊也者，言萬物之潔齊也。",
+            "離也者，明也，萬物皆相見，南方之卦也。聖人南面而聽天下，嚮明而治，蓋取諸此也。",
+            "坤也者，地也，萬物皆致養焉，故曰致役乎坤。",
+            "兌，正秋也。萬物之所說也。故曰說；言乎兌。",
+            "戰乎乾，乾，西北之卦也。言陰陽相薄也。",
+            "坎者，水也，正北方之卦也，勞卦也，萬物之所歸也，故曰勞乎坎。",
+            "艮，東北之卦也，萬物之所成，終而所成始也，故曰成言乎艮。"
+          ]
+        },
+        {
+          "id": "shuogua-6",
+          "label": "第六章",
+          "pageTitle": "易傳/說卦",
+          "revisionId": 2614055,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E8%AA%AA%E5%8D%A6&oldid=2614055",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "神也者。妙萬物而為言者也。",
+            "動萬物者，莫疾乎雷。",
+            "橈萬物者，莫疾乎風。",
+            "燥萬物者，莫熯乎火。",
+            "說萬物者，莫說乎澤。",
+            "潤萬物者，莫潤乎水。",
+            "終萬物、始萬物者，莫盛乎艮。 故水火相逮，雷風不相悖，山澤通氣，然後能變化，既成萬物也。"
+          ]
+        },
+        {
+          "id": "shuogua-7",
+          "label": "第七章",
+          "pageTitle": "易傳/說卦",
+          "revisionId": 2614055,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E8%AA%AA%E5%8D%A6&oldid=2614055",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "乾，健也。坤，順也。震，動也。巽，入也。坎，陷也。離，麗也。艮，止也。兌，說也。"
+          ]
+        },
+        {
+          "id": "shuogua-8",
+          "label": "第八章",
+          "pageTitle": "易傳/說卦",
+          "revisionId": 2614055,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E8%AA%AA%E5%8D%A6&oldid=2614055",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "乾為馬，坤為牛，震為龍，巽為雞，坎為豕，離為雉，艮為狗，兌為羊。"
+          ]
+        },
+        {
+          "id": "shuogua-9",
+          "label": "第九章",
+          "pageTitle": "易傳/說卦",
+          "revisionId": 2614055,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E8%AA%AA%E5%8D%A6&oldid=2614055",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "乾為首，坤為腹，震為足，巽為股，坎為耳，離為目，艮為手，兌為口。"
+          ]
+        },
+        {
+          "id": "shuogua-10",
+          "label": "第十章",
+          "pageTitle": "易傳/說卦",
+          "revisionId": 2614055,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E8%AA%AA%E5%8D%A6&oldid=2614055",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "乾，天也，故稱乎父；坤，地也，故稱乎母； 震一索而得男，故謂之長男；巽一索而得女，故謂之長女； 坎再索而得男，故謂之中男；離再索而得女，故謂之中女； 艮三索而得男，故謂之少男；兌三索而得女，故謂之少女。"
+          ]
+        },
+        {
+          "id": "shuogua-11",
+          "label": "第十一章",
+          "pageTitle": "易傳/說卦",
+          "revisionId": 2614055,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E8%AA%AA%E5%8D%A6&oldid=2614055",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "乾為天、為圜、為君、為父、為玉、為金、為寒、為冰、為大赤、為良馬、為老馬、為瘠馬、為駁馬、為木果。",
+            "坤為地、為母、為布、為釜、為吝嗇、為均、為子母牛、為大輿、為文、為眾、為柄。",
+            "其於地也為黑。",
+            "震為雷、為龍、為玄黃、為敷、為大涂、為長子、為決躁、為蒼筤竹、為萑葦。",
+            "其於馬也，為善鳴、為馵足，為的顙。",
+            "其於稼也，為反生。",
+            "其究為健，為蕃鮮。",
+            "巽為木、為風、為長女、為繩直、為工、為白、為長、為高、為進退、為不果、為臭。",
+            "其於人也，為寡髮、為廣顙、為多白眼、為近利市三倍。",
+            "其究為躁卦。",
+            "坎為水、為溝瀆、為隱伏、為矯輮、為弓輪。",
+            "其於人也，為加憂、為心病、為耳痛、為血卦、為赤。",
+            "其於馬也，為美脊、為亟心、為下首、為薄蹄、為曳。",
+            "其於輿也，為多眚、為通、為月、為盜。",
+            "其於木也，為堅多心。",
+            "離為火、為日、為電、為中女、為甲冑、為戈兵。",
+            "其於人也，為大腹、為乾卦、為鱉、為蟹、為蠃、為蚌、為龜。",
+            "其於木也，為科上槁。",
+            "艮為山、為徑路、為小石、為門闕、為果蓏、為閽寺、為指、為狗、為鼠、為黔喙之屬。",
+            "其於木也，為堅多節。",
+            "兌為澤、為少女、為巫、為口舌、為毀折、為附決。",
+            "其於地也，為剛鹵，為妾、為羊。"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "xugua",
+      "title": "序卦傳",
+      "shortTitle": "序卦",
+      "description": "依六十四卦次序，呈现前后相承的一种传统理解。",
+      "pages": [
+        {
+          "id": "xugua-1",
+          "label": "全文（上、下篇）",
+          "pageTitle": "易傳/序卦",
+          "revisionId": 2611127,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E5%BA%8F%E5%8D%A6&oldid=2611127",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "有天地，然後萬物生焉。",
+            "盈天地之間者，唯萬物，故受之以屯；屯者盈也，屯者物之始生也。",
+            "物生必蒙，故受之以蒙；蒙者蒙也，物之穉也。",
+            "物穉不可不養也，故受之以需；需者飲食之道也。",
+            "飲食必有訟，故受之以訟。",
+            "訟必有眾起，故受之以師；師者眾也。",
+            "眾必有所比，故受之以比；比者比也。",
+            "比必有所畜也，故受之以小畜。",
+            "物畜然後有禮，故受之以履。",
+            "履而泰，然後安，故受之以泰；泰者通也。",
+            "物不可以終通，故受之以否。",
+            "物不可以終否，故受之以同人。",
+            "與人同者，物必歸焉，故受之以大有。",
+            "有大者不可以盈，故受之以謙。",
+            "有大而能謙，必豫，故受之以豫。",
+            "豫必有隨，故受之以隨。",
+            "以喜隨人者，必有事，故受之以蠱；蠱者事也。",
+            "有事而后可大，故受之以臨；臨者大也。",
+            "物大然後可觀，故受之以觀。",
+            "可觀而后有所合，故受之以噬嗑；嗑者合也。",
+            "物不可以苟合而已，故受之以賁；賁者飾也。",
+            "致飾然後亨，則盡矣，故受之以剝；剝者剝也。",
+            "物不可以終盡，剝窮上反下，故受之以復。",
+            "復則不妄矣，故受之以无妄。",
+            "有无妄然後可畜，故受之以大畜。",
+            "物畜然後可養，故受之以頤；頤者養也。",
+            "不養則不可動，故受之以大過。",
+            "物不可以終過，故受之以坎；坎者陷也。",
+            "陷必有所麗，故受之以離；離者麗也。",
+            "有天地然後有萬物，有萬物然後有男女，有男女然後有夫婦，有夫婦然後有父子，有父子然後有君臣，有君臣然後有上下，有上下然後禮儀有所錯。",
+            "夫婦之道，不可以不久也，故受之以恆；恆者久也。",
+            "物不可以久居其所，故受之以遯；遯者退也。",
+            "物不可終遯，故受之以大壯。",
+            "物不可以終壯，故受之以晉；晉者進也。",
+            "進必有所傷，故受之以明夷；夷者傷也。",
+            "傷於外者，必反其家，故受之以家人。",
+            "家道窮必乖，故受之以睽；睽者乖也。",
+            "乖必有難，故受之以蹇；蹇者難也。",
+            "物不可終難，故受之以解；解者緩也。",
+            "緩必有所失，故受之以損。",
+            "損而不已，必益，故受之以益。",
+            "益而不已，必決，故受之以夬； 夬者決也。",
+            "決必有所遇，故受之以姤；姤者遇也。",
+            "物相遇而后聚，故受之以萃；萃者聚也。",
+            "聚而上者，謂之升，故受之以升。",
+            "升而不已，必困，故受之以困。",
+            "困乎上者，必反下，故受之以井。",
+            "井道不可不革，故受之以革。",
+            "革物者莫若鼎，故受之以鼎。",
+            "主器者莫若長子，故受之以震；震者動也。",
+            "物不可以終動，止之，故受之以艮；艮者止也。",
+            "物不可以終止，故受之以漸；漸者進也。",
+            "進必有所歸，故受之以歸妹。",
+            "得其所歸者必大，故受之以豐；豐者大也。",
+            "窮大者必失其居，故受之以旅。",
+            "旅而無所容，故受之以巽；巽者入也。",
+            "入而后說之，故受之以兌；兌者說也。",
+            "說而后散之，故受之以渙；渙者離也。",
+            "物不可以終離，故受之以節。",
+            "節而信之，故受之以中孚。",
+            "有其信者，必行之，故受之以小過。",
+            "有過物者，必濟，故受之既濟。",
+            "物不可窮也，故受之以未濟；終焉。"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zagua",
+      "title": "雜卦傳",
+      "shortTitle": "杂卦",
+      "description": "重新错综六十四卦，从相对与相类关系中简要举义。",
+      "pages": [
+        {
+          "id": "zagua-1",
+          "label": "一篇",
+          "pageTitle": "易傳/雜卦",
+          "revisionId": 2611129,
+          "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E6%98%93%E5%82%B3%2F%E9%9B%9C%E5%8D%A6&oldid=2611129",
+          "review": {
+            "status": "source-recorded",
+            "recordedOn": "2026-08-10",
+            "method": "fixed-revision-readback"
+          },
+          "paragraphs": [
+            "乾剛坤柔，比樂師憂。",
+            "臨、觀之義，或與或求。",
+            "屯見而不失其居，蒙雜而著。",
+            "震起也，艮止也。",
+            "損、益，盛衰之始也。",
+            "大畜時也，无妄災也。",
+            "萃聚，而升不來也。",
+            "謙輕，而豫怠也。",
+            "噬嗑食也，賁无色也。",
+            "兌見，而巽伏也。",
+            "隨无故也，蠱則飭也。",
+            "剝爛也，復反也。",
+            "晉晝也，明夷誅也。",
+            "井通，而困相遇也。",
+            "咸速也，恒久也。",
+            "渙離也，節止也。",
+            "解緩也，蹇難也。",
+            "睽外也，家人內也。",
+            "否、泰，反其類也。",
+            "大壯則止，遯則退也。",
+            "大有眾也，同人親也。",
+            "革去故也，鼎取新也。",
+            "小過過也，中孚信也。",
+            "豐多故也，親寡旅也。",
+            "離上，而坎下也。",
+            "小畜寡也，履不處也。",
+            "需不進也，訟不親也。",
+            "大過顛也，姤遇也，柔遇剛也。",
+            "漸女歸待男行也，頤養正也，既濟定也。",
+            "歸妹女之終也，未濟男之窮也。",
+            "夬決也，剛決柔也。君子道長，小人道消也。"
+          ]
+        }
+      ]
+    }
+  ]
+}
