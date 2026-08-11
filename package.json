@@ -6,10 +6,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:pages": "node scripts/build-pages.mjs",
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "verify:classical-sources": "node scripts/sync-classical-text.mjs && node scripts/sync-classical-wings.mjs",
+    "sync:classical-assets": "node scripts/sync-classical-reading-assets.mjs --write",
+    "verify:classical-assets": "node scripts/sync-classical-reading-assets.mjs",
+    "verify:pages": "node scripts/verify-pages.mjs"
   },
   "dependencies": {
     "next": "16.2.12",
@@ -26,5 +31,8 @@
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^4.1.10"
+  },
+  "overrides": {
+    "nanoid": "3.3.18"
   }
 }

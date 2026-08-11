@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 45,
+  "name": "萃",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F05%E8%90%83&oldid=2404976",
+  "jing": {
+    "judgmentOriginal": "亨。王假有廟。利見大人，亨，利貞。用大牲，吉。利有攸往。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "有孚不終，乃亂乃萃。若號，一握為笑，勿恤，往無咎。"
+      },
+      {
+        "position": "六二",
+        "original": "引吉無咎，孚乃利用禴。"
+      },
+      {
+        "position": "六三",
+        "original": "萃如，嗟如，無攸利。往無咎，小吝。"
+      },
+      {
+        "position": "九四",
+        "original": "大吉，無咎。"
+      },
+      {
+        "position": "九五",
+        "original": "萃有位，無咎，匪孚。元永貞，悔亡。"
+      },
+      {
+        "position": "上六",
+        "original": "齎咨涕洟，無咎。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "萃，聚也；順以說，剛中而應，故聚也。王假有廟，致孝享也。利見大人亨，聚以正也。用大牲吉，利有攸往，順天命也。觀其所聚，而天地萬物之情可見矣。"
+    ],
+    "greatImageText": "澤上於地，萃。君子以除戎器，戒不虞。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "乃亂乃萃，其志亂也。"
+      },
+      {
+        "position": "六二",
+        "original": "引吉无咎，中未變也。"
+      },
+      {
+        "position": "六三",
+        "original": "往无咎，上巽也。"
+      },
+      {
+        "position": "九四",
+        "original": "大吉无咎，位不當也。"
+      },
+      {
+        "position": "九五",
+        "original": "萃有位，志未光也。"
+      },
+      {
+        "position": "上六",
+        "original": "齎咨涕洟，未安上也。"
+      }
+    ]
+  }
+}

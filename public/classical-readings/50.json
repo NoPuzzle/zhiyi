@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 50,
+  "name": "鼎",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F05%E9%BC%8E&oldid=2608820",
+  "jing": {
+    "judgmentOriginal": "元吉，亨。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "鼎顛趾，利出否，得妾以其子，無咎。"
+      },
+      {
+        "position": "九二",
+        "original": "鼎有實，我仇有疾，不我能即，吉。"
+      },
+      {
+        "position": "九三",
+        "original": "鼎耳革，其行塞，雉膏不食。方雨虧悔，終吉。"
+      },
+      {
+        "position": "九四",
+        "original": "鼎折足，覆公餗，其形渥，凶。"
+      },
+      {
+        "position": "六五",
+        "original": "鼎黃耳金鉉，利貞。"
+      },
+      {
+        "position": "上九",
+        "original": "鼎玉鉉，大吉，無不利。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "鼎，象也。以木巽火，亨飪也。聖人亨以享上帝，而大亨以養聖賢。巽而耳目聰明，柔進而上行，得中而應乎剛，是以元亨。"
+    ],
+    "greatImageText": "木上有火，鼎。君子以正位凝命。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "鼎顛趾，未悖也。利出否，以從貴也。"
+      },
+      {
+        "position": "九二",
+        "original": "鼎有實，慎所之也。我仇有疾，終无尤也。"
+      },
+      {
+        "position": "九三",
+        "original": "鼎耳革，失其義也。"
+      },
+      {
+        "position": "九四",
+        "original": "覆公餗，信如何也。"
+      },
+      {
+        "position": "六五",
+        "original": "鼎黃耳，中以為實也。"
+      },
+      {
+        "position": "上九",
+        "original": "玉鉉在上，剛柔節也。"
+      }
+    ]
+  }
+}

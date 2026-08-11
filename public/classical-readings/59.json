@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 59,
+  "name": "渙",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F06%E6%B8%99&oldid=2404987",
+  "jing": {
+    "judgmentOriginal": "亨。王假有廟，利涉大川，利貞。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "用拯馬壯，吉。"
+      },
+      {
+        "position": "九二",
+        "original": "渙奔其機，悔亡。"
+      },
+      {
+        "position": "六三",
+        "original": "渙其躬，無悔。"
+      },
+      {
+        "position": "六四",
+        "original": "渙其群，元吉。渙有丘，匪夷所思。"
+      },
+      {
+        "position": "九五",
+        "original": "渙汗其大號。渙，王居無咎。"
+      },
+      {
+        "position": "上九",
+        "original": "渙其血，去逖出，無咎。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "渙，亨。剛來而不窮，柔得位乎外而上同。王假有廟，王乃在中也。利涉大川，乘木有功也。"
+    ],
+    "greatImageText": "風行水上，「渙」，先王以享於帝，立廟。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "初六之吉，順也。"
+      },
+      {
+        "position": "九二",
+        "original": "渙奔其机，得愿也。"
+      },
+      {
+        "position": "六三",
+        "original": "渙其躬，志在外也。"
+      },
+      {
+        "position": "六四",
+        "original": "渙其群，元吉；光大也。"
+      },
+      {
+        "position": "九五",
+        "original": "王居无咎，正位也。"
+      },
+      {
+        "position": "上九",
+        "original": "渙其血，遠害也。"
+      }
+    ]
+  }
+}

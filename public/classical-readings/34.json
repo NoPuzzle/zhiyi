@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 34,
+  "name": "大壯",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F04%E5%A4%A7%E5%A3%AF&oldid=2404958",
+  "jing": {
+    "judgmentOriginal": "利貞。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "壯於趾，征凶有孚。"
+      },
+      {
+        "position": "九二",
+        "original": "貞吉。"
+      },
+      {
+        "position": "九三",
+        "original": "小人用壯，君子用罔，貞厲。羝羊觸藩，羸其角。"
+      },
+      {
+        "position": "九四",
+        "original": "貞吉，悔亡。藩決不羸。壯於大輿之輹。"
+      },
+      {
+        "position": "六五",
+        "original": "喪羊於易，無悔。"
+      },
+      {
+        "position": "上六",
+        "original": "羝羊觸藩，不能退，不能遂。無攸利，艱則吉。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "大壯，大者壯也。剛以動，故壯。大壯利貞；大者正也。正大而天地之情可見矣！"
+    ],
+    "greatImageText": "雷在天上，大壯。君子以非禮弗履。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "壯于趾，其孚窮也。"
+      },
+      {
+        "position": "九二",
+        "original": "九二貞吉，以中也。"
+      },
+      {
+        "position": "九三",
+        "original": "小人用壯，君子罔也。"
+      },
+      {
+        "position": "九四",
+        "original": "藩決不羸，尚往也。"
+      },
+      {
+        "position": "六五",
+        "original": "喪羊于易，位不當也。"
+      },
+      {
+        "position": "上六",
+        "original": "不能退，不能遂，不詳也。艱則吉，咎不長也。"
+      }
+    ]
+  }
+}

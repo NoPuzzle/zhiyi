@@ -1,13 +1,21 @@
-import Image from "next/image";
+import type { SixClassicalLineTexts } from "../../../data/classical-text";
+import type { SixSmallImageTexts } from "../../../data/classical-wings";
 import type { Hexagram } from "../../../data/hexagrams";
-import { withBasePath } from "@/lib/base-path";
+import { FolioWash } from "./FolioWash";
+import { HexagramAtmosphere } from "./HexagramAtmosphere";
 import { InkLine } from "./InkLine";
 
 type InteractiveHexagramHeroProps = {
   hexagram: Hexagram;
+  classicalLineTexts: SixClassicalLineTexts;
+  smallImageTexts: SixSmallImageTexts;
   upperLabel: string;
   lowerLabel: string;
 };
+
+const upperLineIndexes = [5, 4, 3] as const;
+const lowerLineIndexes = [2, 1, 0] as const;
+const visualLineIndexes = [...upperLineIndexes, ...lowerLineIndexes] as const;
 
 function linePosition(hexagram: Hexagram, index: number) {
   const existingPosition = hexagram.lineTexts?.[index]?.position;
@@ -32,168 +40,176 @@ function linePosition(hexagram: Hexagram, index: number) {
 
 export function InteractiveHexagramHero({
   hexagram,
+  classicalLineTexts,
+  smallImageTexts,
   upperLabel,
   lowerLabel,
 }: InteractiveHexagramHeroProps) {
-  const repeatedAtmosphere =
-    hexagram.upperTrigramId === hexagram.lowerTrigramId;
   const defaultLineIndex = hexagram.id === 1 ? 1 : 0;
+
+  const renderLineControl = (index: (typeof visualLineIndexes)[number]) => {
+    const line = hexagram.lines[index];
+    const position =
+      classicalLineTexts[index]?.position ?? linePosition(hexagram, index);
+    const readingId = `hexagram-${hexagram.id}-line-${index}-reading`;
+
+    return (
+      <label
+        key={`${index}-${line}`}
+        className="hexagram-touch-line group relative flex min-h-11 w-full cursor-pointer touch-pan-y items-center justify-center px-2 outline-none"
+      >
+        <input
+          className="hexagram-line-input sr-only"
+          type="radio"
+          name={`hexagram-${hexagram.id}-line`}
+          value={index}
+          data-line-index={index}
+          defaultChecked={index === defaultLineIndex}
+          aria-label={`查看${position}`}
+          aria-controls={readingId}
+        />
+        <InkLine
+          line={line}
+          animated
+          delayMs={(5 - index) * 90}
+          size="lg"
+          seed={index}
+        />
+      </label>
+    );
+  };
 
   return (
     <section
-      className="hexagram-hero relative isolate mt-8 overflow-hidden border-y border-mist/55"
+      className="hexagram-hero relative isolate overflow-hidden border-y border-mist/55"
       aria-labelledby="hexagram-title"
     >
-      <div
-        className="hexagram-atmosphere absolute inset-0 -z-10 overflow-hidden"
-        data-repeated={repeatedAtmosphere}
-      >
-        <Image
-          src={withBasePath(
-            `/atmospheres/${hexagram.lowerTrigramId}.jpg`,
-          )}
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="hexagram-atmosphere-lower object-cover"
-          aria-hidden="true"
-        />
-        {!repeatedAtmosphere ? (
-          <Image
-            src={withBasePath(
-              `/atmospheres/${hexagram.upperTrigramId}.jpg`,
-            )}
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="hexagram-atmosphere-upper object-cover"
-            aria-hidden="true"
-          />
-        ) : null}
-      </div>
+      <HexagramAtmosphere
+        upperTrigramId={hexagram.upperTrigramId}
+        lowerTrigramId={hexagram.lowerTrigramId}
+        variant="folio"
+      />
 
-      <div className="hexagram-selector mx-auto grid max-w-5xl items-center gap-6 px-1 py-8 md:min-h-[43rem] md:grid-cols-[minmax(0,1fr)_minmax(20rem,0.82fr)] md:gap-10 md:px-8 md:py-12">
-        <div className="text-center">
-          <p className="ui-copy text-xs tracking-[0.2em] text-ink-soft">
+      <div className="hexagram-selector mx-auto max-w-3xl px-5 py-5 text-center sm:px-8 sm:py-14">
+        <header className="hexagram-folio-title">
+          <p className="ui-copy text-xs tracking-[0.24em] text-ink-soft">
             第 {hexagram.id} 卦
           </p>
-          <div className="mt-3 flex items-baseline justify-center gap-3">
-            <h1
-              id="hexagram-title"
-              className="text-6xl font-semibold leading-none text-ink sm:text-7xl"
-            >
-              {hexagram.chineseName}
-            </h1>
-            <span className="text-4xl text-ink-soft/80" aria-hidden="true">
-              {hexagram.unicodeSymbol}
-            </span>
-          </div>
-          <p className="ui-copy mt-3 text-xs uppercase tracking-[0.24em] text-ink-soft">
+          <h1
+            id="hexagram-title"
+            className="mt-3 text-5xl font-semibold leading-none text-ink sm:mt-4 sm:text-7xl"
+          >
+            {hexagram.chineseName}
+          </h1>
+          <p className="ui-copy mt-3 text-xs uppercase tracking-[0.28em] text-ink-soft sm:mt-4">
             {hexagram.name}
           </p>
+        </header>
+
+        <fieldset
+          className="hexagram-folio-reader mt-6 min-w-0 border-0 p-0 sm:mt-12"
+          role="radiogroup"
+          aria-orientation="vertical"
+          aria-label="选择一爻观察"
+        >
+          <legend className="sr-only">选择一爻阅读</legend>
 
           <div
-            className="interactive-hexagram mx-auto mt-5 flex w-64 flex-col-reverse"
-            role="radiogroup"
-            aria-label="选择一爻观察"
+            className="hexagram-line-bank hexagram-line-bank-upper"
+            aria-label={`${upperLabel}三爻`}
           >
-            {hexagram.lines.map((line, index) => {
-              const position = linePosition(hexagram, index);
-              const readingId = `hexagram-${hexagram.id}-line-${index}-reading`;
-
-              return (
-                <label
-                  key={`${index}-${line}`}
-                  className="hexagram-touch-line group relative flex min-h-11 w-full cursor-pointer items-center justify-center px-5 outline-none"
-                >
-                  <input
-                    className="hexagram-line-input sr-only"
-                    type="radio"
-                    name={`hexagram-${hexagram.id}-line`}
-                    value={index}
-                    data-line-index={index}
-                    defaultChecked={index === defaultLineIndex}
-                    aria-label={`查看${position}`}
-                    aria-controls={readingId}
-                  />
-                  <span
-                    className="hexagram-line-marker absolute left-0 flex h-6 min-w-6 items-center justify-center text-[0.66rem] text-vermilion"
-                    aria-hidden="true"
-                  >
-                    {position}
-                  </span>
-                  <InkLine
-                    line={line}
-                    animated
-                    delayMs={index * 110}
-                    size="lg"
-                    seed={index}
-                  />
-                </label>
-              );
-            })}
+            {upperLineIndexes.map(renderLineControl)}
           </div>
 
-          <p className="mt-4 text-base leading-8 text-ink-soft">
-            {hexagram.imageText ?? hexagram.imageObservation}
-          </p>
-          <p className="ui-copy mt-3 text-xs tracking-[0.14em] text-ink-soft/80">
-            触碰一爻，观其位
-          </p>
-        </div>
+          <div className="hexagram-folio-stage">
+            <FolioWash />
+            <div className="hexagram-reading-stack relative z-10 text-left">
+              {visualLineIndexes.map((index) => {
+                const classicalLine = classicalLineTexts[index];
+                const smallImage = smallImageTexts[index];
+                const productObservation =
+                  hexagram.lineTexts?.[index]?.plain ?? hexagram.coreMeaning;
+                const position =
+                  classicalLine?.position ?? linePosition(hexagram, index);
+                const readingId = `hexagram-${hexagram.id}-line-${index}-reading`;
+                const headingId = `${readingId}-title`;
 
-        <div className="hexagram-reading-stack mx-4 text-left md:mx-0">
-          {hexagram.lines.map((_, index) => {
-            const line = hexagram.lineTexts?.[index];
-            const position = linePosition(hexagram, index);
+                return (
+                  <article
+                    key={position}
+                    id={readingId}
+                    className="hexagram-line-reading"
+                    data-line-index={index}
+                    data-default={index === defaultLineIndex ? "true" : undefined}
+                    role="region"
+                    aria-labelledby={headingId}
+                  >
+                    <p
+                      className="sr-only"
+                      role="status"
+                      aria-live="polite"
+                      aria-atomic="true"
+                    >
+                      已展开{position}，第 {index + 1} 爻，共六爻
+                    </p>
 
-            return (
-              <article
-                key={position}
-                id={`hexagram-${hexagram.id}-line-${index}-reading`}
-                className="hexagram-line-reading border-y border-mist/65 bg-paper/72 px-1 py-6 backdrop-blur-[2px] md:px-7 md:py-7"
-                data-line-index={index}
-              >
-                <div className="flex items-baseline gap-3">
-                  <p className="text-3xl font-semibold text-vermilion">
-                    {position}
-                  </p>
-                  <span className="ui-copy text-xs tracking-[0.16em] text-ink-soft">
-                    {index + 1} / 6
-                  </span>
-                </div>
-                {line?.original ? (
-                  <p className="mt-5 text-xl leading-9 text-ink">
-                    {line.original}
-                  </p>
-                ) : null}
-                <p className="mt-3 text-base leading-8 text-ink-soft">
-                  {line?.plain}
-                </p>
-                <p className="mt-5 border-l-2 border-vermilion/55 pl-4 text-base leading-8 text-vermilion">
-                  {line?.reflection}
-                </p>
+                    <div className="hexagram-folio-meta">
+                      <h2
+                        id={headingId}
+                        className="text-2xl font-semibold text-vermilion sm:text-3xl"
+                      >
+                        {position}
+                      </h2>
+                      <p className="ui-copy mt-2 text-[0.68rem] tracking-[0.16em] text-ink-soft/75">
+                        {String(index + 1).padStart(2, "0")} / 06
+                      </p>
+                    </div>
 
-                <dl className="ui-copy mt-7 grid grid-cols-2 gap-4 border-t border-mist/55 pt-5 text-sm">
-                  <div>
-                    <dt className="text-xs tracking-[0.14em] text-ink-soft/75">
-                      上卦
-                    </dt>
-                    <dd className="mt-1 text-ink">{upperLabel}</dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs tracking-[0.14em] text-ink-soft/75">
-                      下卦
-                    </dt>
-                    <dd className="mt-1 text-ink">{lowerLabel}</dd>
-                  </div>
-                </dl>
-              </article>
-            );
-          })}
-        </div>
+                    <div className="hexagram-folio-copy">
+                      <section>
+                        <p className="ui-copy text-xs tracking-[0.16em] text-ink-soft/75">
+                          经 · 爻辞
+                        </p>
+                        <p className="mt-2 text-base leading-7 text-ink sm:text-xl sm:leading-9">
+                          {classicalLine?.original}
+                        </p>
+                      </section>
+
+                      <section className="mt-2 border-t border-mist/75 pt-2">
+                        <p className="ui-copy text-xs tracking-[0.16em] text-ink-soft/75">
+                          传 · 小象
+                        </p>
+                        <p className="mt-1 text-base leading-7 text-ink">
+                          {smallImage.original}
+                        </p>
+                      </section>
+
+                      <section className="mt-1 border-t border-mist/75 pt-1">
+                        <p className="ui-copy text-xs tracking-[0.16em] text-ink-soft/75">
+                          位置观察 · 产品原创
+                        </p>
+                        <p className="mt-1 text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
+                          {productObservation}
+                        </p>
+                      </section>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+
+          <div
+            className="hexagram-line-bank hexagram-line-bank-lower"
+            aria-label={`${lowerLabel}三爻`}
+          >
+            {lowerLineIndexes.map(renderLineControl)}
+          </div>
+        </fieldset>
+
+        <p className="ui-copy mx-auto mt-9 max-w-sm border-t border-mist/65 pt-4 text-xs tracking-[0.18em] text-ink-soft/80">
+          点触一爻，逐爻而观
+        </p>
       </div>
     </section>
   );

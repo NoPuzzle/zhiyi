@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 41,
+  "name": "損",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F04%E6%90%8D&oldid=2404961",
+  "jing": {
+    "judgmentOriginal": "有孚，元吉，無咎可貞，利有攸往。曷之用？二簋可用享。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "巳事遄往，無咎，酌損之。"
+      },
+      {
+        "position": "九二",
+        "original": "利貞，征凶。弗損，益之。"
+      },
+      {
+        "position": "六三",
+        "original": "三人行則損一人，一人行則得其友。"
+      },
+      {
+        "position": "六四",
+        "original": "損其疾，使遄有喜，無咎。"
+      },
+      {
+        "position": "六五",
+        "original": "或益之，十朋之龜，弗克違，元吉。"
+      },
+      {
+        "position": "上九",
+        "original": "弗損，益之，無咎，貞吉，利有攸往。得臣無家。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "損，損下益上，其道上行。損而有孚，元吉，无咎，可貞，利有攸往。曷之用？二簋可用享；二簋應有時。損剛益柔有時，損益盈虛，與時偕行。"
+    ],
+    "greatImageText": "山下有澤，損。君子以懲忿窒慾。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "已事遄往，尚合志也。"
+      },
+      {
+        "position": "九二",
+        "original": "九二利貞，中以為志也。"
+      },
+      {
+        "position": "六三",
+        "original": "一人行，三則疑也。"
+      },
+      {
+        "position": "六四",
+        "original": "損其疾，亦可喜也。"
+      },
+      {
+        "position": "六五",
+        "original": "六五元吉，自上佑也。"
+      },
+      {
+        "position": "上九",
+        "original": "弗損益之，大得志也。"
+      }
+    ]
+  }
+}

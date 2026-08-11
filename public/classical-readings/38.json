@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 38,
+  "name": "睽",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F04%E7%9D%BD&oldid=2832235",
+  "jing": {
+    "judgmentOriginal": "小事吉。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "悔亡。喪馬，勿逐，自復。見惡人，無咎。"
+      },
+      {
+        "position": "九二",
+        "original": "遇主於巷，無咎。"
+      },
+      {
+        "position": "六三",
+        "original": "見輿曳，其牛掣。其人天且劓，無初有終。"
+      },
+      {
+        "position": "九四",
+        "original": "睽孤，遇元夫。交孚，厲，無咎。"
+      },
+      {
+        "position": "六五",
+        "original": "悔亡。厥宗噬膚，往，何咎？"
+      },
+      {
+        "position": "上九",
+        "original": "睽孤。見豕負塗，載鬼一車，先張之弧，後說之弧。匪寇婚媾，往，遇雨則吉。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "睽，火動而上，澤動而下；二女同居，其志不同行；說而麗乎明，柔進而上行，得中而應乎剛；是以小事吉。天地睽，而其事同也；男女睽，而其志通也；萬物睽，而其事類也；睽之時用大矣哉！"
+    ],
+    "greatImageText": "上火下澤，睽。君子以同而異。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "見惡人，以辟咎也。"
+      },
+      {
+        "position": "九二",
+        "original": "遇主于巷，未失道也。"
+      },
+      {
+        "position": "六三",
+        "original": "見輿曳，位不當也。无初有終，遇剛也。"
+      },
+      {
+        "position": "九四",
+        "original": "交孚无咎，志行也。"
+      },
+      {
+        "position": "六五",
+        "original": "厥宗噬膚，往有慶也。"
+      },
+      {
+        "position": "上九",
+        "original": "遇雨之吉，群疑亡也。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 4,
+  "name": "蒙",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F01%E8%92%99&oldid=2404940",
+  "jing": {
+    "judgmentOriginal": "亨。匪我求童蒙，童蒙求我。初筮告，再、三瀆，瀆則不告。利貞。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "發蒙，利用刑人，用說桎梏，以往吝。"
+      },
+      {
+        "position": "九二",
+        "original": "包蒙吉，納婦吉，子克家。"
+      },
+      {
+        "position": "六三",
+        "original": "勿用取女。見金夫，不有躬，無攸利。"
+      },
+      {
+        "position": "六四",
+        "original": "困蒙，吝。"
+      },
+      {
+        "position": "六五",
+        "original": "童蒙吉。"
+      },
+      {
+        "position": "上九",
+        "original": "擊蒙，不利為寇，利禦寇。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "蒙，山下有險，險而止，蒙。蒙亨，以亨行，時中也。匪我求童蒙，童蒙求我，志應也。初筮告，以剛中也。再三瀆，瀆則不告，瀆蒙也。蒙以養正，聖功也。"
+    ],
+    "greatImageText": "山下出泉，蒙。君子以果行育德。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "利用刑人，以正法也。"
+      },
+      {
+        "position": "九二",
+        "original": "子克家，剛柔接也。"
+      },
+      {
+        "position": "六三",
+        "original": "勿用取女，行不順也。"
+      },
+      {
+        "position": "六四",
+        "original": "困蒙之吝，獨遠實也。"
+      },
+      {
+        "position": "六五",
+        "original": "童蒙之吉，順以巽也。"
+      },
+      {
+        "position": "上九",
+        "original": "利禦寇，上下順也。"
+      }
+    ]
+  }
+}

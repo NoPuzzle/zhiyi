@@ -2,7 +2,8 @@ const SERVICE_WORKER_URL = new URL(self.location.href);
 const CACHE_VERSION = SERVICE_WORKER_URL.searchParams.get("v") ?? "dev";
 const BASE_PATH = SERVICE_WORKER_URL.pathname.replace(/\/sw\.js$/, "");
 const withBasePath = (path) => `${BASE_PATH}${path}`;
-const CACHE_NAME = `zhiyi-static-${BASE_PATH || "root"}-${CACHE_VERSION}`;
+const CACHE_NAMESPACE = `zhiyi-static-${BASE_PATH || "root"}-`;
+const CACHE_NAME = `${CACHE_NAMESPACE}${CACHE_VERSION}`;
 const OFFLINE_URL = withBasePath("/offline/");
 const CORE_ASSETS = [
   withBasePath("/"),
@@ -10,6 +11,7 @@ const CORE_ASSETS = [
   withBasePath("/learn/"),
   withBasePath("/ask/"),
   withBasePath("/hexagrams/"),
+  withBasePath("/classics/"),
   withBasePath("/manifest.webmanifest"),
   withBasePath("/icons/apple-touch-icon.png"),
   withBasePath("/icons/zhiyi-icon-192.png"),
@@ -35,7 +37,10 @@ self.addEventListener("activate", (event) => {
       .then((keys) =>
         Promise.all(
           keys
-            .filter((key) => key !== CACHE_NAME)
+            .filter(
+              (key) =>
+                key.startsWith(CACHE_NAMESPACE) && key !== CACHE_NAME,
+            )
             .map((key) => caches.delete(key)),
         ),
       )
@@ -54,8 +59,11 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
       fetch(request)
         .then((response) => {
-          const copy = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+          if (response.ok) {
+            const copy = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+          }
+
           return response;
         })
         .catch(() =>
@@ -68,11 +76,12 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
 
   if (url.origin === self.location.origin) {
+    const isNextAsset = url.pathname.startsWith(withBasePath("/_next/"));
     const shouldRefresh =
       url.pathname === withBasePath("/manifest.webmanifest") ||
       url.pathname.startsWith(withBasePath("/icons/"));
 
-    if (shouldRefresh) {
+    if (isNextAsset || shouldRefresh) {
       event.respondWith(
         fetch(request)
           .then((response) => {

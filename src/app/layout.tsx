@@ -59,7 +59,7 @@ export default function RootLayout({
       <body className="min-h-full bg-paper text-ink">
         <ServiceWorkerRegistration />
         <div className="paper-grain min-h-dvh">
-          <header className="mx-auto flex w-full max-w-5xl items-center justify-between px-5 py-5 sm:px-8">
+          <header className="mx-auto flex w-full max-w-5xl items-center justify-between px-5 py-3 sm:px-8">
             <Link
               href="/"
               className="flex flex-col leading-none"
@@ -72,17 +72,32 @@ export default function RootLayout({
             </Link>
 
             <nav
-              className="flex items-center gap-3 text-sm text-ink-soft"
+              className="flex items-center gap-2 text-sm text-ink-soft sm:gap-3"
               aria-label="主导航"
             >
-              <Link className="transition hover:text-ink" href="/learn">
+              <Link
+                className="flex min-h-11 items-center rounded-sm px-1 transition hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion"
+                href="/learn"
+              >
                 学易
               </Link>
-              <Link className="transition hover:text-ink" href="/ask">
+              <Link
+                className="flex min-h-11 items-center rounded-sm px-1 transition hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion"
+                href="/ask"
+              >
                 问卦
               </Link>
-              <Link className="transition hover:text-ink" href="/hexagrams">
+              <Link
+                className="flex min-h-11 items-center rounded-sm px-1 transition hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion"
+                href="/hexagrams"
+              >
                 观象
+              </Link>
+              <Link
+                className="flex min-h-11 items-center rounded-sm px-1 transition hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion"
+                href="/classics"
+              >
+                经传
               </Link>
             </nav>
           </header>

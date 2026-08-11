@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 25,
+  "name": "無妄",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F03%E7%84%A1%E5%A6%84&oldid=2625764",
+  "jing": {
+    "judgmentOriginal": "元亨利貞。其匪正有眚，不利有攸往。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "無妄往，吉。"
+      },
+      {
+        "position": "六二",
+        "original": "不耕獲，不菑畬，則利有攸往。"
+      },
+      {
+        "position": "六三",
+        "original": "無妄之災，或系之牛。行人之得，邑人之災。"
+      },
+      {
+        "position": "九四",
+        "original": "可貞，無咎。"
+      },
+      {
+        "position": "九五",
+        "original": "無妄之疾，勿藥有喜。"
+      },
+      {
+        "position": "上九",
+        "original": "無妄行，有眚，無攸利。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "无妄，剛自外來，而為主於內。動而健，剛中而應，大亨以正，天之命也。其匪正有眚，不利有攸往。无妄之往，何之矣？ 天命不佑，行矣哉？"
+    ],
+    "greatImageText": "天下雷行，物與無妄。先王以茂對時育萬物。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "无妄之往，得志也。"
+      },
+      {
+        "position": "六二",
+        "original": "不耕穫，未富也。"
+      },
+      {
+        "position": "六三",
+        "original": "行人得牛，邑人災也。"
+      },
+      {
+        "position": "九四",
+        "original": "可貞无咎，固有之也。"
+      },
+      {
+        "position": "九五",
+        "original": "无妄之藥，不可試也。"
+      },
+      {
+        "position": "上九",
+        "original": "无妄之行，窮之災也。"
+      }
+    ]
+  }
+}

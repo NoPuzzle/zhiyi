@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 61,
+  "name": "中孚",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F06%E4%B8%AD%E5%AD%9A&oldid=2620549",
+  "jing": {
+    "judgmentOriginal": "豚魚吉。利涉大川，利貞。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "虞吉，有它不燕。"
+      },
+      {
+        "position": "九二",
+        "original": "鳴鶴在陰，其子和之。我有好爵，吾與爾靡之。"
+      },
+      {
+        "position": "六三",
+        "original": "得敵，或鼓或罷，或泣或歌。"
+      },
+      {
+        "position": "六四",
+        "original": "月幾望，馬匹亡，無咎。"
+      },
+      {
+        "position": "九五",
+        "original": "有孚攣如，無咎。"
+      },
+      {
+        "position": "上九",
+        "original": "翰音登於天，貞凶。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "中孚，柔在內而剛得中。說而巽，孚，乃化邦也。豚魚吉，信及豚魚也。利涉大川，乘木舟虛也。中孚以利貞，乃應乎天也。"
+    ],
+    "greatImageText": "澤上有風，中孚。君子以議獄緩死。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "初九虞吉，志未變也。"
+      },
+      {
+        "position": "九二",
+        "original": "其子和之，中心愿也。"
+      },
+      {
+        "position": "六三",
+        "original": "可鼓或罷，位不當也。"
+      },
+      {
+        "position": "六四",
+        "original": "馬匹亡，絕類上也。"
+      },
+      {
+        "position": "九五",
+        "original": "有孚攣如，位正當也。"
+      },
+      {
+        "position": "上九",
+        "original": "翰音登于天，何可長也。"
+      }
+    ]
+  }
+}

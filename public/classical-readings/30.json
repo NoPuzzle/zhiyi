@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 30,
+  "name": "離",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F03%E9%9B%A2&oldid=2692302",
+  "jing": {
+    "judgmentOriginal": "利貞，亨。畜牝牛，吉。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "履錯然，敬之，無咎。"
+      },
+      {
+        "position": "六二",
+        "original": "黃離，元吉。"
+      },
+      {
+        "position": "九三",
+        "original": "日昃之離，不鼓缶而歌，則大耋之嗟，凶。"
+      },
+      {
+        "position": "九四",
+        "original": "突如其來如，焚如，死如，棄如。"
+      },
+      {
+        "position": "六五",
+        "original": "出涕沱若，戚嗟若，吉。"
+      },
+      {
+        "position": "上九",
+        "original": "王用出征，有嘉折首，獲匪其醜，無咎。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "離，麗也；日月麗乎天，百谷草木麗乎土，重明以麗乎正，乃化成天下。柔麗乎中正，故亨；是以畜牝牛吉也。"
+    ],
+    "greatImageText": "明兩作，離。大人以繼明照於四方。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "履錯之敬，以辟咎也。"
+      },
+      {
+        "position": "六二",
+        "original": "黃離元吉，得中道也。"
+      },
+      {
+        "position": "九三",
+        "original": "日昃之離，何可久也。"
+      },
+      {
+        "position": "九四",
+        "original": "突如其來如，无所容也。"
+      },
+      {
+        "position": "六五",
+        "original": "六五之吉，離王公也。"
+      },
+      {
+        "position": "上九",
+        "original": "王用出征，以正邦也。"
+      }
+    ]
+  }
+}

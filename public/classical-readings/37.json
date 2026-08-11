@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 37,
+  "name": "家人",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F04%E5%AE%B6%E4%BA%BA&oldid=2404959",
+  "jing": {
+    "judgmentOriginal": "利女貞。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "閑有家，悔亡。"
+      },
+      {
+        "position": "六二",
+        "original": "無攸遂，在中饋，貞吉。"
+      },
+      {
+        "position": "九三",
+        "original": "家人嗃嗃，悔厲，吉。婦子嘻嘻，終吝。"
+      },
+      {
+        "position": "六四",
+        "original": "富家，大吉。"
+      },
+      {
+        "position": "九五",
+        "original": "王假有家，勿恤，吉。"
+      },
+      {
+        "position": "上九",
+        "original": "有孚，威如，終吉。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "家人，女正位乎內，男正位乎外，男女正，天地之大義也。家人有嚴君焉，父母之謂也。父父，子子，兄兄，弟弟，夫夫，婦婦，而家道正；正家而天下定矣。"
+    ],
+    "greatImageText": "風自火出，家人。君子以言有物而行有恆。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "閑有家，志未變也。"
+      },
+      {
+        "position": "六二",
+        "original": "六二之吉，順以巽也。"
+      },
+      {
+        "position": "九三",
+        "original": "家人嗃嗃，未失也；婦子嘻嘻，失家節也。"
+      },
+      {
+        "position": "六四",
+        "original": "富家大吉，順在位也。"
+      },
+      {
+        "position": "九五",
+        "original": "王假有家，交相愛也。"
+      },
+      {
+        "position": "上九",
+        "original": "威如之吉，反身之謂也。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 54,
+  "name": "歸妹",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F05%E6%AD%B8%E5%A6%B9&oldid=2404973",
+  "jing": {
+    "judgmentOriginal": "征凶，無攸利。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "歸妹以娣，跛能履，征吉。"
+      },
+      {
+        "position": "九二",
+        "original": "眇能視，利幽人之貞。"
+      },
+      {
+        "position": "六三",
+        "original": "歸妹以須，反歸以娣。"
+      },
+      {
+        "position": "九四",
+        "original": "歸妹愆期，遲歸有時。"
+      },
+      {
+        "position": "六五",
+        "original": "帝乙歸妹，其君之袂，不如其娣之袂良。月幾望，吉。"
+      },
+      {
+        "position": "上六",
+        "original": "女承筐，無實，士刲羊，無血，無攸利。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "歸妹，天地之大義也。天地不交，而萬物不興，歸妹人之終始也。說以動，所歸妹也。征凶，位不當也。无攸利，柔乘剛也。"
+    ],
+    "greatImageText": "澤上有雷，歸妹。君子以永終知敝。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "歸妹以娣，以恆也。跛能履吉，相承也。"
+      },
+      {
+        "position": "九二",
+        "original": "利幽人之貞，未變常也。"
+      },
+      {
+        "position": "六三",
+        "original": "歸妹以須，未當也。"
+      },
+      {
+        "position": "九四",
+        "original": "愆期之志，有待而行也。"
+      },
+      {
+        "position": "六五",
+        "original": "帝乙歸妹，不如其娣之袂良也。其位在中，以貴行也。"
+      },
+      {
+        "position": "上六",
+        "original": "上六无實，承虛筐也。"
+      }
+    ]
+  }
+}

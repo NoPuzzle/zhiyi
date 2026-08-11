@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 55,
+  "name": "豐",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F06%E8%B1%90&oldid=2608391",
+  "jing": {
+    "judgmentOriginal": "亨，王假之。勿憂，宜日中。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "遇其配主，雖旬無咎，往有尚。"
+      },
+      {
+        "position": "六二",
+        "original": "豐其蔀，日中見斗。往得疑疾，有孚發若，吉。"
+      },
+      {
+        "position": "九三",
+        "original": "豐其沛，日中見沬。折其右肱，無咎。"
+      },
+      {
+        "position": "九四",
+        "original": "豐其蔀，日中見斗。遇其夷主，吉。"
+      },
+      {
+        "position": "六五",
+        "original": "來章有慶譽，吉。"
+      },
+      {
+        "position": "上六",
+        "original": "豐其屋，蔀其家，闚其戶，闃其無人。三歲不覿，凶。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "豐，大也。明以動，故豐。王假之，尚大也。勿憂宜日中，宜照天下也。日中則昃，月盈則食，天地盈虛，與時消息，而況于人乎？況于鬼神乎？"
+    ],
+    "greatImageText": "雷電皆至，豐。君子以折獄致刑。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "雖旬无咎，過旬災也。"
+      },
+      {
+        "position": "六二",
+        "original": "有孚發若，信以發志也。"
+      },
+      {
+        "position": "九三",
+        "original": "豐其沛，不可大事也。折其右肱，終不可用也。"
+      },
+      {
+        "position": "九四",
+        "original": "豐其蔀，位不當也。日中見斗，幽不明也。遇其夷主，吉；行也。"
+      },
+      {
+        "position": "六五",
+        "original": "六五之吉，有慶也。"
+      },
+      {
+        "position": "上六",
+        "original": "豐其屋，天際翔也。窺其戶，闃其无人，自藏也。"
+      }
+    ]
+  }
+}

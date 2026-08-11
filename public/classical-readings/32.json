@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 32,
+  "name": "恒",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F04%E6%81%92&oldid=2404960",
+  "jing": {
+    "judgmentOriginal": "亨，無咎，利貞。利有攸往。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "浚恆，貞凶，無攸利。"
+      },
+      {
+        "position": "九二",
+        "original": "悔亡。"
+      },
+      {
+        "position": "九三",
+        "original": "不恆其德，或承之羞，貞吝。"
+      },
+      {
+        "position": "九四",
+        "original": "田，無禽。"
+      },
+      {
+        "position": "六五",
+        "original": "恆其德，貞。婦人吉，夫子凶。"
+      },
+      {
+        "position": "上六",
+        "original": "振恆，凶。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "恆，久也。剛上而柔下，雷風相與，巽而動，剛柔皆應，恆。恆亨无咎，利貞；久于其道也，天地之道，恆久而不已也。利有攸往，終則有始也。日月得天，而能久照，四時變化，而能久成，聖人久于其道，而天下化成；觀其所恆，而天地萬物之情可見矣！"
+    ],
+    "greatImageText": "雷風，恆。君子以立不易方。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "浚恆之凶，始求深也。"
+      },
+      {
+        "position": "九二",
+        "original": "九二悔亡，能久中也。"
+      },
+      {
+        "position": "九三",
+        "original": "不恆其德，无所容也。"
+      },
+      {
+        "position": "九四",
+        "original": "久非其位，安得禽也。"
+      },
+      {
+        "position": "六五",
+        "original": "婦人貞吉，從一而終也。夫子制義，從婦凶也。"
+      },
+      {
+        "position": "上六",
+        "original": "振恆在上，大无功也。"
+      }
+    ]
+  }
+}

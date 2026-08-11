@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 5,
+  "name": "需",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F02%E9%9C%80&oldid=2404946",
+  "jing": {
+    "judgmentOriginal": "有孚，光亨貞吉，利涉大川。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "需於郊，利用恆，無咎。"
+      },
+      {
+        "position": "九二",
+        "original": "需於沙，小有言，終吉。"
+      },
+      {
+        "position": "九三",
+        "original": "需於泥，致寇至。"
+      },
+      {
+        "position": "六四",
+        "original": "需於血，出自穴。"
+      },
+      {
+        "position": "九五",
+        "original": "需於酒食，貞吉。"
+      },
+      {
+        "position": "上六",
+        "original": "入於穴，有不速之客三人來，敬之，終吉。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "需，須也，險在前也；剛健而不陷，其義不困窮矣。需，有孚，光亨，貞吉，位乎天位，以正中也。利涉大川，往有功也。"
+    ],
+    "greatImageText": "雲上於天，需，君子以飲食宴樂。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "需于郊，不犯難行也。利用恆，无咎，未失常也。"
+      },
+      {
+        "position": "九二",
+        "original": "需于沙，衍在中也。雖小有言，以終吉也。"
+      },
+      {
+        "position": "九三",
+        "original": "需于泥，災在外也。自我致寇，敬慎不敗也。"
+      },
+      {
+        "position": "六四",
+        "original": "需于血，順以聽也。"
+      },
+      {
+        "position": "九五",
+        "original": "酒食，貞吉，以中正也。"
+      },
+      {
+        "position": "上六",
+        "original": "不速之客來，敬之終吉。雖不當位，未大失也。"
+      }
+    ]
+  }
+}

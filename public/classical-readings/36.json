@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 36,
+  "name": "明夷",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F04%E6%98%8E%E5%A4%B7&oldid=2772387",
+  "jing": {
+    "judgmentOriginal": "利艱貞。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "明夷於飛，垂其翼。君子於行，三日不食。有攸往，主人有言。"
+      },
+      {
+        "position": "六二",
+        "original": "明夷，夷於左股，用拯馬壯，吉。"
+      },
+      {
+        "position": "九三",
+        "original": "明夷於南狩，得其大首，不可疾貞。"
+      },
+      {
+        "position": "六四",
+        "original": "入於左腹，獲明夷之心，於出門庭。"
+      },
+      {
+        "position": "六五",
+        "original": "箕子之明夷，利貞。"
+      },
+      {
+        "position": "上六",
+        "original": "不明晦，初登於天，後入於地。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "明入地中，明夷。內文明而外柔順，以蒙大難，文王以之。利艱貞，晦其明也，內難而能正其志，箕子以之。"
+    ],
+    "greatImageText": "「明入地中，明夷」，君子以蒞眾，用晦而明。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "君子于行，義不食也。"
+      },
+      {
+        "position": "六二",
+        "original": "六二之吉，順以則也。"
+      },
+      {
+        "position": "九三",
+        "original": "南狩之志，乃大得也。"
+      },
+      {
+        "position": "六四",
+        "original": "入于左腹，獲心意也。"
+      },
+      {
+        "position": "六五",
+        "original": "箕子之貞，明不可息也。"
+      },
+      {
+        "position": "上六",
+        "original": "初登于天，照四國也。后入于地，失則也。"
+      }
+    ]
+  }
+}

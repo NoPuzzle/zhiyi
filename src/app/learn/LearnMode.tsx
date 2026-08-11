@@ -134,7 +134,7 @@ function RelatedLink({ href, children }: { href: string; children: React.ReactNo
   return (
     <Link
       href={href}
-      className="ui-copy inline-flex min-h-10 items-center justify-center rounded-sm border border-mist px-4 text-sm font-medium text-ink transition hover:border-ink hover:bg-ink hover:text-paper"
+      className="ui-copy inline-flex min-h-10 items-center justify-center rounded-sm border border-mist px-4 text-sm font-medium text-ink transition hover:border-ink hover:bg-ink hover:text-paper focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion"
     >
       {children}
     </Link>
@@ -185,7 +185,8 @@ function ToggleButton({
     <button
       type="button"
       onClick={onClick}
-      className={`ui-copy min-h-10 rounded-sm border px-3 text-sm font-medium transition ${
+      aria-pressed={active}
+      className={`ui-copy min-h-10 rounded-sm border px-3 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion ${
         active
           ? "border-vermilion text-vermilion"
           : "border-mist text-ink-soft hover:border-ink hover:text-ink"
@@ -259,7 +260,12 @@ export function LearnMode() {
           </div>
         }
       >
-        <div className="w-full max-w-xs text-center">
+        <div
+          className="w-full max-w-xs text-center"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
           <InkLine line={yinYangLine} size="lg" animated seed={0} />
           <p className="mt-6 text-3xl font-semibold text-ink">
             {yinYangLine === 1 ? "阳" : "阴"}
@@ -284,7 +290,8 @@ export function LearnMode() {
                   key={index}
                   type="button"
                   onClick={() => toggleBuildingLine(index)}
-                  className="ui-copy min-h-10 rounded-sm border border-mist px-3 text-sm text-ink-soft transition hover:border-vermilion hover:text-vermilion"
+                  aria-pressed={line === 1}
+                  className="ui-copy min-h-10 rounded-sm border border-mist px-3 text-sm text-ink-soft transition hover:border-vermilion hover:text-vermilion focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion"
                 >
                   {positionNotes[index].label} · {line === 1 ? "阳" : "阴"}
                 </button>
@@ -294,7 +301,12 @@ export function LearnMode() {
           </div>
         }
       >
-        <div className="text-center">
+        <div
+          className="text-center"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
           <TrigramVisual
             trigram={{
               ...(builtTrigram ?? trigrams[0]),
@@ -325,7 +337,8 @@ export function LearnMode() {
                   key={trigram.id}
                   type="button"
                   onClick={() => setSelectedTrigramId(trigram.id)}
-                  className={`rounded-sm border px-3 py-2 transition ${
+                  aria-pressed={selectedTrigramId === trigram.id}
+                  className={`rounded-sm border px-3 py-2 transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion ${
                     selectedTrigramId === trigram.id
                       ? "border-vermilion text-vermilion"
                       : "border-mist text-ink-soft hover:border-ink hover:text-ink"
@@ -343,7 +356,12 @@ export function LearnMode() {
         }
       >
         <div className="w-full">
-          <div className="flex flex-col items-center text-center">
+          <div
+            className="flex flex-col items-center text-center"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
             <TrigramVisual trigram={selectedTrigram} animated />
             <p className="mt-5 text-4xl font-semibold text-ink">
               {selectedTrigram.chineseName}
@@ -370,7 +388,7 @@ export function LearnMode() {
                 <select
                   value={lowerTrigramId}
                   onChange={(event) => setLowerTrigramId(event.target.value)}
-                  className="mt-2 min-h-10 w-full rounded-sm border border-mist bg-paper px-3 text-ink outline-none focus:border-vermilion"
+                  className="mt-2 min-h-10 w-full rounded-sm border border-mist bg-paper px-3 text-ink outline-none focus:border-vermilion focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion"
                 >
                   {trigrams.map((trigram) => (
                     <option key={trigram.id} value={trigram.id}>
@@ -384,7 +402,7 @@ export function LearnMode() {
                 <select
                   value={upperTrigramId}
                   onChange={(event) => setUpperTrigramId(event.target.value)}
-                  className="mt-2 min-h-10 w-full rounded-sm border border-mist bg-paper px-3 text-ink outline-none focus:border-vermilion"
+                  className="mt-2 min-h-10 w-full rounded-sm border border-mist bg-paper px-3 text-ink outline-none focus:border-vermilion focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion"
                 >
                   {trigrams.map((trigram) => (
                     <option key={trigram.id} value={trigram.id}>
@@ -400,7 +418,12 @@ export function LearnMode() {
           </div>
         }
       >
-        <div className="text-center">
+        <div
+          className="text-center"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
           <HexagramLines
             lines={hexagramLines}
             animated
@@ -435,7 +458,12 @@ export function LearnMode() {
           </div>
         }
       >
-        <div className="text-center">
+        <div
+          className="text-center"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
           <HexagramLines
             lines={[1, 1, 1, 1, 1, 1]}
             movingLineIndexes={[selectedPosition]}
@@ -474,7 +502,12 @@ export function LearnMode() {
           </div>
         }
       >
-        <div className="w-full">
+        <div
+          className="w-full"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
           <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-3">
             <div className="flex flex-col items-center">
               <p className="ui-copy mb-4 text-xs text-ink-soft">本卦</p>
@@ -530,7 +563,12 @@ export function LearnMode() {
           </div>
         }
       >
-        <div className="w-full">
+        <div
+          className="w-full"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
           <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-3">
             <div className="flex flex-col items-center">
               <p className="ui-copy mb-4 text-xs text-ink-soft">

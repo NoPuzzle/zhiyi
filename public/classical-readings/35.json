@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 35,
+  "name": "晉",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F04%E6%99%89&oldid=2766694",
+  "jing": {
+    "judgmentOriginal": "康侯用錫馬蕃庶，晝日三接。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "晉如、摧如，貞吉。罔孚，裕，無咎。"
+      },
+      {
+        "position": "六二",
+        "original": "晉如，愁如，貞吉。受茲介福，於其王母。"
+      },
+      {
+        "position": "六三",
+        "original": "眾允，悔亡。"
+      },
+      {
+        "position": "九四",
+        "original": "晉如鼫鼠，貞厲。"
+      },
+      {
+        "position": "六五",
+        "original": "悔亡。失得勿恤，往，吉，無不利。"
+      },
+      {
+        "position": "上九",
+        "original": "晉其角，維用伐邑。厲吉無咎，貞吝。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "晉，進也。明出地上，順而麗乎大明，柔進而上行。是以康侯用錫馬蕃庶，晝日三接也。"
+    ],
+    "greatImageText": "「明出地上」，晉。君子以自昭明德。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "晉如，摧如；獨行正也。裕无咎；未受命也。"
+      },
+      {
+        "position": "六二",
+        "original": "受茲介福，以中正也。"
+      },
+      {
+        "position": "六三",
+        "original": "眾允之志，上行也。"
+      },
+      {
+        "position": "九四",
+        "original": "鼫鼠貞厲，位不當也。"
+      },
+      {
+        "position": "六五",
+        "original": "失得勿恤，往有慶也。"
+      },
+      {
+        "position": "上九",
+        "original": "維用伐邑，道未光也。"
+      }
+    ]
+  }
+}

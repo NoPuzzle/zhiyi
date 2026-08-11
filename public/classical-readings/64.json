@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 64,
+  "name": "未濟",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F06%E6%9C%AA%E6%BF%9F&oldid=2414136",
+  "jing": {
+    "judgmentOriginal": "亨，小狐汔濟，濡其尾，無攸利。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "濡其尾，吝。"
+      },
+      {
+        "position": "九二",
+        "original": "曳其輪，貞吉。"
+      },
+      {
+        "position": "六三",
+        "original": "未濟，征凶。利涉大川。"
+      },
+      {
+        "position": "九四",
+        "original": "貞吉，悔亡。震用伐鬼方，三年有賞於大國。"
+      },
+      {
+        "position": "六五",
+        "original": "貞吉，無悔。君子之光，有孚，吉。"
+      },
+      {
+        "position": "上九",
+        "original": "有孚於飲酒，無咎。濡其首，有孚，失是。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "未濟，亨；柔得中也。小狐汔濟，未出中也。濡其尾，无攸利；不續終也。雖不當位，剛柔應也。"
+    ],
+    "greatImageText": "火在水上，未濟。君子以慎辨物居方。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "濡其尾，亦不知極也。"
+      },
+      {
+        "position": "九二",
+        "original": "九二貞吉，中以行正也。"
+      },
+      {
+        "position": "六三",
+        "original": "未濟征凶，位不當也。"
+      },
+      {
+        "position": "九四",
+        "original": "貞吉悔亡，志行也。"
+      },
+      {
+        "position": "六五",
+        "original": "君子之光，其暉吉也。"
+      },
+      {
+        "position": "上九",
+        "original": "飲酒濡首，亦不知節也。"
+      }
+    ]
+  }
+}

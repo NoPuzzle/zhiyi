@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 18,
+  "name": "蠱",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F03%E8%A0%B1&oldid=2386435",
+  "jing": {
+    "judgmentOriginal": "元亨，利涉大川。先甲三日，後甲三日。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "幹父之蠱，有子，考無咎，厲終吉。"
+      },
+      {
+        "position": "九二",
+        "original": "幹母之蠱，不可貞。"
+      },
+      {
+        "position": "九三",
+        "original": "幹父之蠱，小有悔，無大咎。"
+      },
+      {
+        "position": "六四",
+        "original": "裕父之蠱，往見吝。"
+      },
+      {
+        "position": "六五",
+        "original": "幹父之蠱，用譽。"
+      },
+      {
+        "position": "上九",
+        "original": "不事王侯，高尚其事。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "蠱，剛上而柔下，巽而止，蠱。蠱，元亨，而天下治也。利涉大川，往有事也。先甲三日，後甲三日，終則有始，天行也。"
+    ],
+    "greatImageText": "山下有風，蠱。君子以振民育德。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "幹父之蠱，意承考也。"
+      },
+      {
+        "position": "九二",
+        "original": "幹母之蠱，得中道也。"
+      },
+      {
+        "position": "九三",
+        "original": "幹父之蠱，終无咎也。"
+      },
+      {
+        "position": "六四",
+        "original": "裕父之蠱，往未得也。"
+      },
+      {
+        "position": "六五",
+        "original": "幹父用譽，承以德也。"
+      },
+      {
+        "position": "上九",
+        "original": "不事王侯，志可則也。"
+      }
+    ]
+  }
+}

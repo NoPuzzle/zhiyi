@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 10,
+  "name": "履",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F02%E5%B1%A5&oldid=2404942",
+  "jing": {
+    "judgmentOriginal": "履虎尾，不咥人，亨。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "素履往，無咎。"
+      },
+      {
+        "position": "九二",
+        "original": "履道坦坦，幽人貞吉。"
+      },
+      {
+        "position": "六三",
+        "original": "眇能視，跛能履。履虎尾，咥人凶。武人為於大君。"
+      },
+      {
+        "position": "九四",
+        "original": "履虎尾，愬愬，終吉。"
+      },
+      {
+        "position": "九五",
+        "original": "夬履，貞厲。"
+      },
+      {
+        "position": "上九",
+        "original": "視履考祥，其旋元吉。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "履，柔履剛也。說而應乎乾，是以履虎尾，不咥人，亨。剛中正，履帝位而不疚，光明也。"
+    ],
+    "greatImageText": "上天下澤，履。君子以辯上下、定民志。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "素履之往，獨行願也。"
+      },
+      {
+        "position": "九二",
+        "original": "幽人貞吉，中不自亂也。"
+      },
+      {
+        "position": "六三",
+        "original": "眇能視，不足以有明也。跛能履，不足以與行也。咥人之凶，位不當也。武人為于大君，志剛也。"
+      },
+      {
+        "position": "九四",
+        "original": "愬愬終吉，志行也。"
+      },
+      {
+        "position": "九五",
+        "original": "夬履貞厲，位正當也。"
+      },
+      {
+        "position": "上九",
+        "original": "元吉在上，大有慶也。"
+      }
+    ]
+  }
+}

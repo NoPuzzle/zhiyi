@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 12,
+  "name": "否",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F02%E5%90%A6&oldid=2633973",
+  "jing": {
+    "judgmentOriginal": "否之匪人，不利君子貞。大往小來。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "拔茅茹，以其彙，貞，吉亨。"
+      },
+      {
+        "position": "六二",
+        "original": "包承，小人吉，大人否，亨。"
+      },
+      {
+        "position": "六三",
+        "original": "包羞。"
+      },
+      {
+        "position": "九四",
+        "original": "有命無咎。疇離祉。"
+      },
+      {
+        "position": "九五",
+        "original": "休否，大人吉。其亡其亡，繫於苞桑。"
+      },
+      {
+        "position": "上九",
+        "original": "傾否，先否後喜。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "否之匪人，不利君子貞，大往小來。則是天地不交而萬物不通也，上下不交而天下无邦也。內陰而外陽，內柔而外剛，內小人而外君子，小人道長，君子道消也。"
+    ],
+    "greatImageText": "天地不交，否。君子以儉德辟難，不可榮以祿。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "拔茅貞吉，志在君也。"
+      },
+      {
+        "position": "六二",
+        "original": "大人否，亨。不亂羣也。"
+      },
+      {
+        "position": "六三",
+        "original": "包羞，位不當也。"
+      },
+      {
+        "position": "九四",
+        "original": "有命无咎，志行也。"
+      },
+      {
+        "position": "九五",
+        "original": "大人之吉，位正當也。"
+      },
+      {
+        "position": "上九",
+        "original": "否終則傾，何可長也。"
+      }
+    ]
+  }
+}

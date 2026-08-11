@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 57,
+  "name": "巽",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F06%E5%B7%BD&oldid=2635592",
+  "jing": {
+    "judgmentOriginal": "小亨。利有攸往。利見大人。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "進退，利武人之貞。"
+      },
+      {
+        "position": "九二",
+        "original": "巽在床下，用史巫紛若，吉，無咎。"
+      },
+      {
+        "position": "九三",
+        "original": "頻巽，吝。"
+      },
+      {
+        "position": "六四",
+        "original": "悔亡，田獲三品。"
+      },
+      {
+        "position": "九五",
+        "original": "貞吉，悔亡，無不利。無初有終。先庚三日，後庚三日，吉。"
+      },
+      {
+        "position": "上九",
+        "original": "巽在床下，喪其資斧，貞凶。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "重巽以申命，剛巽乎中正而志行。柔皆順乎剛，是以小亨，利有攸往，利見大人。"
+    ],
+    "greatImageText": "隨風，巽。君子以申命行事。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "進退，志疑也。利武人之貞，志治也。"
+      },
+      {
+        "position": "九二",
+        "original": "紛若之吉，得中也。"
+      },
+      {
+        "position": "九三",
+        "original": "頻巽之吝，志窮也。"
+      },
+      {
+        "position": "六四",
+        "original": "田獲三品，有功也。"
+      },
+      {
+        "position": "九五",
+        "original": "九五之吉，位正中也。"
+      },
+      {
+        "position": "上九",
+        "original": "巽在牀下，上窮也。喪其資斧，正乎凶也。"
+      }
+    ]
+  }
+}

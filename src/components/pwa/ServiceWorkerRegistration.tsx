@@ -3,12 +3,58 @@
 import { useEffect } from "react";
 import { withBasePath } from "@/lib/base-path";
 
+const developmentResetKey = "zhiyi-development-service-worker-reset";
+
+function isZhiyiWorker(scriptUrl?: string) {
+  if (!scriptUrl) {
+    return false;
+  }
+
+  return new URL(scriptUrl).pathname === withBasePath("/sw.js");
+}
+
 export function ServiceWorkerRegistration() {
   useEffect(() => {
-    if (
-      process.env.NODE_ENV !== "production" ||
-      !("serviceWorker" in navigator)
-    ) {
+    if (!("serviceWorker" in navigator)) {
+      return;
+    }
+
+    if (process.env.NODE_ENV !== "production") {
+      navigator.serviceWorker
+        .getRegistrations()
+        .then(async (registrations) => {
+          const zhiyiRegistrations = registrations.filter((registration) =>
+            isZhiyiWorker(
+              registration.active?.scriptURL ??
+                registration.waiting?.scriptURL ??
+                registration.installing?.scriptURL,
+            ),
+          );
+          const hasZhiyiController = isZhiyiWorker(
+            navigator.serviceWorker.controller?.scriptURL,
+          );
+
+          if (zhiyiRegistrations.length === 0 && !hasZhiyiController) {
+            sessionStorage.removeItem(developmentResetKey);
+            return;
+          }
+
+          await Promise.all(
+            zhiyiRegistrations.map((registration) => registration.unregister()),
+          );
+
+          if (
+            hasZhiyiController &&
+            sessionStorage.getItem(developmentResetKey) !== "complete"
+          ) {
+            sessionStorage.setItem(developmentResetKey, "complete");
+            window.location.reload();
+          }
+        })
+        .catch(() => {
+          // Development cleanup should never block the app.
+        });
+
       return;
     }
 

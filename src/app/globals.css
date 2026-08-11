@@ -44,6 +44,11 @@ select {
   color: var(--ink);
 }
 
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--vermilion);
+  outline-offset: 3px;
+}
+
 .paper-grain {
   background: var(--paper);
 }
@@ -58,6 +63,29 @@ select {
   transform: translateY(8px) scaleX(0.94);
   transform-origin: center;
   animation: zhiyi-line-appear 680ms ease-out var(--line-delay, 0ms) forwards;
+}
+
+.hex-line-edge-bloom,
+.hex-line-texture {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.hex-line-edge-bloom {
+  opacity: 0;
+  filter: blur(0.55px);
+  pointer-events: none;
+  transform: scaleX(0.995) scaleY(0.92);
+  transition:
+    opacity 220ms ease-out,
+    transform 440ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.hex-line-texture {
+  opacity: var(--line-texture-opacity, 0.13);
+  transition:
+    opacity 320ms ease,
+    transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .hex-yang-ghost,
@@ -91,58 +119,186 @@ select {
   background: var(--paper);
 }
 
-.hexagram-atmosphere-lower {
-  opacity: 0.42;
-  transform: scale(1.1) translateY(-4%);
-  transform-origin: 46% 58%;
-  animation: zhiyi-atmosphere-drift 24s ease-in-out infinite alternate;
-  mix-blend-mode: multiply;
+.hexagram-atmosphere-folio {
+  opacity: 0.46;
 }
 
-.hexagram-atmosphere[data-repeated="true"] .hexagram-atmosphere-lower {
-  opacity: 0.74;
-  animation-name: zhiyi-atmosphere-rise;
+.hexagram-atmosphere-layer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 56%;
+  overflow: hidden;
+  opacity: var(--atmosphere-opacity);
+  transform: translate3d(0, 0, 0);
+  transition:
+    opacity 680ms ease,
+    transform 920ms ease;
+}
+
+.hexagram-atmosphere-lower {
+  bottom: 0;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgb(0 0 0 / 0.42) 16%,
+    #000 34%,
+    #000 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgb(0 0 0 / 0.42) 16%,
+    #000 34%,
+    #000 100%
+  );
 }
 
 .hexagram-atmosphere-upper {
-  opacity: 0.28;
-  transform: scale(1.1);
+  top: 0;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 66%,
+    rgb(0 0 0 / 0.42) 84%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 66%,
+    rgb(0 0 0 / 0.42) 84%,
+    transparent 100%
+  );
+}
+
+.hexagram-atmosphere-image {
+  object-position: var(--atmosphere-object-position);
+  filter: contrast(var(--atmosphere-contrast)) saturate(0.72);
+}
+
+.hexagram-atmosphere-lower-image {
+  transform: scale(1.06);
+  transform-origin: 46% 62%;
+  animation: zhiyi-atmosphere-drift 26s ease-in-out infinite alternate;
+}
+
+.hexagram-atmosphere-upper-image {
+  transform: scale(1.05);
   transform-origin: 56% 38%;
-  animation: zhiyi-atmosphere-breathe 30s ease-in-out infinite alternate;
-  mix-blend-mode: multiply;
+  animation: zhiyi-atmosphere-breathe 32s ease-in-out infinite alternate;
 }
 
 .hexagram-hero::after {
   position: absolute;
   inset: 0;
   z-index: -5;
-  background: rgb(243 241 234 / 0.24);
+  background: linear-gradient(
+    to bottom,
+    rgb(243 241 234 / 0.12),
+    transparent 24%,
+    transparent 72%,
+    rgb(243 241 234 / 0.22)
+  );
   content: "";
   pointer-events: none;
 }
 
+.hexagram-hero:has(
+    .hexagram-line-input[data-line-index="0"]:checked
+  )
+  .hexagram-atmosphere-lower,
+.hexagram-hero:has(
+    .hexagram-line-input[data-line-index="1"]:checked
+  )
+  .hexagram-atmosphere-lower,
+.hexagram-hero:has(
+    .hexagram-line-input[data-line-index="2"]:checked
+  )
+  .hexagram-atmosphere-lower {
+  opacity: calc(var(--atmosphere-opacity) + 0.1);
+  transform: translate3d(0, -1%, 0);
+}
+
+.hexagram-hero:has(
+    .hexagram-line-input[data-line-index="3"]:checked
+  )
+  .hexagram-atmosphere-upper,
+.hexagram-hero:has(
+    .hexagram-line-input[data-line-index="4"]:checked
+  )
+  .hexagram-atmosphere-upper,
+.hexagram-hero:has(
+    .hexagram-line-input[data-line-index="5"]:checked
+  )
+  .hexagram-atmosphere-upper {
+  opacity: calc(var(--atmosphere-opacity) + 0.1);
+  transform: translate3d(0, 1%, 0);
+}
+
 .hexagram-touch-line {
-  opacity: 0.42;
-  transform: scaleX(0.93);
+  opacity: 0.9;
+  transform: scaleX(1.12);
   transform-origin: center;
   transition:
     opacity 360ms ease,
     transform 520ms ease;
 }
 
-.hexagram-touch-line:hover {
-  opacity: 0.78;
-  transform: scaleX(1);
+@media (hover: hover) and (pointer: fine) {
+  .hexagram-touch-line:hover {
+    opacity: 1;
+    transform: scaleX(1.135);
+  }
+
+  .hexagram-touch-line:hover .hex-line-edge-bloom {
+    opacity: 0.12;
+    transform: scaleX(1.01) scaleY(1.22);
+  }
+
+  .hexagram-touch-line:hover .hex-line-texture {
+    opacity: 0.17;
+    transform: scaleY(1.04);
+  }
 }
 
 .hexagram-touch-line:has(.hexagram-line-input:checked) {
   opacity: 1;
-  transform: scaleX(1.06);
+  transform: scaleX(1.16);
+}
+
+.hexagram-touch-line:has(.hexagram-line-input:checked)
+  .hex-line-edge-bloom {
+  opacity: 0.105;
+  transform: scaleX(1.01) scaleY(1.18);
+}
+
+.hexagram-touch-line:has(.hexagram-line-input:checked)
+  .hex-line-texture {
+  opacity: 0.16;
+  transform: scaleY(1.04);
 }
 
 .hexagram-touch-line:has(.hexagram-line-input:focus-visible) {
-  outline: 1px solid var(--ink);
-  outline-offset: 3px;
+  border-radius: 2px;
+  outline: 2px solid var(--vermilion);
+  outline-offset: 4px;
+}
+
+.hexagram-touch-line:has(.hexagram-line-input:focus-visible)
+  .hex-line-edge-bloom {
+  opacity: 0.12;
+  transform: scaleX(1.01) scaleY(1.22);
+}
+
+.hexagram-touch-line:active .hex-line-edge-bloom,
+.hexagram-touch-line:has(.hexagram-line-input:active)
+  .hex-line-edge-bloom,
+.hexagram-touch-line:has(.hexagram-line-input:checked):active
+  .hex-line-edge-bloom {
+  opacity: 0.2;
+  transform: scaleX(1.02) scaleY(1.38);
+  transition-duration: 80ms;
 }
 
 .hexagram-line-marker {
@@ -159,36 +315,126 @@ select {
   transform: translateX(0);
 }
 
-.hexagram-line-reading {
-  display: none;
-  animation: zhiyi-reading-reveal 420ms ease-out;
+/* Central folio reader: the visual order follows top line to bottom line. */
+.hexagram-line-bank {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: min(76vw, 22rem);
+  flex-direction: column;
+  gap: clamp(1.75rem, 8vw, 2rem);
+  margin-inline: auto;
 }
 
-.hexagram-selector:has(
-    .hexagram-line-input[data-line-index="0"]:checked
-  )
-  .hexagram-line-reading[data-line-index="0"],
-.hexagram-selector:has(
-    .hexagram-line-input[data-line-index="1"]:checked
-  )
-  .hexagram-line-reading[data-line-index="1"],
-.hexagram-selector:has(
-    .hexagram-line-input[data-line-index="2"]:checked
-  )
-  .hexagram-line-reading[data-line-index="2"],
-.hexagram-selector:has(
-    .hexagram-line-input[data-line-index="3"]:checked
-  )
-  .hexagram-line-reading[data-line-index="3"],
-.hexagram-selector:has(
-    .hexagram-line-input[data-line-index="4"]:checked
-  )
-  .hexagram-line-reading[data-line-index="4"],
-.hexagram-selector:has(
-    .hexagram-line-input[data-line-index="5"]:checked
-  )
-  .hexagram-line-reading[data-line-index="5"] {
+.hexagram-folio-stage {
+  position: relative;
+  left: 50%;
+  width: min(100vw, 48rem);
+  min-height: clamp(15rem, 62vw, 18rem);
+  margin-top: -4rem;
+  margin-bottom: -2.5rem;
+  transform: translateX(-50%);
+  isolation: isolate;
+}
+
+.hexagram-folio-wash {
+  position: absolute;
+  inset: -1.25rem 0 0;
+  z-index: -1;
   display: block;
+  overflow: hidden;
+  opacity: 0.94;
+  pointer-events: none;
+}
+
+.hexagram-folio-wash img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zhiyi-folio-breathe 14s ease-in-out infinite alternate;
+}
+
+.hexagram-reading-stack {
+  display: grid;
+  min-height: inherit;
+  place-items: start center;
+  padding: clamp(3.75rem, 12vw, 4.5rem) clamp(3.5rem, 16vw, 4rem)
+    clamp(0.25rem, 1vw, 1rem);
+}
+
+.hexagram-line-reading {
+  display: none;
+  width: 100%;
+  max-width: 38rem;
+  grid-template-columns: minmax(3.65rem, 4.5rem) minmax(0, 1fr);
+  gap: clamp(1.1rem, 4vw, 2rem);
+  animation: zhiyi-reading-reveal 320ms ease-out;
+}
+
+.hexagram-line-reading[data-default="true"] {
+  display: grid;
+}
+
+.hexagram-folio-meta {
+  border-right: 1px solid rgb(111 123 128 / 0.34);
+  padding-top: 0.1rem;
+  padding-right: 0.9rem;
+}
+
+.hexagram-folio-copy {
+  min-width: 0;
+}
+
+@supports selector(.hexagram-selector:has(.hexagram-line-input:checked)) {
+  .hexagram-line-reading[data-default="true"] {
+    display: none;
+  }
+
+  .hexagram-selector:has(
+      .hexagram-line-input[data-line-index="0"]:checked
+    )
+    .hexagram-line-reading[data-line-index="0"],
+  .hexagram-selector:has(
+      .hexagram-line-input[data-line-index="1"]:checked
+    )
+    .hexagram-line-reading[data-line-index="1"],
+  .hexagram-selector:has(
+      .hexagram-line-input[data-line-index="2"]:checked
+    )
+    .hexagram-line-reading[data-line-index="2"],
+  .hexagram-selector:has(
+      .hexagram-line-input[data-line-index="3"]:checked
+    )
+    .hexagram-line-reading[data-line-index="3"],
+  .hexagram-selector:has(
+      .hexagram-line-input[data-line-index="4"]:checked
+    )
+    .hexagram-line-reading[data-line-index="4"],
+  .hexagram-selector:has(
+      .hexagram-line-input[data-line-index="5"]:checked
+    )
+    .hexagram-line-reading[data-line-index="5"] {
+    display: grid;
+  }
+}
+
+@media (max-width: 359px) {
+  .hexagram-line-reading {
+    grid-template-columns: 1fr;
+  }
+
+  .hexagram-folio-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    border-right: 0;
+    border-bottom: 1px solid rgb(111 123 128 / 0.34);
+    padding: 0 0 0.75rem;
+  }
+
+  .hexagram-folio-meta p {
+    margin-top: 0;
+  }
 }
 
 @keyframes zhiyi-line-appear {
@@ -207,6 +453,18 @@ select {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes zhiyi-folio-breathe {
+  from {
+    opacity: 0.94;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.012);
   }
 }
 
@@ -237,33 +495,21 @@ select {
 
 @keyframes zhiyi-atmosphere-drift {
   from {
-    transform: scale(1.1) translate3d(-1.5%, -4%, 0);
+    transform: scale(1.06) translate3d(-1.25%, 0, 0);
   }
 
   to {
-    transform: scale(1.14) translate3d(1.5%, -5%, 0);
+    transform: scale(1.1) translate3d(1.25%, -1%, 0);
   }
 }
 
 @keyframes zhiyi-atmosphere-breathe {
   from {
-    opacity: 0.2;
-    transform: scale(1.08) translate3d(1%, -1%, 0);
+    transform: scale(1.05) translate3d(0.8%, -0.6%, 0);
   }
 
   to {
-    opacity: 0.34;
-    transform: scale(1.13) translate3d(-1%, 1%, 0);
-  }
-}
-
-@keyframes zhiyi-atmosphere-rise {
-  from {
-    transform: scale(1.1) translate3d(-1.5%, -11%, 0);
-  }
-
-  to {
-    transform: scale(1.14) translate3d(1.5%, -14%, 0);
+    transform: scale(1.09) translate3d(-0.8%, 0.6%, 0);
   }
 }
 
@@ -279,14 +525,36 @@ select {
     transform: none;
   }
 
+  .hex-line-edge-bloom {
+    animation: none;
+    filter: none;
+    transform: none;
+    transition: none;
+  }
+
+  .hex-line-texture {
+    transform: none;
+    transition: none;
+  }
+
   .hex-yang-ghost,
   .hex-yin-ghost {
     display: none;
   }
 
-  .hexagram-atmosphere-lower,
-  .hexagram-atmosphere-upper {
+  .hexagram-atmosphere-layer {
+    transition: none;
+    transform: none;
+  }
+
+  .hexagram-atmosphere-image {
     animation: none;
+    transform: none;
+  }
+
+  .hexagram-folio-wash img {
+    animation: none;
+    opacity: 1;
     transform: none;
   }
 
@@ -298,5 +566,30 @@ select {
 
   .hexagram-line-reading {
     animation: none;
+  }
+
+  .hexagram-touch-line:hover .hex-line-edge-bloom,
+  .hexagram-touch-line:active .hex-line-edge-bloom,
+  .hexagram-touch-line:has(.hexagram-line-input:active)
+    .hex-line-edge-bloom,
+  .hexagram-touch-line:has(.hexagram-line-input:checked)
+    .hex-line-edge-bloom,
+  .hexagram-touch-line:has(.hexagram-line-input:focus-visible)
+    .hex-line-edge-bloom {
+    opacity: 0.11;
+    filter: none;
+    transform: none;
+  }
+
+  .hexagram-touch-line:hover .hex-line-texture,
+  .hexagram-touch-line:has(.hexagram-line-input:checked)
+    .hex-line-texture {
+    transform: none;
+    transition: none;
+  }
+
+  .hexagram-hero:has(.hexagram-line-input:checked)
+    .hexagram-atmosphere-layer {
+    transform: none;
   }
 }

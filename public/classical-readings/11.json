@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 11,
+  "name": "泰",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F02%E6%B3%B0&oldid=2000742",
+  "jing": {
+    "judgmentOriginal": "小往大來，吉亨。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "拔茅茹，以其彙，征吉。"
+      },
+      {
+        "position": "九二",
+        "original": "包荒，用馮河，不遐遺，朋亡。得尚於中行。"
+      },
+      {
+        "position": "九三",
+        "original": "無平不陂，無往不復。艱貞無咎。勿恤其孚，於食有福。"
+      },
+      {
+        "position": "六四",
+        "original": "翩翩，不富以其鄰。不戒以孚。"
+      },
+      {
+        "position": "六五",
+        "original": "帝乙歸妹，以祉元吉。"
+      },
+      {
+        "position": "上六",
+        "original": "城復於隍，勿用師。自邑告命，貞吝。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "泰，小往大來，吉亨。則是天地交而萬物通也，上下交而其志同也。內陽而外陰，內健而外順，內君子而外小人，君子道長，小人道消也。"
+    ],
+    "greatImageText": "天地交，泰。後以財成天地之道，輔相天地之宜，以左右民。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "拔茅征吉，志在外也。"
+      },
+      {
+        "position": "九二",
+        "original": "包荒，得尚于中行，以光大也。"
+      },
+      {
+        "position": "九三",
+        "original": "无往不復，天地際也。"
+      },
+      {
+        "position": "六四",
+        "original": "翩翩不富，皆失實也。不戒以孚，中心願也。"
+      },
+      {
+        "position": "六五",
+        "original": "以祉，元吉。中以行願也。"
+      },
+      {
+        "position": "上六",
+        "original": "城復于隍，其命亂也。"
+      }
+    ]
+  }
+}

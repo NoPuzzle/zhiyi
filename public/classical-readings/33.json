@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 33,
+  "name": "遯",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F04%E9%81%AF&oldid=2404968",
+  "jing": {
+    "judgmentOriginal": "亨，小利貞。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "遯尾，厲，勿用有攸往。"
+      },
+      {
+        "position": "六二",
+        "original": "執之用黃牛之革，莫之勝說。"
+      },
+      {
+        "position": "九三",
+        "original": "系遯，有疾厲，畜臣妾，吉。"
+      },
+      {
+        "position": "九四",
+        "original": "好遯，君子吉，小人否。"
+      },
+      {
+        "position": "九五",
+        "original": "嘉遯，貞吉。"
+      },
+      {
+        "position": "上九",
+        "original": "肥遯，無不利。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "遯亨，遯而亨也。剛當位而應，與時行也。小利貞，浸而長也。遯之時義大矣哉！"
+    ],
+    "greatImageText": "天下有山，遯。君子以遠小人，不惡而嚴。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "遯尾之厲，不往何災也。"
+      },
+      {
+        "position": "六二",
+        "original": "執用黃牛，固志也。"
+      },
+      {
+        "position": "九三",
+        "original": "系遯之厲，有疾憊也。畜臣妾吉，不可大事也。"
+      },
+      {
+        "position": "九四",
+        "original": "君子好遯，小人否也。"
+      },
+      {
+        "position": "九五",
+        "original": "嘉遯貞吉，以正志也。"
+      },
+      {
+        "position": "上九",
+        "original": "肥遯，无不利；无所疑也。"
+      }
+    ]
+  }
+}

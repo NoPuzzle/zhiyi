@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 28,
+  "name": "大過",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F03%E5%A4%A7%E9%81%8E&oldid=2692227",
+  "jing": {
+    "judgmentOriginal": "棟橈，利有攸往，亨。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "藉用白茅，無咎。"
+      },
+      {
+        "position": "九二",
+        "original": "枯楊生稊，老夫得其女妻，無不利。"
+      },
+      {
+        "position": "九三",
+        "original": "棟橈，凶。"
+      },
+      {
+        "position": "九四",
+        "original": "棟隆，吉。有它吝。"
+      },
+      {
+        "position": "九五",
+        "original": "枯楊生華，老婦得其士夫，無咎無譽。"
+      },
+      {
+        "position": "上六",
+        "original": "過涉滅頂，凶，無咎。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "大過，大者過也。棟橈，本末弱也。剛過而中，巽而說行，利有攸往，乃亨。大過之時義大矣哉！"
+    ],
+    "greatImageText": "澤滅木，大過。君子以獨立不懼，遁世無悶。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "藉用白茅，柔在下也。"
+      },
+      {
+        "position": "九二",
+        "original": "老夫女妻，過以相與也。"
+      },
+      {
+        "position": "九三",
+        "original": "棟橈之凶，不可以有輔也。"
+      },
+      {
+        "position": "九四",
+        "original": "棟隆之吉，不橈乎下也。"
+      },
+      {
+        "position": "九五",
+        "original": "枯楊生華，何可久也。老婦士夫，亦可丑也。"
+      },
+      {
+        "position": "上六",
+        "original": "過涉之凶，不可咎也。"
+      }
+    ]
+  }
+}

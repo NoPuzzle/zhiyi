@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 1,
+  "name": "乾",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F01%E4%B9%BE&oldid=2676007",
+  "jing": {
+    "judgmentOriginal": "元、亨、利、貞。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "潛龍勿用。"
+      },
+      {
+        "position": "九二",
+        "original": "見龍在田，利見大人。"
+      },
+      {
+        "position": "九三",
+        "original": "君子終日乾乾，夕惕若厲，無咎。"
+      },
+      {
+        "position": "九四",
+        "original": "或躍在淵，無咎。"
+      },
+      {
+        "position": "九五",
+        "original": "飛龍在天，利見大人。"
+      },
+      {
+        "position": "上九",
+        "original": "亢龍有悔。"
+      }
+    ],
+    "specialUseText": {
+      "position": "用九",
+      "original": "見群龍，無首，吉。"
+    }
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "大哉乾元，萬物資始，乃統天。雲行雨施，品物流形，大明終始，六位時成。",
+      "時乘六龍以御天，乾道變化，各正性命，保合大和，乃利貞。",
+      "首出庶物，萬國咸寧。"
+    ],
+    "greatImageText": "天行健，君子以自強不息。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "潛龍勿用，陽在下也。"
+      },
+      {
+        "position": "九二",
+        "original": "見龍在田，德施普也。"
+      },
+      {
+        "position": "九三",
+        "original": "終日乾乾，反復道也。"
+      },
+      {
+        "position": "九四",
+        "original": "或躍在淵，進无咎也。"
+      },
+      {
+        "position": "九五",
+        "original": "飛龍在天，大人造也。"
+      },
+      {
+        "position": "上九",
+        "original": "亢龍有悔，盈不可久也。"
+      }
+    ],
+    "specialUseImageText": {
+      "position": "用九",
+      "original": "用九，天德不可為首也。"
+    }
+  }
+}

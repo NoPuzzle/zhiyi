@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 16,
+  "name": "豫",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F02%E8%B1%AB&oldid=7904495",
+  "jing": {
+    "judgmentOriginal": "利建侯行師。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "鳴豫，凶。"
+      },
+      {
+        "position": "六二",
+        "original": "介於石，不終日，貞吉。"
+      },
+      {
+        "position": "六三",
+        "original": "盱豫悔，遲有悔。"
+      },
+      {
+        "position": "九四",
+        "original": "由豫，大有得。勿疑，朋盍簪。"
+      },
+      {
+        "position": "六五",
+        "original": "貞疾，恆不死。"
+      },
+      {
+        "position": "上六",
+        "original": "冥豫成，有渝無咎。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "豫，剛應而志行，順以動，豫。豫，順以動，故天地如之，而況建侯行師乎？天地以順動，故日月不過，而四時不忒；聖人以順動，則刑罰清而民服。豫之時義大矣哉！"
+    ],
+    "greatImageText": "雷出地奮，豫。先王以作樂崇德。殷薦之上帝，以配祖考。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "初六鳴豫，志窮凶也。"
+      },
+      {
+        "position": "六二",
+        "original": "不終日，貞吉；以中正也。"
+      },
+      {
+        "position": "六三",
+        "original": "盱豫有悔，位不當也。"
+      },
+      {
+        "position": "九四",
+        "original": "由豫，大有得；志大行也。"
+      },
+      {
+        "position": "六五",
+        "original": "六五貞疾，乘剛也。恆不死，中未亡也。"
+      },
+      {
+        "position": "上六",
+        "original": "冥豫在上，何可長也。"
+      }
+    ]
+  }
+}

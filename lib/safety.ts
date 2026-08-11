@@ -4,6 +4,9 @@ export type HighStakesArea =
   | "financial"
   | "mentalHealth";
 
+export const PROFESSIONAL_SUPPORT_NOTICE =
+  "如果问题涉及医疗、法律、财务或心理健康，请把卦象只作为整理思路的参考，并寻求相应合格专业人士的评估与支持。";
+
 const areaRules: Record<HighStakesArea, readonly string[]> = {
   medical: [
     "医疗",
@@ -65,18 +68,48 @@ const areaRules: Record<HighStakesArea, readonly string[]> = {
     "抑郁",
     "焦虑",
     "恐慌",
-    "自杀",
-    "自残",
-    "活不下去",
     "mental health",
     "therapy",
     "depression",
     "anxiety",
     "panic",
-    "suicide",
-    "self-harm",
   ],
 };
+
+const mentalHealthCrisisRules = [
+  "自杀",
+  "自残",
+  "轻生",
+  "寻死",
+  "想死",
+  "不想活",
+  "活不下去",
+  "结束生命",
+  "了结生命",
+  "伤害自己",
+  "割腕",
+  "一死了之",
+  "活着没意思",
+  "活着没有意义",
+  "suicide",
+  "suicidal",
+  "self-harm",
+  "self harm",
+  "kill myself",
+  "end my life",
+  "end it all",
+  "take my own life",
+  "don't want to live",
+  "do not want to live",
+  "not worth living",
+  "hurt myself",
+  "harm myself",
+  "want to die",
+  "wish i were dead",
+  "better off dead",
+  "no reason to live",
+  "ending my life",
+] as const;
 
 const areaLabels: Record<HighStakesArea, string> = {
   medical: "医疗或健康",
@@ -85,6 +118,12 @@ const areaLabels: Record<HighStakesArea, string> = {
   mentalHealth: "心理健康",
 };
 
+function hasMentalHealthCrisis(normalizedQuestion: string) {
+  return mentalHealthCrisisRules.some((keyword) =>
+    normalizedQuestion.includes(keyword),
+  );
+}
+
 export function detectHighStakesAreas(question: string): HighStakesArea[] {
   const normalized = question.trim().toLowerCase();
 
@@ -92,12 +131,17 @@ export function detectHighStakesAreas(question: string): HighStakesArea[] {
     return [];
   }
 
-  return (Object.keys(areaRules) as HighStakesArea[]).filter((area) =>
-    areaRules[area].some((keyword) => normalized.includes(keyword)),
+  const mentalHealthCrisis = hasMentalHealthCrisis(normalized);
+
+  return (Object.keys(areaRules) as HighStakesArea[]).filter(
+    (area) =>
+      areaRules[area].some((keyword) => normalized.includes(keyword)) ||
+      (area === "mentalHealth" && mentalHealthCrisis),
   );
 }
 
 export function getHighStakesSafetyNote(question: string): string | undefined {
+  const normalized = question.trim().toLowerCase();
   const areas = detectHighStakesAreas(question);
 
   if (areas.length === 0) {
@@ -105,8 +149,9 @@ export function getHighStakesSafetyNote(question: string): string | undefined {
   }
 
   const labels = areas.map((area) => areaLabels[area]).join("、");
-  const urgentNote = areas.includes("mentalHealth")
-    ? "如果你或他人正处于立即危险中，请立刻联系当地紧急服务或可信赖的人。"
+  const isMentalHealthCrisis = hasMentalHealthCrisis(normalized);
+  const urgentNote = isMentalHealthCrisis
+    ? "如果你或他人正有伤害自己或结束生命的念头，或正处于立即危险中，请立即联系当地紧急服务、危机热线或可信赖的人，不要独自承担。"
     : "";
 
   return `这个问题可能涉及${labels}。卦象只能作为整理思路的反思工具，不能代替合格专业人士的评估或建议。请把现实证据与专业意见作为行动依据。${urgentNote}`;

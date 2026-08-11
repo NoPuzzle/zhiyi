@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 21,
+  "name": "噬嗑",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F03%E5%99%AC%E5%97%91&oldid=2404948",
+  "jing": {
+    "judgmentOriginal": "亨。利用獄。",
+    "lineTexts": [
+      {
+        "position": "初九",
+        "original": "屨校滅趾，無咎。"
+      },
+      {
+        "position": "六二",
+        "original": "噬膚滅鼻，無咎。"
+      },
+      {
+        "position": "六三",
+        "original": "噬臘肉，遇毒，小吝無咎。"
+      },
+      {
+        "position": "九四",
+        "original": "噬乾胏，得金矢。利艱貞吉。"
+      },
+      {
+        "position": "六五",
+        "original": "噬乾肉，得黃金，貞厲無咎。"
+      },
+      {
+        "position": "上九",
+        "original": "何校滅耳，凶。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "頤中有物，曰噬嗑，噬嗑而亨。剛柔分，動而明，雷電合而章。柔得中而上行，雖不當位，利用獄也。"
+    ],
+    "greatImageText": "「雷電」「噬嗑」，先王以明罰敕法。",
+    "smallImageTexts": [
+      {
+        "position": "初九",
+        "original": "屨校滅趾，不行也。"
+      },
+      {
+        "position": "六二",
+        "original": "噬膚滅鼻，乘剛也。"
+      },
+      {
+        "position": "六三",
+        "original": "遇毒，位不當也。"
+      },
+      {
+        "position": "九四",
+        "original": "利艱貞吉，未光也。"
+      },
+      {
+        "position": "六五",
+        "original": "貞厲无咎，得當也。"
+      },
+      {
+        "position": "上九",
+        "original": "何校滅耳，聰不明也。"
+      }
+    ]
+  }
+}

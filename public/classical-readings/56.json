@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 56,
+  "name": "旅",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F06%E6%97%85&oldid=2404984",
+  "jing": {
+    "judgmentOriginal": "小亨，旅，貞吉。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "旅瑣瑣，斯其所取災。"
+      },
+      {
+        "position": "六二",
+        "original": "旅即次，懷其資，得童僕貞。"
+      },
+      {
+        "position": "九三",
+        "original": "旅焚其次，喪其童僕，貞厲。"
+      },
+      {
+        "position": "九四",
+        "original": "旅於處，得其資斧，我心不快。"
+      },
+      {
+        "position": "六五",
+        "original": "射雉一矢，亡。終以譽命。"
+      },
+      {
+        "position": "上九",
+        "original": "鳥焚其巢，旅人先笑後號咷。喪牛於易，凶。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "旅，小亨，柔得中乎外，而順乎剛，止而麗乎明，是以小亨，旅貞吉也。旅之時義大矣哉！"
+    ],
+    "greatImageText": "山上有火，旅。君子以明，慎用刑而不留獄。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "旅瑣瑣，志窮災也。"
+      },
+      {
+        "position": "六二",
+        "original": "得童僕貞，終无尤也。"
+      },
+      {
+        "position": "九三",
+        "original": "旅焚其次，亦以傷矣。以旅與下，其義喪也。"
+      },
+      {
+        "position": "九四",
+        "original": "旅于處，未得位也。得其資斧，心未快也。"
+      },
+      {
+        "position": "六五",
+        "original": "終以譽命，上逮也。"
+      },
+      {
+        "position": "上九",
+        "original": "以旅在上，其義焚也。喪牛于易，終莫之聞也。"
+      }
+    ]
+  }
+}

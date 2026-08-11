@@ -43,11 +43,16 @@ jobs:
         run: |
           npm run lint
           npm test
+          npm run verify:classical-assets
 
       - name: Build static site
-        run: npm run build
+        run: npm run build:pages
         env:
-          GITHUB_PAGES: "true"
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+
+      - name: Verify static export
+        run: npm run verify:pages
+        env:
           NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
       - name: Upload Pages artifact

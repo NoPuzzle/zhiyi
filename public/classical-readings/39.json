@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 39,
+  "name": "蹇",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F04%E8%B9%87&oldid=2404967",
+  "jing": {
+    "judgmentOriginal": "利西南，不利東北。利見大人。貞吉。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "往蹇，來譽。"
+      },
+      {
+        "position": "六二",
+        "original": "王臣蹇蹇，匪躬之故。"
+      },
+      {
+        "position": "九三",
+        "original": "往蹇，來反。"
+      },
+      {
+        "position": "六四",
+        "original": "往蹇，來連。"
+      },
+      {
+        "position": "九五",
+        "original": "大蹇，朋來。"
+      },
+      {
+        "position": "上六",
+        "original": "往蹇來碩，吉。利見大人。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "蹇，難也，險在前也。見險而能止，知矣哉！蹇利西南，往得中也；不利東北，其道窮也。利見大人，往有功也。當位貞吉，以正邦也。蹇之時用大矣哉！"
+    ],
+    "greatImageText": "山上有水，蹇。君子以反身修德。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "往蹇來譽，宜待也。"
+      },
+      {
+        "position": "六二",
+        "original": "王臣蹇蹇，終无尤也。"
+      },
+      {
+        "position": "九三",
+        "original": "往蹇來反，內喜之也。"
+      },
+      {
+        "position": "六四",
+        "original": "往蹇來連，當位實也。"
+      },
+      {
+        "position": "九五",
+        "original": "大蹇朋來，以中節也。"
+      },
+      {
+        "position": "上六",
+        "original": "往蹇來碩，志在內也。利見大人，以從貴也。"
+      }
+    ]
+  }
+}

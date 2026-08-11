@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 47,
+  "name": "困",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F05%E5%9B%B0&oldid=2407153",
+  "jing": {
+    "judgmentOriginal": "亨。貞，大人吉，無咎。有言不信。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "臀困於株木，入於幽谷，三歲不覿。"
+      },
+      {
+        "position": "九二",
+        "original": "困於酒食，朱紱方來，利用享祀。征凶，無咎。"
+      },
+      {
+        "position": "六三",
+        "original": "困於石，據於蒺藜，入於其宮，不見其妻，凶。"
+      },
+      {
+        "position": "九四",
+        "original": "來徐徐，困於金車。吝，有終。"
+      },
+      {
+        "position": "九五",
+        "original": "劓刖，困於赤紱，乃徐有說，利用祭祀。"
+      },
+      {
+        "position": "上六",
+        "original": "困於葛藟，於臲卼，曰動悔、有悔，征吉。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "困，剛掩也。險以說，困而不失其所，亨；其唯君子乎？ 貞大人吉，以剛中也。有言不信，尚口乃窮也。"
+    ],
+    "greatImageText": "澤無水，困。君子以致命遂志。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "入于幽谷，幽不明也。"
+      },
+      {
+        "position": "九二",
+        "original": "困于酒食，中有慶也。"
+      },
+      {
+        "position": "六三",
+        "original": "據于蒺藜，乘剛也。入于其宮，不見其妻，不祥也。"
+      },
+      {
+        "position": "九四",
+        "original": "來徐徐，志在下也。雖不當位，有與也。"
+      },
+      {
+        "position": "九五",
+        "original": "劓刖，志未得也。乃徐有說，以中直也。利用祭祀，受福也。"
+      },
+      {
+        "position": "上六",
+        "original": "困于葛藟，未當也。動悔，有悔，吉行也。"
+      }
+    ]
+  }
+}

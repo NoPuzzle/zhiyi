@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-10",
+  "id": 48,
+  "name": "井",
+  "revisionUrl": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E6%98%93%E6%AD%A3%E7%BE%A9%2F05%E4%BA%95&oldid=2407709",
+  "jing": {
+    "judgmentOriginal": "改邑不改井，無喪無得，往來井井。汔至亦未繘井，羸其瓶，凶。",
+    "lineTexts": [
+      {
+        "position": "初六",
+        "original": "井泥不食，舊井無禽。"
+      },
+      {
+        "position": "九二",
+        "original": "井穀射鮒，甕敝漏。"
+      },
+      {
+        "position": "九三",
+        "original": "井渫不食，為我心惻，可用汲。王明，並受其福。"
+      },
+      {
+        "position": "六四",
+        "original": "井甃，無咎。"
+      },
+      {
+        "position": "九五",
+        "original": "井洌寒泉，食。"
+      },
+      {
+        "position": "上六",
+        "original": "井收。勿幕有孚，元吉。"
+      }
+    ]
+  },
+  "zhuan": {
+    "tuanParagraphs": [
+      "巽乎水而上水，井；井養而不窮也。改邑不改井，乃以剛中也。汔至亦未繘井，未有功也。羸其瓶，是以凶也。"
+    ],
+    "greatImageText": "木上有水，井，君子以勞民勸相。",
+    "smallImageTexts": [
+      {
+        "position": "初六",
+        "original": "井泥不食，下也。舊井无禽，時舍也。"
+      },
+      {
+        "position": "九二",
+        "original": "井谷射鮒，无與也。"
+      },
+      {
+        "position": "九三",
+        "original": "井渫不食，行惻也。求王明，受福也。"
+      },
+      {
+        "position": "六四",
+        "original": "井甃无咎，修井也。"
+      },
+      {
+        "position": "九五",
+        "original": "寒泉之食，中正也。"
+      },
+      {
+        "position": "上六",
+        "original": "元吉在上，大成也。"
+      }
+    ]
+  }
+}
