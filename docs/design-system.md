@@ -187,6 +187,10 @@ On hexagram detail pages, present the six line controls as one vertical
   do not recreate its folds with CSS gradients or decorative boxes.
 - Keep all six 44px line targets visible while the folio changes. The active
   state must use expansion and checked state in addition to color.
+- Reserve separate vertical space for the longest reading and both line banks;
+  no text may overlap any line's touch target. Longer passages may extend below
+  the first viewport and use ordinary page scrolling instead of clipping text
+  or shrinking the hit areas to force a single-screen composition.
 - Build every interactive line from three SVG stroke layers: a readable core,
   a restrained paper-texture pass, and a normally transparent ink-edge bloom.
   On a fine pointer, hover may let that outer edge spread mostly vertically;
@@ -206,6 +210,9 @@ The folio and trigram atmosphere may breathe very slowly. Both must become
 fully static under `prefers-reduced-motion`. Ink-edge feedback also loses all
 transition and transform there, while retaining a faint immediate outline for
 hover, focus, press, and checked state.
+Reading transitions are opt-in under `prefers-reduced-motion: no-preference`,
+including the higher-specificity selected-line states. Browser regressions
+must inspect the final computed styles, not just the presence of a CSS rule.
 
 The global page surface remains a clean neutral ivory. Atmosphere movement must
 stop when the user prefers reduced motion.

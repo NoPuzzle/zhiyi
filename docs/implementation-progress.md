@@ -1,6 +1,6 @@
 # 知易 / Zhiyi Implementation Progress
 
-Last updated: 2026-08-11
+Last updated: 2026-10-24
 
 ## Product Goal
 
@@ -525,6 +525,96 @@ Minimum base content means:
   384 line texts, both special-use texts, 64 Tuan texts, 384 Small Images, both
   Wenyan texts, and the five received treatises.
 
+### 2026-08-11 mobile line interaction continuity
+
+- Replaced the home page's static 屯 hexagram image with six native, 44px line
+  controls. The visible and keyboard order runs from the top line to the bottom
+  line while the data remains bottom-to-top; selecting a line reveals its
+  existing product-authored position observation.
+- Replaced detail-page `display` switching with a stable, overlapping folio
+  layout and a short exit/entry crossfade. The selected article, `aria-hidden`
+  state, checked radio, atmosphere response, and one shared polite status now
+  update together.
+- Softened the mobile ink response by lowering the press bloom and extending
+  its release from 80ms to 180ms, followed by a restrained 420–560ms checked
+  settle. Normal vertical touch panning and reduced-motion behavior remain
+  intact.
+- Added home interaction and detail transition contracts. The suite now passes
+  60 tests across nine files.
+- Local in-app-browser QA at 390×844 confirmed all six home targets are 44px,
+  the selected home observation updates, the detail folio remains 342px through
+  a line change, only one reading is visible and exposed to assistive
+  technology, horizontal overflow is zero, and no console warnings or errors
+  were reported.
+- Final verification passed with npm 11.18.0: `git diff --check`, lint, 60 tests
+  across nine files, all 64 generated Ask classical assets, the normal 79-route
+  build, the 79-route Pages build, and Pages verification of 78 exported HTML
+  files.
+
+### 2026-10-07 review fixes and browser regression coverage
+
+- Continued `codex/soft-line-interactions` at `9c88a30`, preserving the eight
+  uncommitted files from this thread's earlier mobile-touch pass. Refreshed
+  `origin/main` with no divergence. Git identity remains
+  `NoPuzzle <liang.liang@outlook.com.au>`; Node 22.23.1 and declared npm 11.18.0
+  passed clean installation, baseline lint, 60 tests, and the 79-route build.
+- Fixed all six findings from the preceding review: long folio text no longer
+  overlaps line targets; reduced-motion reading/pressed-edge states remain
+  static; smart punctuation and common Traditional Chinese crisis wording
+  receive consistent safety guidance; worker installation caches complete core
+  HTML/JS/CSS; HTTP errors use existing valid resources; scope cleanup cannot
+  confuse `/zhiyi` with `/zhiyi-preview`.
+- PWA installation fully consumes resource response bodies before waiting for
+  the whole group, avoiding a real HTTP connection-pool stall caught by the new
+  browser tests. New workers wait for old controlled pages to close instead of
+  force-claiming them. Dependency failures preserve the prior cached document.
+  Runtime cache-open/read failures fall back to the network; an unavailable
+  cache must not prevent an otherwise valid online page from loading.
+- Added Playwright as a development-only dependency and `npm run test:browser`.
+  The Pages workflow now runs Chromium regressions before artifact upload.
+  Tests cover all 64 mobile folio layouts, 360/390px touch interactions,
+  keyboard/ARIA state, computed reduced-motion styles, first-install offline
+  reload, and waiting-worker update followed by offline home/Ask interactions.
+- Longer readings may extend below the first viewport. All six 44px controls
+  remain in ordinary page flow; text is neither clipped nor covered to keep a
+  forced single-screen composition. Mobile and desktop screenshots were
+  inspected; evidence lives in ignored `tmp/review-fix-*.png`.
+- Verification: 115 unit tests across nine files, six UI browser regressions,
+  and two real worker lifecycle regressions passed locally using Chrome.
+  Lint, normal and Pages builds (79 routes each), 64/64 classical assets, and
+  Pages artifact verification (78 HTML files) passed. No external release was
+  requested or performed.
+- Changed-file ownership: all current changes belong to this thread. The
+  earlier eight files are `design-qa.md`, `docs/implementation-progress.md`,
+  `src/app/globals.css`, `src/app/page.tsx`,
+  `src/components/hexagram/InteractiveHexagramHero.tsx`,
+  `src/components/hexagram/HomeHexagramPreview.tsx`,
+  `tests/interactive-hexagram-hero.test.tsx`, and
+  `tests/home-hexagram-interaction.test.tsx`. This fix additionally touches
+  `public/sw.js`, `lib/safety.ts`, their tests, `docs/pwa.md`,
+  `docs/design-system.md`, `README.md`, browser-test/config/server files,
+  package manifests, ignore/lint/Vitest configuration, and the Pages workflow.
+- No commit, push, PR, merge, or online deployment was performed. Physical
+  iPhone/Safari acceptance and the separate dependency-upgrade task remain open.
+
+### 2026-10-24 authorized repair handoff
+
+- Rechecked ownership of all 25 pending files on `codex/soft-line-interactions`
+  at `9c88a30`; all belong to this thread's mobile/PWA/safety repair work.
+  Refreshed `origin/main` with no divergence. The user authorized committing
+  and pushing this repair branch only, not merging or deploying it.
+- Clean installation with Node 22.23.1 and npm 11.18.0, lint, 115 unit tests,
+  and the normal 79-route build passed again. The preceding preflight in the
+  same session also passed all eight Chromium regressions, Pages build/export
+  verification (78 HTML files), and 64/64 classical assets.
+- The current installation audit reports 11 aggregate dependency findings:
+  three moderate, seven high, and one critical. This is not a claim that the
+  static Pages deployment exposes every reported server-side attack path.
+  Dependency upgrades remain a separate task; no forced fix was applied.
+- Physical iPhone/Safari acceptance remains open. Existing worker-update tests
+  change the worker version against one export; they do not establish a real
+  two-build chunk transition or cover every offline client-side Link path.
+
 ## Known Follow-ups
 
 - Product-authored content for all 64 hexagrams has completed a first editorial
@@ -533,9 +623,12 @@ Minimum base content means:
   should use small, edition-aware manual collation batches and retain both
   source layers' fixed-revision evidence; do not describe them as a settled
   critical edition.
-- Next.js 16.3.0 is available for a separate dependency-upgrade PR with its own
-  compatibility, regression, Pages, and audit review. Keep this release on
-  16.2.12; do not run `npm audit fix --force`.
+- Next.js remains pinned to 16.2.12. Known dependency audit warnings remain;
+  historical audit counts and upgrade suggestions are not current guarantees.
+  Re-audit and upgrade in a separate dependency task with compatibility, Pages,
+  and browser regression checks. Do not run `npm audit fix --force`.
+- Validate the repaired touch and motion behavior on a physical iPhone/Safari.
+  Chromium touch emulation is not a substitute for that acceptance step.
 - The initial two commits retain the original machine-inferred author identity.
   Future commits should use `NoPuzzle <liang.liang@outlook.com.au>`.
 

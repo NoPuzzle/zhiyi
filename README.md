@@ -102,12 +102,20 @@ npm run verify:classical-sources  # 回读全部固定经传来源版本
 npm run verify:classical-assets   # 校验问卦按卦经传资产
 npm run build:pages   # 生成 /zhiyi 静态站点
 npm run verify:pages  # 校验 Pages 路由、资源与体积预算
+npm run test:browser  # 对已导出的 out 运行触控、动效和离线更新回归
 ```
 
+首次运行浏览器测试前执行 `npx playwright install chromium`（Linux CI 使用
+`npx playwright install --with-deps chromium`）。先运行 `npm run build:pages`；
+测试会自动启动并关闭本地静态服务。自定义部署路径须在构建和测试时使用相同的
+`NEXT_PUBLIC_BASE_PATH`。已有 Chromium/Chrome 时，可通过
+`PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` 指定可执行文件。触屏模拟不替代 iPhone
+Safari 真机验收。
+
 > [!WARNING]
-> 不要运行 `npm audit fix --force`。项目当前固定使用 Next.js 16.2.12；审计仍会
-> 通过其内置的 `postcss` 与可选 `sharp` 报告传递性问题。Next.js 16.3.0 已可用，
-> 应在独立依赖升级 PR 中完成兼容性验证，不与本次产品发布混合处理。
+> 不要运行 `npm audit fix --force`。项目当前固定使用 Next.js 16.2.12，仍有已知
+> 依赖审计告警；旧日志的数量和版本建议不代表当前状态。应在独立依赖升级任务中
+> 重新审计并完成兼容性、Pages 与浏览器验证。本次交互/PWA 修复未升级 Next.js。
 
 ## 免费公网部署
 

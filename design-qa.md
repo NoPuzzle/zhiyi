@@ -62,24 +62,52 @@
   low-opacity pass with a fixed 0.55px blur; it expands chiefly on the vertical
   axis and never jitters, changes hue, or shifts sideways.
 - Pointer QA at 390×844 confirmed that hovering changes only the hovered line,
-  without switching its reading. Pressing gives an immediate 80ms release and
-  the checked state settles to a quiet edge while its matching reading becomes
-  the sole visible region.
+  without switching its reading. The original press study used an 80ms edge
+  release; the later mobile-continuity pass below replaces that abrupt peak
+  while preserving the quiet checked state.
 - Kun QA confirmed that the two edge paths remain separate and the yin gap does
   not close. Desktop QA at 1280×900 retained the centered manuscript axis and
   produced no horizontal overflow.
+
+### Pass 4 · Mobile touch continuity
+
+- P1 · Home-page affordance: the landing-page 屯 image was a static `role=img`,
+  so its six visible lines did not respond on touch. It now uses six native
+  radio controls in top-to-bottom visual order, keeps 44px targets, and shows
+  the selected position's existing product-authored observation below the
+  hexagram.
+- P2 · Reading continuity: detail readings previously switched with
+  `display: none/grid`, making the old passage disappear in one frame and
+  allowing content height to feel unstable. All six readings now share one
+  grid cell; the inactive passage fades out while the next passage enters with
+  a 4px ink-settling movement, and the folio height stays fixed through the
+  change.
+- P2 · Touch rhythm: the press peak was reduced from `opacity: 0.2` and
+  `scaleY(1.38)` at 80ms to `opacity: 0.17` and `scaleY(1.28)` at 180ms. The
+  checked state then settles over 420–560ms, intended to avoid an abrupt flash
+  on touch. Physical iOS acceptance remains separate.
+- Accessibility semantics now update with the visual state: only the selected
+  article has `aria-hidden="false"`, and one shared polite status announces the
+  new position without duplicating six live regions.
+- Local in-app-browser QA at 390×844 confirmed six 44px home targets, a 九五
+  selection and matching observation, a stable 342px detail folio before and
+  after switching, exactly one visible/accessible reading, zero horizontal
+  overflow, and no console warnings or errors. Temporary screenshots remain in
+  ignored QA storage rather than the repository.
 
 ## Required Fidelity Surfaces
 
 - Fonts and typography: the system Songti stack preserves the source's Chinese
   editorial character. Display name, pinyin, UI labels, classical text, and
   folio metadata remain legible at 390px without clipping or truncation.
-- Spacing and layout rhythm: the mobile hero ends at approximately one viewport;
-  the desktop version retains the same single vertical manuscript axis rather
-  than reverting to a generic two-column card layout. Both checked viewports
-  have zero horizontal overflow.
-- Colors and tokens: the result uses neutral cool ivory, carbon ink, soft
-  blue-gray watercolor, and vermilion only for the active line position. No
+- Spacing and layout rhythm: the hero retains a single vertical manuscript axis.
+  Long readings can extend beyond the first viewport with normal page scrolling;
+  no prose overlaps a line's touch target. Both checked viewports have zero
+  horizontal overflow. The first-screen claims in earlier passes above are
+  historical and are superseded by the October review fixes below.
+- Colors and tokens: the result uses neutral cool ivory, carbon ink, and soft
+  blue-gray watercolor. Ordinary line strokes stay neutral; vermilion line
+  strokes indicate moving lines. Existing folio headings retain their accent. No
   muddy yellow-brown cast or card shadow was introduced.
 - Image quality and asset fidelity: the folio uses dedicated 1200 × 736 AVIF and
   WebP raster assets generated from the selected visual direction. Existing
@@ -107,18 +135,40 @@
   `prefers-reduced-motion`; the selected line keeps an immediate static edge.
 - Fresh production-browser inspection reported no console errors.
 
+## October Review Fixes
+
+- The 390px 屯六二 observation previously sat underneath the lower trigram's
+  first line. Reduced decorative overlap and reserved bottom space now keep
+  the entire reading outside all six 44px touch targets. All 64 folios are
+  checked geometrically at 360px; 屯's six states are tapped at both 360/390px,
+  including the formerly obscured final paragraph.
+- Selected-reading motion is enabled only for `no-preference`; computed-style
+  tests now confirm zero transition duration/delay under reduced motion.
+  The checked-and-pressed ink edge also has no transform or transition.
+- Current screenshots were inspected at 390×844 (屯六二) and 1280×900
+  (乾九二), including complete hero captures in ignored `tmp/review-fix-*`.
+  There is no clipped prose, line overlap, or horizontal overflow. Some lower
+  lines require scrolling; preserving readable text takes priority over
+  fitting all content into one screen.
+- This is Chrome touch emulation and desktop verification, not physical
+  iPhone/Safari acceptance.
+
 ## Verification
 
 - `git diff --check`: passed.
 - `npm run lint`: passed.
-- `npm test`: passed, 45 tests across 8 files.
+- `npm test`: passed, 115 tests across 9 files.
 - `npm run build`: passed, 79 routes.
 - `npm run build:pages`: passed, 79 routes and 78 exported HTML files.
 - `npm run verify:pages`: passed, including all 64 detail pages, 40 trigram
   atmosphere resources, and 2 folio assets.
+- `npm run test:browser`: six UI regressions and two PWA lifecycle regressions.
+  The latter disable HTTP cache assistance and exercise offline home/Ask controls
+  after initial installation and after a waiting worker activates.
 
-No actionable P0, P1, or P2 findings remain. The missing decorative dotted
-track and chevrons are intentional: they do not represent a real gesture and
-would add non-semantic ornament without improving the core reading task.
+The reviewed overlap and reduced-motion defects are resolved within the tested
+browser scope. Dependency maintenance and physical-device acceptance remain
+separate follow-ups. The omitted dotted track and chevrons do not represent a
+real gesture and are still intentionally absent.
 
-final result: passed
+final result: passed for the recorded Chromium regression scope

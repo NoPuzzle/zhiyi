@@ -3,7 +3,7 @@ import { hexagramsById } from "../../data/hexagrams";
 import { ChangingHexagramView } from "@/components/hexagram/ChangingHexagramView";
 import { HexagramCard } from "@/components/hexagram/HexagramCard";
 import { HexagramAtmosphere } from "@/components/hexagram/HexagramAtmosphere";
-import { HexagramLines } from "@/components/hexagram/HexagramLines";
+import { HomeHexagramPreview } from "@/components/hexagram/HomeHexagramPreview";
 
 const qian = hexagramsById.get(1);
 const kun = hexagramsById.get(2);
@@ -41,17 +41,16 @@ export default function Home() {
           lowerTrigramId={zhun.lowerTrigramId}
         />
 
-        <div className="flex w-full justify-center text-ink">
-          <HexagramLines
+        <div className="w-full">
+          <HomeHexagramPreview
             lines={zhun.lines}
-            movingLineIndexes={[1]}
-            animated
-            size="lg"
-            label="知易首页卦象"
+            lineTexts={zhun.lineTexts ?? []}
+            hexagramLabel="屯卦"
+            movingLineIndex={1}
           />
         </div>
 
-        <div>
+        <div className="-mt-4">
           <p className="text-xl font-semibold text-ink">屯 · 云雷初生</p>
           <p className="mt-2 text-sm leading-6 text-ink-soft">
             下震为雷，上坎为水：万事初起，先在未定中辨清第一步。

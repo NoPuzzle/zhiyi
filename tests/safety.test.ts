@@ -45,6 +45,66 @@ describe("high-stakes safety guidance", () => {
     expect(note).toContain("不能代替");
   });
 
+  it.each([
+    "I don’t want to live anymore",
+    "I don‘t want to live anymore",
+    "I donʼt want to live anymore",
+    "I don\u201bt want to live anymore",
+    "Ｉ ＤＯＮ＇Ｔ ＷＡＮＴ ＴＯ ＬＩＶＥ",
+    "I don’t\u00a0want\u202fto\u3000live anymore",
+    "I don’t\t want\n to\r\n live anymore",
+    "I have thoughts of self‐harm",
+    "I have thoughts of self‑harm",
+    "I have thoughts of self–harm",
+    "I have thoughts of self—harm",
+    "I have thoughts of self−harm",
+    "I have thoughts of self\u2012harm",
+    "I have thoughts of self\u2015harm",
+  ])("normalizes mobile and pasted typography consistently: %s", (question) => {
+    expect(detectHighStakesAreas(question)).toEqual(["mentalHealth"]);
+    expect(getHighStakesSafetyNote(question)).toContain("当地紧急服务");
+    expect(getHighStakesSafetyNote(question)).toContain("危机热线");
+  });
+
+  it.each([
+    "我想自殺",
+    "我害怕自己會自殘",
+    "我有輕生的念頭",
+    "我想尋死",
+    "我想結束生命",
+    "我想了結生命",
+    "我怕自己會傷害自己",
+    "我覺得活著沒意思",
+    "我覺得活着沒意思",
+    "我覺得活著沒有意義",
+    "我覺得活着沒有意義",
+  ])("recognizes common traditional Chinese crisis wording: %s", (question) => {
+    expect(detectHighStakesAreas(question)).toEqual(["mentalHealth"]);
+    expect(getHighStakesSafetyNote(question)).toContain("当地紧急服务");
+    expect(getHighStakesSafetyNote(question)).toContain("危机热线");
+  });
+
+  it.each([
+    "I don’t know how to plan my next step",
+    "I would like to make time for self‑care",
+    "我想結束今天的工作，休息一下",
+    "我想活得更有意義",
+    "\u00a0\u202f\u3000\t\n",
+  ])("does not turn ordinary wording into a crisis: %s", (question) => {
+    expect(detectHighStakesAreas(question)).toEqual([]);
+    expect(getHighStakesSafetyNote(question)).toBeUndefined();
+  });
+
+  it("normalizes whitespace for non-urgent professional-support guidance", () => {
+    const question = "I need mental\u2003health support";
+    const note = getHighStakesSafetyNote(question);
+
+    expect(detectHighStakesAreas(question)).toEqual(["mentalHealth"]);
+    expect(note).toContain("合格专业人士");
+    expect(note).not.toContain("当地紧急服务");
+    expect(note).not.toContain("危机热线");
+  });
+
   it("keeps ordinary anxiety guidance separate from crisis guidance", () => {
     const note = getHighStakesSafetyNote("我最近因为工作有些焦虑");
 

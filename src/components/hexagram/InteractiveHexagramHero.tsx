@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef, useState, type KeyboardEvent } from "react";
 import type { SixClassicalLineTexts } from "../../../data/classical-text";
 import type { SixSmallImageTexts } from "../../../data/classical-wings";
 import type { Hexagram } from "../../../data/hexagrams";
@@ -46,6 +49,38 @@ export function InteractiveHexagramHero({
   lowerLabel,
 }: InteractiveHexagramHeroProps) {
   const defaultLineIndex = hexagram.id === 1 ? 1 : 0;
+  const [selectedLineIndex, setSelectedLineIndex] =
+    useState(defaultLineIndex);
+  const lineInputRefs = useRef<Array<HTMLInputElement | null>>([]);
+  const selectedPosition =
+    classicalLineTexts[selectedLineIndex]?.position ??
+    linePosition(hexagram, selectedLineIndex);
+
+  const moveWithArrowKey = (
+    event: KeyboardEvent<HTMLInputElement>,
+    index: (typeof visualLineIndexes)[number],
+  ) => {
+    const direction =
+      event.key === "ArrowDown" || event.key === "ArrowRight"
+        ? 1
+        : event.key === "ArrowUp" || event.key === "ArrowLeft"
+          ? -1
+          : 0;
+
+    if (direction === 0) {
+      return;
+    }
+
+    event.preventDefault();
+    const currentVisualIndex = visualLineIndexes.indexOf(index);
+    const nextVisualIndex =
+      (currentVisualIndex + direction + visualLineIndexes.length) %
+      visualLineIndexes.length;
+    const nextLineIndex = visualLineIndexes[nextVisualIndex];
+
+    setSelectedLineIndex(nextLineIndex);
+    lineInputRefs.current[nextLineIndex]?.focus();
+  };
 
   const renderLineControl = (index: (typeof visualLineIndexes)[number]) => {
     const line = hexagram.lines[index];
@@ -64,7 +99,12 @@ export function InteractiveHexagramHero({
           name={`hexagram-${hexagram.id}-line`}
           value={index}
           data-line-index={index}
-          defaultChecked={index === defaultLineIndex}
+          checked={index === selectedLineIndex}
+          onChange={() => setSelectedLineIndex(index)}
+          onKeyDown={(event) => moveWithArrowKey(event, index)}
+          ref={(input) => {
+            lineInputRefs.current[index] = input;
+          }}
           aria-label={`查看${position}`}
           aria-controls={readingId}
         />
@@ -141,18 +181,11 @@ export function InteractiveHexagramHero({
                     className="hexagram-line-reading"
                     data-line-index={index}
                     data-default={index === defaultLineIndex ? "true" : undefined}
+                    data-active={index === selectedLineIndex ? "true" : "false"}
                     role="region"
                     aria-labelledby={headingId}
+                    aria-hidden={index !== selectedLineIndex}
                   >
-                    <p
-                      className="sr-only"
-                      role="status"
-                      aria-live="polite"
-                      aria-atomic="true"
-                    >
-                      已展开{position}，第 {index + 1} 爻，共六爻
-                    </p>
-
                     <div className="hexagram-folio-meta">
                       <h2
                         id={headingId}
@@ -198,6 +231,15 @@ export function InteractiveHexagramHero({
               })}
             </div>
           </div>
+
+          <p
+            className="sr-only"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            已选{selectedPosition}，第 {selectedLineIndex + 1} 爻，共六爻
+          </p>
 
           <div
             className="hexagram-line-bank hexagram-line-bank-lower"

@@ -78,19 +78,30 @@ const areaRules: Record<HighStakesArea, readonly string[]> = {
 
 const mentalHealthCrisisRules = [
   "自杀",
+  "自殺",
   "自残",
+  "自殘",
   "轻生",
+  "輕生",
   "寻死",
+  "尋死",
   "想死",
   "不想活",
   "活不下去",
   "结束生命",
+  "結束生命",
   "了结生命",
+  "了結生命",
   "伤害自己",
+  "傷害自己",
   "割腕",
   "一死了之",
   "活着没意思",
+  "活著沒意思",
+  "活着沒意思",
   "活着没有意义",
+  "活著沒有意義",
+  "活着沒有意義",
   "suicide",
   "suicidal",
   "self-harm",
@@ -118,6 +129,18 @@ const areaLabels: Record<HighStakesArea, string> = {
   mentalHealth: "心理健康",
 };
 
+function normalizeSafetyQuestion(question: string): string {
+  // Normalize input typography only; this remains bounded keyword matching,
+  // not a diagnosis or a broader interpretation of the user's intent.
+  return question
+    .normalize("NFKC")
+    .replace(/[\u2018\u2019\u201b\u02bc]/g, "'")
+    .replace(/[\u2010-\u2015\u2212]/g, "-")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
 function hasMentalHealthCrisis(normalizedQuestion: string) {
   return mentalHealthCrisisRules.some((keyword) =>
     normalizedQuestion.includes(keyword),
@@ -125,7 +148,7 @@ function hasMentalHealthCrisis(normalizedQuestion: string) {
 }
 
 export function detectHighStakesAreas(question: string): HighStakesArea[] {
-  const normalized = question.trim().toLowerCase();
+  const normalized = normalizeSafetyQuestion(question);
 
   if (!normalized) {
     return [];
@@ -141,7 +164,7 @@ export function detectHighStakesAreas(question: string): HighStakesArea[] {
 }
 
 export function getHighStakesSafetyNote(question: string): string | undefined {
-  const normalized = question.trim().toLowerCase();
+  const normalized = normalizeSafetyQuestion(question);
   const areas = detectHighStakesAreas(question);
 
   if (areas.length === 0) {

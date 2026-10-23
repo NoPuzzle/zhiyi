@@ -11,6 +11,7 @@
     "lint": "eslint",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:browser": "playwright test",
     "verify:classical-sources": "node scripts/sync-classical-text.mjs && node scripts/sync-classical-wings.mjs",
     "sync:classical-assets": "node scripts/sync-classical-reading-assets.mjs --write",
     "verify:classical-assets": "node scripts/sync-classical-reading-assets.mjs",
@@ -22,6 +23,7 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

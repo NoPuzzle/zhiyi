@@ -136,6 +136,8 @@ describe("InteractiveHexagramHero line-reading contract", () => {
     expect(group).toBeDefined();
     expect(attribute(group ?? "", "aria-label") ?? legend).toMatch(/选择一爻/);
     expect(attribute(group ?? "", "aria-orientation")).toBe("vertical");
+    expect([...html.matchAll(/role="status"/g)]).toHaveLength(1);
+    expect(html).toContain("aria-live=\"polite\"");
 
     for (const [order, radio] of radios.entries()) {
       const index = visualLineOrder[order];
@@ -179,6 +181,9 @@ describe("InteractiveHexagramHero line-reading contract", () => {
     expect(normalizedStyles).toContain(
       ".hexagram-touch-line:has(.hexagram-line-input:checked) .hex-line-edge-bloom",
     );
+    expect(normalizedStyles).toContain(
+      ".hexagram-touch-line:active .hex-line-edge-bloom",
+    );
 
     const reducedMotion = blockAfter(
       globalStyles,
@@ -191,6 +196,66 @@ describe("InteractiveHexagramHero line-reading contract", () => {
 
     expect(reducedBloomDeclarations).toMatch(/animation:\s*none/);
     expect(reducedBloomDeclarations).toMatch(/transition:\s*none/);
+  });
+
+  it("crossfades readings instead of hard-switching their display state", () => {
+    const readingDeclarations = blockAfter(
+      globalStyles,
+      ".hexagram-line-reading {",
+    );
+    const selectorSupport = blockAfter(
+      globalStyles,
+      "@supports selector(.hexagram-selector:has(.hexagram-line-input:checked))",
+    );
+    const activeReadingDeclarations = blockAfter(
+      globalStyles,
+      '.hexagram-line-reading[data-active="true"]',
+    );
+    const normalizedSupport = selectorSupport.replace(/\s+/g, " ");
+    const enabledMotion = blockAfter(
+      globalStyles,
+      "@media (prefers-reduced-motion: no-preference)",
+    );
+
+    expect(readingDeclarations).not.toMatch(/display:\s*none/);
+    expect(readingDeclarations).toMatch(/display:\s*grid/);
+    expect(readingDeclarations).toMatch(/opacity:\s*0/);
+    expect(readingDeclarations).toMatch(/visibility:\s*hidden/);
+    expect(readingDeclarations).toMatch(/transition:/);
+    expect(readingDeclarations).toContain("var(--reading-exit-transition, none)");
+    expect(activeReadingDeclarations).toContain("var(--reading-enter-transition, none)");
+    expect(normalizedSupport).toContain("var(--reading-enter-transition, none)");
+    expect(enabledMotion).toMatch(/opacity\s+\d/);
+    expect(enabledMotion).toMatch(/transform\s+\d/);
+    expect(enabledMotion).toMatch(/visibility\s+\d/);
+    expect(activeReadingDeclarations).toMatch(/opacity:\s*1/);
+    expect(activeReadingDeclarations).toMatch(/visibility:\s*visible/);
+
+    expect(normalizedSupport).not.toMatch(/display:\s*(?:none|grid)/);
+    expect(normalizedSupport).toMatch(/opacity:\s*1/);
+    expect(normalizedSupport).toMatch(/visibility:\s*visible/);
+  });
+
+  it("removes line and reading transitions for reduced-motion users", () => {
+    const reducedMotion = blockAfter(
+      globalStyles,
+      "@media (prefers-reduced-motion: reduce)",
+    );
+    const reducedLineDeclarations = blockAfter(
+      reducedMotion,
+      ".hexagram-touch-line,",
+    );
+    const reducedReadingDeclarations = blockAfter(
+      reducedMotion,
+      ".hexagram-line-reading {",
+    );
+    const normalizedReducedMotion = reducedMotion.replace(/\s+/g, " ");
+
+    expect(reducedLineDeclarations).toMatch(/transition:\s*none/);
+    expect(reducedReadingDeclarations).toMatch(/transition:\s*none/);
+    expect(normalizedReducedMotion).toMatch(
+      /\.hexagram-line-reading \{ animation:\s*none;/,
+    );
   });
 
   it("places all six readings in the folio stage between the upper and lower trigrams", () => {
@@ -239,10 +304,23 @@ describe("InteractiveHexagramHero line-reading contract", () => {
 
   it("defaults only Qian to line two and every other hexagram to its first line", () => {
     for (let id = 1; id <= 64; id += 1) {
-      const radios = radioTags(renderHexagram(id).html);
+      const { html } = renderHexagram(id);
+      const radios = radioTags(html);
       const checkedRadios = radios.filter(({ tag }) => tag.includes(" checked"));
+      const visibleReadings = [
+        ...html.matchAll(
+          /<article\b[^>]*\bdata-active="true"[^>]*\baria-hidden="false"[^>]*>/g,
+        ),
+      ];
+      const hiddenReadings = [
+        ...html.matchAll(
+          /<article\b[^>]*\bdata-active="false"[^>]*\baria-hidden="true"[^>]*>/g,
+        ),
+      ];
 
       expect(checkedRadios, `hexagram ${id} checked radio`).toHaveLength(1);
+      expect(visibleReadings, `hexagram ${id} active reading`).toHaveLength(1);
+      expect(hiddenReadings, `hexagram ${id} hidden readings`).toHaveLength(5);
       expect(attribute(checkedRadios[0].tag, "data-line-index")).toBe(
         id === 1 ? "1" : "0",
       );
